@@ -37,17 +37,17 @@ class SplashVC: UIViewController {
                     
                     if User.shared.data?.user?.country_id != "0" && User.shared.data?.user?.country_id != nil {
 //                        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldNavController") as!  BeautyWorldNavController
-//                        UIApplication.shared.keyWindow?.rootViewController = vc
+//                        keyWindow?.rootViewController = vc
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        keyWindow?.rootViewController = vc
                     }else {
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        keyWindow?.rootViewController = vc
                     }
                 }
             }else {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
             }
             }else {
                 Shortcuts.shortcut = false
@@ -56,20 +56,20 @@ class SplashVC: UIViewController {
                 case "com.Vrou.Offers":
                     let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "OffersNavController") as! OffersNavController
                     Shortcuts.ID = ""
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                     
                 case "com.Vrou.Places":
                     let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "CenterNavController") as! CenterNavController
                      Shortcuts.ID = ""
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                 case "com.Vrou.Services":
                     let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ServicesNavController") as! ServicesNavController
                      Shortcuts.ID = ""
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                 case "com.Vrou.Marketplace":
                     let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ShopNavController") as! ShopNavController
                      Shortcuts.ID = ""
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                 default:
                     break
                 }

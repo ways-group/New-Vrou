@@ -88,7 +88,7 @@ class ReservationsVC: UIViewController {
     // MARK: - CartBtn
     @IBAction func CartBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CartNavController") as! CartNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     // MARK: - ApplyCodeBtn
@@ -189,7 +189,7 @@ extension ReservationsVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -224,7 +224,7 @@ extension ReservationsVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }
             
@@ -247,7 +247,7 @@ extension ReservationsVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }
             

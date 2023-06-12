@@ -135,14 +135,14 @@ class MapVC: UIViewController, CLLocationManagerDelegate, GMSMapViewDelegate {
     
     @IBAction func BackBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "CenterNavController") as! CenterNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
 
     }
     
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
 }

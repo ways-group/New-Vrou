@@ -257,19 +257,19 @@ class BeautyWorldVC: UIViewController , UIScrollViewDelegate{
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
         
     }
     
     @IBAction func YouWorldBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyWorldNavController") as! MyWorldNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
     @IBAction func DiscoverBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeDiscoverNavController") as! HomeDiscoverNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
@@ -292,7 +292,7 @@ extension BeautyWorldVC: ChooseSideMenu {
     
     func SideToCenter() {
           let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "CenterNavController") as! CenterNavController
-          UIApplication.shared.keyWindow?.rootViewController = vc
+          keyWindow?.rootViewController = vc
     }
     
     
@@ -928,7 +928,7 @@ extension BeautyWorldVC : UICollectionViewDelegate, UICollectionViewDataSource ,
             vc.OuterViewController = true
             CenterParams.SectionID = "\(beautyWorld.data?.categories?[indexPath.row].id ?? Int())"
             CenterParams.OuterViewController = true
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             
         }
         

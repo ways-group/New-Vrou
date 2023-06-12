@@ -85,7 +85,7 @@ class CartVC: UIViewController {
     // MARK: - ReservationBtn
     @IBAction func ReservationBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReservationNavController") as! ReservationNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
@@ -283,7 +283,7 @@ extension CartVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -316,7 +316,7 @@ extension CartVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }
             
@@ -342,7 +342,7 @@ extension CartVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }
             
@@ -367,7 +367,7 @@ extension CartVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }
             
@@ -390,7 +390,7 @@ extension CartVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }
             

@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>848990114158-hf0l7kvdr5aifj7as6jlaejebecapcip.apps.googleusercontent.com</string>
+	<string>188497319542-ig3frfsm12j8g47vcfemnmsp5veh7ifg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.848990114158-hf0l7kvdr5aifj7as6jlaejebecapcip</string>
+	<string>com.googleusercontent.apps.188497319542-ig3frfsm12j8g47vcfemnmsp5veh7ifg</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDCA9jG9tMx5xsNVAn4ZX7IC42tQp0gcQ4</string>
+	<string>AIzaSyA8D3y2c6pwgDb4LqrkUuJxFvVLseqIMmg</string>
 	<key>GCM_SENDER_ID</key>
-	<string>848990114158</string>
+	<string>188497319542</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.waysgroup.vrou</string>
 	<key>PROJECT_ID</key>
-	<string>vrou-860a6</string>
+	<string>vrou-17287</string>
 	<key>STORAGE_BUCKET</key>
-	<string>vrou-860a6.appspot.com</string>
+	<string>vrou-17287.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:848990114158:ios:6c07440906215f3766f17f</string>
-	<key>DATABASE_URL</key>
-	<string>https://vrou-860a6.firebaseio.com</string>
+	<string>1:188497319542:ios:5423084160df5a1e78f157</string>
 </dict>
 </plist>

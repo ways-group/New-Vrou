@@ -142,7 +142,7 @@ class ServicesVC: UIViewController , UIScrollViewDelegate {
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "ServicesSearchNavController") as! ServicesSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     @IBAction func AtHoneBtn_pressed(_ sender: Any) {
@@ -226,7 +226,7 @@ extension ServicesVC {
                     
                   }else if tmp == "401" {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                       
                   }
                   
@@ -269,7 +269,7 @@ extension ServicesVC {
                      
                  }else if tmp == "401" {
                      let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                     UIApplication.shared.keyWindow?.rootViewController = vc
+                     keyWindow?.rootViewController = vc
                      
                  }
              }

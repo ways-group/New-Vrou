@@ -79,7 +79,7 @@ class WelcomeVC: UIViewController {
      // MARK: - DiscoverBtn
     @IBAction func DiscoverBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
         
     }
     
@@ -95,7 +95,7 @@ class WelcomeVC: UIViewController {
         MOLH.reset()
         
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     

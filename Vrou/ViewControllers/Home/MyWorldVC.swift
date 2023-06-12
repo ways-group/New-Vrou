@@ -154,12 +154,12 @@ class MyWorldVC: UIViewController , UIScrollViewDelegate{
     
     @IBAction func DiscoverBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeDiscoverNavController") as! HomeDiscoverNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     @IBAction func BeautyWorldBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
@@ -176,12 +176,12 @@ class MyWorldVC: UIViewController , UIScrollViewDelegate{
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     @IBAction func SignInBtn_pressed(_ sender: Any) {
           let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
 }
@@ -256,7 +256,7 @@ extension MyWorldVC { //HTTPS requests functions
                     
                 }else if tmp == "401" {
                     let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                 }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
                        vc.callbackClosure = { [weak self] in
@@ -296,7 +296,7 @@ extension MyWorldVC { //HTTPS requests functions
                              
                          }else if tmp == "401" {
                              let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                             UIApplication.shared.keyWindow?.rootViewController = vc
+                             keyWindow?.rootViewController = vc
                              
                          }
                          
@@ -326,7 +326,7 @@ extension MyWorldVC { //HTTPS requests functions
                                
                            }else if tmp == "401" {
                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                               UIApplication.shared.keyWindow?.rootViewController = vc
+                               keyWindow?.rootViewController = vc
                                
                            }
                            
@@ -354,7 +354,7 @@ extension MyWorldVC { //HTTPS requests functions
                                  
                              }else if tmp == "401" {
                                  let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                 UIApplication.shared.keyWindow?.rootViewController = vc
+                                 keyWindow?.rootViewController = vc
                                  
                              }
                              

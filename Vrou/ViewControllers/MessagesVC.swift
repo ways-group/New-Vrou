@@ -70,13 +70,13 @@ class MessagesVC: UIViewController {
     // MARK: - NotificationsBtn
     @IBAction func NotificationBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "NotificationsNavController") as! NotificationsNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
     @IBAction func RequestsBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "FriendsReqNavController") as! FriendsReqNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     

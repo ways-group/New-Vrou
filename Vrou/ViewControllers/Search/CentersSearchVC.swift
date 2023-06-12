@@ -91,19 +91,19 @@ class CentersSearchVC: UIViewController,MXParallaxHeaderDelegate {
     // MARK: - OffersBtn
     @IBAction func OffersBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OffersSearchNavController") as! OffersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     // MARK: - ProductsBtn
     @IBAction func ProductsBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ProductsSearchNavController") as! ProductsSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     // MARK: - ServicesBtn
     @IBAction func ServicesBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ServicesSearchNavController") as! ServicesSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
 }

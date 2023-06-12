@@ -115,7 +115,7 @@ class SideMenuVC: UIViewController {
         MOLH.reset()
         
         let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
   
@@ -193,7 +193,7 @@ class SideMenuVC: UIViewController {
     @IBAction func MyAccountBtn_pressed(_ sender: Any) {
         if User.shared.isLogedIn() {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EditAccountNavController") as! EditAccountNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             
         }else {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginRequiredNavController") as! LoginRequiredNavController
@@ -273,7 +273,7 @@ class SideMenuVC: UIViewController {
     // MARK: - SearchBtn
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
@@ -336,11 +336,11 @@ extension SideMenuVC {
             if tmp == nil {
                 User.shared.remove()
                 let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }

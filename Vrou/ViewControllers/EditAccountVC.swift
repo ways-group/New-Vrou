@@ -240,7 +240,7 @@ extension EditAccountVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -279,7 +279,7 @@ extension EditAccountVC {
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
                 // self.navigationController?.present(vc, animated: true, completion: nil)
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }
             
@@ -304,7 +304,7 @@ extension EditAccountVC {
                                 tmp in
                                 if self.SocialLogin {
                                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
-                                    UIApplication.shared.keyWindow?.rootViewController = vc
+                                    keyWindow?.rootViewController = vc
                                 }else {
                                     self.navigationController?.popViewController(animated: true)
                                 }
@@ -314,7 +314,7 @@ extension EditAccountVC {
                                 tmp in
                                 if self.SocialLogin {
                                     let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
-                                    UIApplication.shared.keyWindow?.rootViewController = vc
+                                    keyWindow?.rootViewController = vc
                                 }else {
                                     self.navigationController?.popViewController(animated: true)
                                 }
@@ -328,7 +328,7 @@ extension EditAccountVC {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
             }
             
         }
@@ -376,7 +376,7 @@ extension EditAccountVC {
                                         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
                                         User.shared.SaveToken(data: User.shared.data?.token! ?? "")
                                         User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
-                                        UIApplication.shared.keyWindow?.rootViewController = vc
+                                        keyWindow?.rootViewController = vc
                                     }else {
                                         self.navigationController?.popViewController(animated: true)
                                     }
@@ -389,7 +389,7 @@ extension EditAccountVC {
                                         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
                                         User.shared.SaveToken(data: User.shared.data?.token! ?? "")
                                         User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
-                                        UIApplication.shared.keyWindow?.rootViewController = vc
+                                        keyWindow?.rootViewController = vc
                                     }else {
                                         self.navigationController?.popViewController(animated: true)
                                     }

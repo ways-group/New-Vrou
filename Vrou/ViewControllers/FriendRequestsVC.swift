@@ -83,13 +83,13 @@ class FriendRequestsVC: UIViewController {
     
     @IBAction func NotificationsBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "NotificationsNavController") as! NotificationsNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
     @IBAction func MessagesBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MessagesNavController") as! MessagesNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
@@ -136,7 +136,7 @@ extension FriendRequestsVC {
                     
                 }else if tmp == "401" {
                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                   UIApplication.shared.keyWindow?.rootViewController = vc
+                   keyWindow?.rootViewController = vc
                    
                }else if tmp == "NoConnect" {
                    guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -169,7 +169,7 @@ extension FriendRequestsVC {
                        
                    }else if tmp == "401" {
                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                       UIApplication.shared.keyWindow?.rootViewController = vc
+                       keyWindow?.rootViewController = vc
                    }
                    
                }

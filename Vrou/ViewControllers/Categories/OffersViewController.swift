@@ -204,7 +204,7 @@ class OffersViewController: UIViewController, MXParallaxHeaderDelegate,  UIScrol
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "OffersSearchNavController") as! OffersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
 
@@ -271,7 +271,7 @@ extension OffersViewController {
                     
                 }else if tmp == "401" {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                 }
                 
             }
@@ -342,7 +342,7 @@ extension OffersViewController {
                        }
                    }else if tmp == "401" {
                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                       UIApplication.shared.keyWindow?.rootViewController = vc
+                       keyWindow?.rootViewController = vc
                    }
                    
                }

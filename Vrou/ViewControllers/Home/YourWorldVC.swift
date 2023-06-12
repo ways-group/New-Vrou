@@ -73,20 +73,20 @@ class YourWorldVC: UIViewController {
     // MARK:- ButtonsActions
     @IBAction func VrouWorldBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
         
     }
     
     
     @IBAction func DiscoverBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeDiscoverNavController") as! HomeDiscoverNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
@@ -217,7 +217,7 @@ extension YourWorldVC {
                         
                     }else if tmp == "401" {
                         let vc =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        keyWindow?.rootViewController = vc
                     }else if tmp == "NoConnect" {
                         guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
                         vc.callbackClosure = { [weak self] in
@@ -245,7 +245,7 @@ extension YourWorldVC {
                                             
                                         }else if tmp == "401" {
                                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                            UIApplication.shared.keyWindow?.rootViewController = vc
+                                            keyWindow?.rootViewController = vc
                                             
                                         }
                                         
@@ -264,7 +264,7 @@ extension YourWorldVC {
                                             
                                         }else if tmp == "401" {
                                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                            UIApplication.shared.keyWindow?.rootViewController = vc
+                                            keyWindow?.rootViewController = vc
                                             
                                         }
                                         
@@ -281,7 +281,7 @@ extension YourWorldVC {
                                             HUD.hide()
                                         }else if tmp == "401" {
                                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                            UIApplication.shared.keyWindow?.rootViewController = vc
+                                            keyWindow?.rootViewController = vc
                                             
                                         }
                                         

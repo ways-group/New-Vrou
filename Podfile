@@ -1,5 +1,4 @@
-# Uncomment the next line to define a global platform for your project
-platform :ios, '13.0'
+platform :ios, '14.0'
 
 target 'Vrou' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -24,25 +23,23 @@ pod 'collection-view-layouts/InstagramLayout'
 pod 'Shimmer'
 pod 'SDWebImage'
 pod 'AlamofireImage', "~> 3.4.1"
-pod 'GoogleMaps'
-pod 'GooglePlaces'
+pod 'GoogleMaps', '8.0.0'
+pod 'GooglePlaces', '8.0.0'
 pod 'ImageSlideshow/Alamofire'
 pod 'MOLH'
 pod 'SwipeCellKit'
-pod 'Firebase/Messaging'
-pod 'Firebase/Analytics'
-pod 'Firebase/Core'
-pod 'Firebase/Performance'
-pod 'FBSDKLoginKit'
-pod 'Fabric', '~> 1.10.2'
-pod 'Crashlytics', '~> 3.14.0'
+
+pod 'FirebaseMessaging'
+pod 'FirebaseAnalytics'
+pod 'FirebasePerformance'
+pod 'FirebaseCrashlytics'
 pod 'GoogleSignIn'
 pod 'ActiveLabel'
 
     post_install do |installer|
       installer.pods_project.targets.each do |target|
         target.build_configurations.each do |config|
-          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
+          config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.0'
         end
       end
       

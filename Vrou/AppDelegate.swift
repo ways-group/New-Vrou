@@ -10,14 +10,13 @@ import UIKit
 import GoogleMaps
 import GooglePlaces
 import MOLH
-import Firebase
-import FirebaseInstanceID
+import FirebaseCore
 import FirebaseMessaging
 import UserNotifications
 import Alamofire
 import SwiftyJSON
 import PKHUD
-import FBSDKCoreKit
+import FacebookCore
 import IQKeyboardManagerSwift
 import GoogleSignIn
 
@@ -25,26 +24,26 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNotificationCenterDelegate, MessagingDelegate {
     
     var launchedShortcutItem: UIApplicationShortcutItem?
+    var window: UIWindow?
 
-   
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-        
+                
         switch shortcutItem.type {
         case "com.Vrou.Offers":
             let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "OffersNavController") as! OffersNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             completionHandler(true)
         case "com.Vrou.Places":
             let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "CenterNavController") as! CenterNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             completionHandler(true)
         case "com.Vrou.Services":
             let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ServicesNavController") as! ServicesNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             completionHandler(true)
         case "com.Vrou.Marketplace":
             let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ShopNavController") as! ShopNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             completionHandler(true)
         default:
             break
@@ -61,43 +60,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         if targetValue == "2"
         {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MessagesNavController") as! MessagesNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             completionHandler()
             
         }
         else if targetValue == "1"
         {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NotificationsNavController") as! NotificationsNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             completionHandler()
             
         }else {
             
             let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             completionHandler()
         }
         
     }
  
-    
-    
-    func application(_ app: UIApplication,open url: URL,options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool
-    {
-         return GIDSignIn.sharedInstance().handle(url)
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
+    ) -> Bool {
+        let facebookValue = ApplicationDelegate.shared.application(
+            app,
+            open: url,
+            sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
+            annotation: options[UIApplication.OpenURLOptionsKey.annotation]
+        )
+        
+        let googleValue = GIDSignIn.sharedInstance.handle(url)
+        return facebookValue && googleValue
     }
-    
-    
     
     func reset() {
         setupGlobalAppearance()
     }
-    
-    func applicationReceivedRemoteMessage(_ remoteMessage: MessagingRemoteMessage) {
-        print(remoteMessage.appData)
-    }
-    
-    var window: UIWindow?
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -116,15 +116,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         
         setupGlobalAppearance()
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
-        //
-        GIDSignIn.sharedInstance().clientID = "848990114158-hkk4tiigq6kfjsupqkf3dhvmn2kffepb.apps.googleusercontent.com"
-        //GIDSignIn.sharedInstance().delegate = self
 
         FirebaseApp.configure()
-        Fabric.sharedSDK().debug = true
-        Fabric.with([Crashlytics.self])
-        // Crashlytics.start(withAPIKey: "")
-
         
         //Keyborad
         IQKeyboardManager.shared.enable = true
@@ -133,8 +126,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         IQKeyboardManager.shared.toolbarPreviousNextAllowedClasses.append(UIStackView.self)
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
         
-        GMSServices.provideAPIKey("AIzaSyDCA9jG9tMx5xsNVAn4ZX7IC42tQp0gcQ4")
-        GMSPlacesClient.provideAPIKey("AIzaSyDCA9jG9tMx5xsNVAn4ZX7IC42tQp0gcQ4")
+        GMSServices.provideAPIKey(GoogleClientID)
+        GMSPlacesClient.provideAPIKey(GoogleClientID)
         
         MOLHLanguage.setDefaultLanguage("en")
 
@@ -164,10 +157,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         }
         
         application.registerForRemoteNotifications()
-        
-        
-        
-        print(Messaging.messaging().fcmToken)
+                
+        print(Messaging.messaging().fcmToken as Any)
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
             print("Not first launch.")
@@ -190,43 +181,41 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
             print("First launch, setting UserDefault.")
             UserDefaults.standard.set(true, forKey: "launchedBefore")
             
-            InstanceID.instanceID().instanceID { (result, error) in
+            Messaging.messaging().token { token, error in
                 if let error = error {
-                    print("Error fetching remote instance ID: \(error)")
-                } else if let result = result {
-                    print("Remote instance ID token: \(result.token)")
-                    UserDefaults.standard.set(result.token, forKey: "FCM_new")
-                    UserDefaults.standard.set(result.token, forKey: "FCM_old")
+                    print("Error fetching FCM registration token: \(error)")
+                } else if let token = token {
+                    print("FCM registration token: \(token)")
+                    UserDefaults.standard.set(token, forKey: "FCM_new")
+                    UserDefaults.standard.set(token, forKey: "FCM_old")
                 }
             }
-            
-            
         }
-       
-        
         
         return shouldPerformAdditionalDelegateHandling
     }
     
     
-    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
-        print("Token Recieved")
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
+        print("Firebase registration token: \(String(describing: fcmToken))")
+        
+        let dataDict: [String: String] = ["token": fcmToken ?? ""]
+        NotificationCenter.default.post(
+            name: Notification.Name("FCMToken"),
+            object: nil,
+            userInfo: dataDict
+        )
+        // TODO: If necessary send token to application server.
+        // Note: This callback is fired at each app startup and whenever a new token is generated.
         RefreshDeviceToken()
     }
-    
-    
-//    func messaging(_ messaging: Messaging, didReceive remoteMessage: MessagingRemoteMessage) {
-//         UIApplication.shared.applicationIconBadgeNumber = remoteMessage.appData.count
-//    }
-    
+
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
     }
     
-    
-    
     func applicationWillResignActive(_ application: UIApplication) {
-        AppEvents.activateApp()
+//        AppEvents.activateApp()
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -248,7 +237,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
     }
     
     
-    func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
+    @discardableResult func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
         var handled = false
         
         switch shortcutItem.type {
@@ -330,7 +319,7 @@ extension AppDelegate {
             }
             //                   }else if tmp == "401" {
             //                       let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-            //                       UIApplication.shared.keyWindow?.rootViewController = vc
+            //                       keyWindow?.rootViewController = vc
             //
             //                   }
             

@@ -20,13 +20,13 @@ class ShakeFeedbackVC: UIViewController {
    
     @IBAction func HaveProblemBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ContactUsNavController") as! ContactUsNavController
-           UIApplication.shared.keyWindow?.rootViewController = vc
+           keyWindow?.rootViewController = vc
     }
     
     
     @IBAction func HelpSupportBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HelpSupportNavController") as! HelpSupportNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     @IBAction func X_Btn_pressed(_ sender: Any) {

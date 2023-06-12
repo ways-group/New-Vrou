@@ -16,9 +16,9 @@ extension UIWindow {
         globalValues.sideMenu_selected = 8
         if globalValues.ShakingEnabled {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ShakeFeedbackVC") as! ShakeFeedbackVC
-       // UIApplication.shared.keyWindow?.rootViewController = vc
+       // keyWindow?.rootViewController = vc
         
-        if var topController = UIApplication.shared.keyWindow?.rootViewController {
+        if var topController = keyWindow?.rootViewController {
             while let presentedViewController = topController.presentedViewController {
                 topController = presentedViewController
             }

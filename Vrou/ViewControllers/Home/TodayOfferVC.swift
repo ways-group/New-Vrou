@@ -304,7 +304,7 @@ extension TodayOfferVC {
                    
                }else if tmp == "401" {
                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                   UIApplication.shared.keyWindow?.rootViewController = vc
+                   keyWindow?.rootViewController = vc
                    
                }else if tmp == "NoConnect" {
                guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -335,7 +335,7 @@ extension TodayOfferVC {
                       
                   }else if tmp == "401" {
                       let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                      UIApplication.shared.keyWindow?.rootViewController = vc
+                      keyWindow?.rootViewController = vc
                       
                   }
                   
@@ -364,7 +364,7 @@ extension TodayOfferVC {
                              
                          }else if tmp == "401" {
                              let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                             UIApplication.shared.keyWindow?.rootViewController = vc
+                             keyWindow?.rootViewController = vc
                              
                          }
                          
@@ -388,7 +388,7 @@ extension TodayOfferVC {
                                
                            }else if tmp == "401" {
                                let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                               UIApplication.shared.keyWindow?.rootViewController = vc
+                               keyWindow?.rootViewController = vc
                                
                            }
                            
@@ -414,7 +414,7 @@ extension TodayOfferVC {
         
         alert.addAction(UIAlertAction(title: msg_2, style: .default, handler: { (_) in
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CartNavController") as! CartNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
         }))
         
         self.present(alert, animated: false, completion: nil)
@@ -444,7 +444,7 @@ extension TodayOfferVC {
                     
                 }else if tmp == "401" {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                     
                 }else if tmp == "NoConnect" {
                     guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -477,7 +477,7 @@ extension TodayOfferVC {
     
                             }else if tmp == "401" {
                                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                UIApplication.shared.keyWindow?.rootViewController = vc
+                                keyWindow?.rootViewController = vc
     
                             }
     
@@ -497,7 +497,7 @@ extension TodayOfferVC {
                                      
                                  }else if tmp == "401" {
                                      let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                     UIApplication.shared.keyWindow?.rootViewController = vc
+                                     keyWindow?.rootViewController = vc
                                      
                                  }
                                  

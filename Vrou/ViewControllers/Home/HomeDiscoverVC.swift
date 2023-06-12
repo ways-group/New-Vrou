@@ -176,12 +176,12 @@ class HomeDiscoverVC: UIViewController , UIScrollViewDelegate {
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     @IBAction func YouWorldBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "MyWorldNavController") as! MyWorldNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     @IBAction func DiscoverBtn_pressed(_ sender: Any) {
@@ -191,7 +191,7 @@ class HomeDiscoverVC: UIViewController , UIScrollViewDelegate {
     
     @IBAction func BeautyWorlfBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
 }

@@ -78,7 +78,7 @@ func SendReview() {
                 
              }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-               //  UIApplication.shared.keyWindow?.rootViewController = vc
+               //  keyWindow?.rootViewController = vc
                  self.navigationController?.pushViewController(vc, animated: false)
              }
 

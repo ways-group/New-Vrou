@@ -105,12 +105,12 @@ class TermsVC: UIViewController {
                         KeyChain.save(key: "passKey", data: passwordData)
                         
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
-                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        keyWindow?.rootViewController = vc
                     })
                     
                 }else if tmp == "401" {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                 }
             }
         }
@@ -139,7 +139,7 @@ class TermsVC: UIViewController {
                 
             }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
             }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
                 vc.callbackClosure = { [weak self] in

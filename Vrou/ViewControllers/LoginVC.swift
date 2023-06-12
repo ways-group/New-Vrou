@@ -13,13 +13,12 @@ import PKHUD
 import MOLH
 import LocalAuthentication
 import SDWebImage
-import FBSDKLoginKit
+import FacebookLogin
 import AuthenticationServices
 import GoogleSignIn
-//import InstagramLogin
 import StoreKit
 
-class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDelegate{
+class LoginVC: UIViewController, ASAuthorizationControllerDelegate {
     
     
     var AdultPickerData = ["Kuwait","Egypt","Oman","Jordon"]
@@ -45,6 +44,15 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
     var Continue = false
     var FB_accessToken = ""
 
+    @IBAction func googleSignIn(_ sender: Any) {
+        let signInConfig = GIDConfiguration(clientID: GoogleClientID)
+        GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) { signInResult, error in
+            guard error == nil else { return }
+            guard let signInResult = signInResult else { return }
+            let accessToken = signInResult.authentication.accessToken
+            self.SocialLogin(token: accessToken, provider: "google")
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,8 +64,6 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
         }
         
         SetImage(image: LoginBackground, link:FirstAdds.login_ads)
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance()?.presentingViewController = self
         
         let c = LAContext()
         var error: NSError?
@@ -74,21 +80,6 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
     @IBAction func InstBtn_pressed(_ sender: Any) {
        
     }
-    
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            if (error as NSError).code == GIDSignInErrorCode.hasNoAuthInKeychain.rawValue {
-                print("The user has not signed in before or they have since signed out.")
-            } else {
-                print("\(error.localizedDescription)")
-            }
-            
-            return
-        }else {
-            self.SocialLogin(token: user.authentication.accessToken, provider: "google")
-        }
-    }
-    
 
      // MARK: - ForgetPasswordBtn
     @IBAction func ForgetPassBtn_pressed(_ sender: Any) {
@@ -147,8 +138,8 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
     }
     
     func facebooklogin() {
-        let fbLoginManager : LoginManager = LoginManager()
-        fbLoginManager.logIn(permissions: ["email"], from: self, handler: { (result, error) -> Void in
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["email"], from: self, handler: { (result, error) -> Void in
         
             if (error == nil) {
                 if(result?.isCancelled ?? false) {
@@ -163,18 +154,18 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
     }
     
     func returnUserData() {
-        let graphRequest : GraphRequest = GraphRequest(graphPath: "me", parameters: ["fields":"email,name"])
-        graphRequest.start(completionHandler: { (connection, result, error) -> Void in
-            if ((error) != nil) {
-                // Process error
+        let graphRequest = GraphRequest(graphPath: "me", parameters: ["fields":"email,name"])
+
+        graphRequest.start() { (connection, result, error) in
+            if let error = error {
                 print("\n\n Error: \(error)")
             } else {
                 let resultDic = result as! NSDictionary
-                print("\n\n  fetched user: \(result)")
+                print("\n\n  fetched user: \(String(describing: result))")
                 if (resultDic.value(forKey:"name") != nil) {
                     let userName = resultDic.value(forKey:"name")! as! String as NSString?
-                    print("\n User Name is: \(userName)")
-                    if let accessToken = AccessToken.current {
+                    print("\n User Name is: \(String(describing: userName))")
+                    if let accessToken = AccessToken.current, !accessToken.isExpired {
                         // User is logged in, use 'accessToken' here.
                         print(accessToken.tokenString)
                         self.FB_accessToken = accessToken.tokenString
@@ -184,10 +175,10 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
                 
                 if (resultDic.value(forKey:"email") != nil) {
                     let userEmail = resultDic.value(forKey:"email")! as! String as NSString?
-                    print("\n User Email is: \(userEmail)")
+                    print("\n User Email is: \(String(describing: userEmail))")
                 }
             }
-        })
+        }
     }
     
     
@@ -219,7 +210,7 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
                 if User.shared.fetchUser(){
                     
                     let passwordData = Data(from:self.pass)
-                    KeyChain.save(key: "passKey", data: passwordData)
+                    _ = KeyChain.save(key: "passKey", data: passwordData)
                     FirstAdds.marketPlace = User.shared.data?.user?.marketplace ?? "0"
                     
                     UserDefaults.standard.set(self.userName, forKey: "userNameKey")
@@ -231,14 +222,14 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
                         let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
                         User.shared.SaveToken(data: User.shared.data?.token! ?? "")
                         User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
-                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        keyWindow?.rootViewController = vc
                     }else {
                         self.dismiss(animated: true, completion: nil)
                     }
                 }
             }    else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -316,12 +307,12 @@ class LoginVC: UIViewController, ASAuthorizationControllerDelegate , GIDSignInDe
                         self.present(vc, animated: true, completion: nil)
                     }else {
                         let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        keyWindow?.rootViewController = vc
                     }
                 }
             }    else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
             }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }

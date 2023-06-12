@@ -22,16 +22,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //        switch shortcutItem.type {
 //        case "com.Vrou.Offers":
 //            let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "OffersNavController") as! OffersNavController
-//            UIApplication.shared.keyWindow?.rootViewController = vc
+//            keyWindow?.rootViewController = vc
 //        case "com.Vrou.Places":
 //            let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "CenterNavController") as! CenterNavController
-//            UIApplication.shared.keyWindow?.rootViewController = vc
+//            keyWindow?.rootViewController = vc
 //        case "com.Vrou.Services":
 //            let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ServicesNavController") as! ServicesNavController
-//            UIApplication.shared.keyWindow?.rootViewController = vc
+//            keyWindow?.rootViewController = vc
 //        case "com.Vrou.Marketplace":
 //            let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ShopNavController") as! ShopNavController
-//            UIApplication.shared.keyWindow?.rootViewController = vc
+//            keyWindow?.rootViewController = vc
 //
 //        default:
 //            break

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -289,6 +289,10 @@
 		69E581B5234C9B2D008D7DC1 /* ReviewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E581B4234C9B2D008D7DC1 /* ReviewsVC.swift */; };
 		69E6C884234E388500E92DB7 /* QR_codeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69E6C883234E388500E92DB7 /* QR_codeVC.swift */; };
 		A48BCF05A0776D33C891968C /* Pods_Vrou.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D553B47596C01013CE5BED21 /* Pods_Vrou.framework */; };
+		DD1337E12A375023002C5655 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD1337E02A375023002C5655 /* Constants.swift */; };
+		DD3A95B52A375A5500C584E8 /* FacebookBasics in Frameworks */ = {isa = PBXBuildFile; productRef = DD3A95B42A375A5500C584E8 /* FacebookBasics */; };
+		DD3A95B72A375A5500C584E8 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = DD3A95B62A375A5500C584E8 /* FacebookCore */; };
+		DD3A95B92A375A5500C584E8 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = DD3A95B82A375A5500C584E8 /* FacebookLogin */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -605,6 +609,7 @@
 		69E6C883234E388500E92DB7 /* QR_codeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QR_codeVC.swift; sourceTree = "<group>"; };
 		9439E28FA14B780BBA0AC1B8 /* Pods-Vrou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vrou.release.xcconfig"; path = "Target Support Files/Pods-Vrou/Pods-Vrou.release.xcconfig"; sourceTree = "<group>"; };
 		D553B47596C01013CE5BED21 /* Pods_Vrou.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vrou.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD1337E02A375023002C5655 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -612,8 +617,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD3A95B92A375A5500C584E8 /* FacebookLogin in Frameworks */,
+				DD3A95B52A375A5500C584E8 /* FacebookBasics in Frameworks */,
 				04B3B4812371B6A300820D55 /* LocalAuthentication.framework in Frameworks */,
 				A48BCF05A0776D33C891968C /* Pods_Vrou.framework in Frameworks */,
+				DD3A95B72A375A5500C584E8 /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -760,6 +768,7 @@
 				523A1F1023200BCF002BF911 /* Extensions */,
 				523A1F0B232006F6002BF911 /* ViewControllers */,
 				523A1EF923200383002BF911 /* AppDelegate.swift */,
+				DD1337E02A375023002C5655 /* Constants.swift */,
 				523A1EFB23200383002BF911 /* ViewController.swift */,
 				523A1F0023200385002BF911 /* Assets.xcassets */,
 				04B3B4862371D28500820D55 /* GoogleService-Info.plist */,
@@ -1294,16 +1303,21 @@
 				523A1EF223200383002BF911 /* Sources */,
 				523A1EF323200383002BF911 /* Frameworks */,
 				523A1EF423200383002BF911 /* Resources */,
-				04A2B92F238C0ACF0012671C /* ShellScript */,
 				043EE5E923B8B16B00455A78 /* Embed App Extensions */,
 				C5B9958D4D28D05966F99130 /* [CP] Embed Pods Frameworks */,
 				A9CBBE39AA35E27AD84D2D1C /* [CP] Copy Pods Resources */,
+				04A2B92F238C0ACF0012671C /* Crashalytics */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Vrou;
+			packageProductDependencies = (
+				DD3A95B42A375A5500C584E8 /* FacebookBasics */,
+				DD3A95B62A375A5500C584E8 /* FacebookCore */,
+				DD3A95B82A375A5500C584E8 /* FacebookLogin */,
+			);
 			productName = BeautySalon;
 			productReference = 523A1EF623200383002BF911 /* Vrou.app */;
 			productType = "com.apple.product-type.application";
@@ -1333,6 +1347,9 @@
 				ar,
 			);
 			mainGroup = 523A1EED23200383002BF911;
+			packageReferences = (
+				DD3A95B32A375A5500C584E8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 523A1EF723200383002BF911 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1378,22 +1395,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04A2B92F238C0ACF0012671C /* ShellScript */ = {
+		04A2B92F238C0ACF0012671C /* Crashalytics */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
 			);
+			name = Crashalytics;
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/Fabric/run\"\n";
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
 		};
 		A9CBBE39AA35E27AD84D2D1C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1497,6 +1517,7 @@
 				52CC2E71234258200068D700 /* OfferDetails.swift in Sources */,
 				526BFE642344C63B00346A0A /* FullImageVC.swift in Sources */,
 				5288884823295F30005D0F95 /* SubCategoryCollCell.swift in Sources */,
+				DD1337E12A375023002C5655 /* Constants.swift in Sources */,
 				690B1953234551B60047B5AD /* ProductCategories.swift in Sources */,
 				5270FFD72333EB4C0017E7A3 /* Error.swift in Sources */,
 				040791E8238AD74900630EC0 /* FullImageCollCell.swift in Sources */,
@@ -1842,7 +1863,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1898,7 +1919,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -1925,7 +1946,7 @@
 					"$(PROJECT_DIR)/Bitcode_Yes",
 				);
 				INFOPLIST_FILE = Vrou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1955,7 +1976,7 @@
 					"$(PROJECT_DIR)/Bitcode_Yes",
 				);
 				INFOPLIST_FILE = Vrou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1991,6 +2012,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD3A95B32A375A5500C584E8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD3A95B42A375A5500C584E8 /* FacebookBasics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3A95B32A375A5500C584E8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookBasics;
+		};
+		DD3A95B62A375A5500C584E8 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3A95B32A375A5500C584E8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		DD3A95B82A375A5500C584E8 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD3A95B32A375A5500C584E8 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 523A1EEE23200383002BF911 /* Project object */;
 }

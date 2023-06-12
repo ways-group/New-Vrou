@@ -53,7 +53,7 @@ class ForYouVC: UIViewController , UIScrollViewDelegate{
     // MARK: - StartBtn
     @IBAction func StartBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
         
     }
     
@@ -61,7 +61,7 @@ class ForYouVC: UIViewController , UIScrollViewDelegate{
     // MARK: - X_btn
     @IBAction func X_btn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
    
@@ -127,7 +127,7 @@ extension ForYouVC {
                     
                 }else if tmp == "401" {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                    UIApplication.shared.keyWindow?.rootViewController = vc
+                    keyWindow?.rootViewController = vc
                 }else if tmp == "NoConnect" {
                     guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
                     vc.callbackClosure = { [weak self] in

@@ -161,7 +161,7 @@ class ShopViewController: UIViewController ,MXParallaxHeaderDelegate,  UIScrollV
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "ProductsSearchNavController") as! ProductsSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
 }
@@ -230,7 +230,7 @@ extension ShopViewController {
                         
                     }else if tmp == "401" {
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        keyWindow?.rootViewController = vc
                         
                     }
                     
@@ -283,7 +283,7 @@ extension ShopViewController {
                              
                          }else if tmp == "401" {
                              let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                             UIApplication.shared.keyWindow?.rootViewController = vc
+                             keyWindow?.rootViewController = vc
                              
                          }
                          
@@ -342,7 +342,7 @@ extension ShopViewController {
             
         }else if tmp == "401" {
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
             
         }
         

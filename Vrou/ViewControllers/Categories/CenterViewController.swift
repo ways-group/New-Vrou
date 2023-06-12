@@ -182,7 +182,7 @@ class CenterViewController: UIViewController , MXParallaxHeaderDelegate,  UIScro
     
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
-        UIApplication.shared.keyWindow?.rootViewController = vc
+        keyWindow?.rootViewController = vc
     }
     
     
@@ -304,7 +304,7 @@ extension CenterViewController {
                      
                  }else if tmp == "401" {
                      let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                     UIApplication.shared.keyWindow?.rootViewController = vc
+                     keyWindow?.rootViewController = vc
                      
                  }
                  
@@ -518,7 +518,7 @@ extension CenterViewController: UISearchBarDelegate {
         func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
            // self.CentersCollection.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "ServicesVC") as! ServicesVC
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
         }
     
 }

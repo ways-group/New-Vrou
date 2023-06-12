@@ -23,25 +23,30 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb829008037530933</string>
-				<string>com.googleusercontent.apps.848990114158-hkk4tiigq6kfjsupqkf3dhvmn2kffepb</string>
+				<string>1415196218649784</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
-			<array/>
+			<array>
+				<string>com.googleusercontent.apps.188497319542-ig3frfsm12j8g47vcfemnmsp5veh7ifg</string>
+			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>FacebookAppID</key>
-	<string>829008037530933</string>
+	<string>1415196218649784</string>
 	<key>FacebookDisplayName</key>
-	<string>vrou</string>
+	<string>Vrou</string>
+    <key>FacebookClientToken</key>
+    <string>b1dc0a83f328daa4a80d19cf7260c87a</string>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<string>YES</string>
+	<key>GIDClientID</key>
+	<string>188497319542-ig3frfsm12j8g47vcfemnmsp5veh7ifg.apps.googleusercontent.com</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>fbapi</string>

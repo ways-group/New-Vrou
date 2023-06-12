@@ -390,7 +390,7 @@ extension SalonOfferVC {
                 
                }else if tmp == "401" {
                 let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                UIApplication.shared.keyWindow?.rootViewController = vc
+                keyWindow?.rootViewController = vc
                 
                }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -427,7 +427,7 @@ extension SalonOfferVC {
                        
                    }else if tmp == "401" {
                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                       UIApplication.shared.keyWindow?.rootViewController = vc
+                       keyWindow?.rootViewController = vc
                        
                    }else if tmp == "NoConnect" {
                        guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
@@ -459,7 +459,7 @@ extension SalonOfferVC {
      
                              }else if tmp == "401" {
                                  let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                 UIApplication.shared.keyWindow?.rootViewController = vc
+                                 keyWindow?.rootViewController = vc
      
                              }
      
@@ -527,7 +527,7 @@ extension SalonOfferVC {
                             
                          }else if tmp == "401" {
                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                            UIApplication.shared.keyWindow?.rootViewController = vc
+                            keyWindow?.rootViewController = vc
                             
                     }
                     
@@ -549,7 +549,7 @@ extension SalonOfferVC {
                         
                     }else if tmp == "401" {
                         let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                        UIApplication.shared.keyWindow?.rootViewController = vc
+                        keyWindow?.rootViewController = vc
                         
                     }
                     
@@ -572,7 +572,7 @@ extension SalonOfferVC {
                             
                            }else if tmp == "401" {
                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                            UIApplication.shared.keyWindow?.rootViewController = vc
+                            keyWindow?.rootViewController = vc
                                
                            }
                            
@@ -599,7 +599,7 @@ extension SalonOfferVC {
         
         alert.addAction(UIAlertAction(title: msg_2, style: .default, handler: { (_) in
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ReservationNavController") as! ReservationNavController
-            UIApplication.shared.keyWindow?.rootViewController = vc
+            keyWindow?.rootViewController = vc
         }))
         
         self.present(alert, animated: false, completion: nil)
@@ -626,7 +626,7 @@ extension SalonOfferVC {
                  
              }else if tmp == "401" {
                  let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                 UIApplication.shared.keyWindow?.rootViewController = vc
+                 keyWindow?.rootViewController = vc
                  
              }
              
@@ -644,7 +644,7 @@ extension SalonOfferVC {
                                             self.GetOfferDetails()
                                         }else if tmp == "401" {
                                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                                            UIApplication.shared.keyWindow?.rootViewController = vc
+                                            keyWindow?.rootViewController = vc
                                             
                 }
                                         
