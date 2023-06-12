@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>INEnums</key>
+	<array/>
+	<key>INIntentDefinitionModelVersion</key>
+	<string>1.1</string>
+	<key>INIntentDefinitionNamespace</key>
+	<string>Cyaz7J</string>
+	<key>INIntentDefinitionSystemVersion</key>
+	<string>19C57</string>
+	<key>INIntentDefinitionToolsBuildVersion</key>
+	<string>11C29</string>
+	<key>INIntentDefinitionToolsVersion</key>
+	<string>11.3</string>
+	<key>INIntents</key>
+	<array/>
+	<key>INTypes</key>
+	<array/>
+</dict>
+</plist>

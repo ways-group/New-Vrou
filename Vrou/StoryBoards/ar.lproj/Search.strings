@@ -1,0 +1,199 @@
+
+/* Class = "UILabel"; text = "Nearby"; ObjectID = "0qt-Vk-UQy"; */
+"0qt-Vk-UQy.text" = "الأقرب لك";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "16c-lH-AoB"; */
+"16c-lH-AoB.text" = "حسابي";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "33O-YS-2vI"; */
+"33O-YS-2vI.placeholder" = "ابحث عن مراكز تجميل ، صالونات ، سبا";
+/* Class = "UILabel"; text = "Home"; ObjectID = "4kA-03-vcz"; */
+"4kA-03-vcz.text" = "الرئيسية";
+
+/* Class = "UIButton"; normalTitle = "Offers"; ObjectID = "6b7-Ye-Cf3"; */
+"6b7-Ye-Cf3.normalTitle" = "عروض";
+
+/* Class = "UILabel"; text = "Marketplace"; ObjectID = "9Mv-9d-VKP"; */
+"9Mv-9d-VKP.text" = "تسوق";
+
+/* Class = "UIButton"; normalTitle = "Products"; ObjectID = "9gB-u7-Kau"; */
+"9gB-u7-Kau.normalTitle" = "منتجات";
+
+/* Class = "UIButton"; normalTitle = "Services"; ObjectID = "AgM-4o-wzZ"; */
+"AgM-4o-wzZ.normalTitle" = "خدمات";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "D1d-pM-LvE"; */
+"D1d-pM-LvE.text" = "2";
+
+/* Class = "UINavigationItem"; title = "Offers Search"; ObjectID = "D59-4z-NIy"; */
+"D59-4z-NIy.title" = "بحث في العروض";
+
+/* Class = "UINavigationItem"; title = "Services Search"; ObjectID = "DaC-DJ-cZN"; */
+"DaC-DJ-cZN.title" = "بحث في الخدمات";
+
+/* Class = "UILabel"; text = "L’Oreal Paris Infallible 24H Face Foundation - 0.31 oz., 245 Warm Sand"; ObjectID = "E8u-8o-d7q"; */
+"E8u-8o-d7q.text" = "L’Oreal Paris Infallible 24H Face Foundation - 0.31 oz., 245 Warm Sand";
+
+/* Class = "UIButton"; normalTitle = "Products"; ObjectID = "EiK-20-EJo"; */
+"EiK-20-EJo.normalTitle" = "منتجات";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "FJw-j1-vlz"; */
+"FJw-j1-vlz.text" = "9";
+
+/* Class = "UILabel"; text = "Watch"; ObjectID = "GWQ-zA-KfN"; */
+"GWQ-zA-KfN.text" = "شاهد";
+
+/* Class = "UILabel"; text = "Farah Chic Salon"; ObjectID = "HDL-cm-0ry"; */
+"HDL-cm-0ry.text" = "Farah Chic Salon";
+
+/* Class = "UILabel"; text = "250,00 LE"; ObjectID = "JNy-IB-RYi"; */
+"JNy-IB-RYi.text" = "250,00 LE";
+
+/* Class = "UINavigationItem"; title = "Centers Search"; ObjectID = "JgK-6a-0He"; */
+"JgK-6a-0He.title" = "بحث في الاماكن";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Kv7-J5-Mqo"; */
+"Kv7-J5-Mqo.text" = "9";
+
+/* Class = "UIButton"; normalTitle = "Centers"; ObjectID = "L6Q-uP-fRx"; */
+"L6Q-uP-fRx.normalTitle" = "أماكن";
+
+/* Class = "UIButton"; normalTitle = "Centers"; ObjectID = "L7G-fa-7nR"; */
+"L7G-fa-7nR.normalTitle" = "أماكن";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "M8z-o3-7hA"; */
+"M8z-o3-7hA.placeholder" = "ابحث عن مراكز تجميل ، صالونات ، سبا";
+
+/* Class = "UILabel"; text = "Places"; ObjectID = "Nla-pp-1El"; */
+"Nla-pp-1El.text" = "أماكن";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "P5P-kQ-CPw"; */
+"P5P-kQ-CPw.text" = "2";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "P9Q-GN-r3K"; */
+"P9Q-GN-r3K.text" = "2";
+
+/* Class = "UIButton"; normalTitle = "Services"; ObjectID = "PRO-ps-g7m"; */
+"PRO-ps-g7m.normalTitle" = "خدمات";
+
+/* Class = "UILabel"; text = "Help & Support"; ObjectID = "Raj-xl-MQt"; */
+"Raj-xl-MQt.text" = "المساعدة و الدعم";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "SCf-pO-1IE"; */
+"SCf-pO-1IE.text" = "2";
+
+/* Class = "UIButton"; normalTitle = "Offers"; ObjectID = "Tgq-Cq-Zhd"; */
+"Tgq-Cq-Zhd.normalTitle" = "عروض";
+
+/* Class = "UIButton"; normalTitle = "Offers"; ObjectID = "Usa-bG-3p3"; */
+"Usa-bG-3p3.normalTitle" = "عروض";
+
+/* Class = "UILabel"; text = "Open"; ObjectID = "Vf2-ZT-n9H"; */
+"Vf2-ZT-n9H.text" = "مفتوح";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "XrR-Db-Rxx"; */
+"XrR-Db-Rxx.normalTitle" = "تسجيل الخروج";
+
+/* Class = "UILabel"; text = "Full makeup"; ObjectID = "Yo2-KP-5cG"; */
+"Yo2-KP-5cG.text" = "Full makeup";
+
+/* Class = "UIButton"; normalTitle = "Products"; ObjectID = "ZJ5-yY-fYx"; */
+"ZJ5-yY-fYx.normalTitle" = "منتجات";
+
+/* Class = "UILabel"; text = "93.00 LE"; ObjectID = "aPg-1H-hB8"; */
+"aPg-1H-hB8.text" = "93.00 LE";
+
+/* Class = "UIButton"; normalTitle = "Offers"; ObjectID = "ar6-wv-Ijd"; */
+"ar6-wv-Ijd.normalTitle" = "عروض";
+
+/* Class = "UIButton"; normalTitle = "Centers"; ObjectID = "b2w-Dl-DhK"; */
+"b2w-Dl-DhK.normalTitle" = "أماكن";
+
+/* Class = "UILabel"; text = "About Vrou"; ObjectID = "bL9-Lb-IJd"; */
+"bL9-Lb-IJd.text" = "عن ڤرو";
+
+/* Class = "UILabel"; text = "Face Powder"; ObjectID = "cDg-rT-ceq"; */
+"cDg-rT-ceq.text" = "Face Powder";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "ccl-Nf-JuZ"; */
+"ccl-Nf-JuZ.text" = "2";
+
+/* Class = "UILabel"; text = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free"; ObjectID = "e3O-sE-8vh"; */
+"e3O-sE-8vh.text" = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "eLj-7c-ZSZ"; */
+"eLj-7c-ZSZ.placeholder" = "ابحث عن مراكز تجميل ، صالونات ، سبا";
+
+/* Class = "UIButton"; normalTitle = "Products"; ObjectID = "eZA-EM-NLA"; */
+"eZA-EM-NLA.normalTitle" = "منتجات";
+
+/* Class = "UILabel"; text = "16 % discount"; ObjectID = "f1A-Wh-C6W"; */
+"f1A-Wh-C6W.text" = "16 % discount";
+
+/* Class = "UILabel"; text = "abu halifa"; ObjectID = "fWI-Zy-cKS"; */
+"fWI-Zy-cKS.text" = "abu halifa";
+
+/* Class = "UILabel"; text = "120 minutes"; ObjectID = "gEq-b3-Mi2"; */
+"gEq-b3-Mi2.text" = "120 minutes";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "hQ5-cg-TBY"; */
+"hQ5-cg-TBY.text" = "2";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "hwk-TS-oAe"; */
+"hwk-TS-oAe.text" = "5";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "j0J-7p-kD4"; */
+"j0J-7p-kD4.text" = "Label";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "jti-f1-p7S"; */
+"jti-f1-p7S.text" = "الإعدادات";
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "ktd-YU-nyZ"; */
+"ktd-YU-nyZ.text" = "زائر";
+
+/* Class = "UIButton"; normalTitle = "Centers"; ObjectID = "mD5-yf-Fky"; */
+"mD5-yf-Fky.normalTitle" = "أماكن";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "nKV-Pl-tIY"; */
+"nKV-Pl-tIY.text" = "9";
+
+/* Class = "UILabel"; text = "Beauty center"; ObjectID = "nYw-bf-cUS"; */
+"nYw-bf-cUS.text" = "سنتر بيوتي";
+
+/* Class = "UIButton"; normalTitle = "Services"; ObjectID = "opt-si-Erv"; */
+"opt-si-Erv.normalTitle" = "خدمات";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "s6a-n9-iPK"; */
+"s6a-n9-iPK.text" = "Label";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "sxy-DM-2qr"; */
+"sxy-DM-2qr.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "Services"; ObjectID = "tVv-JV-LYR"; */
+"tVv-JV-LYR.normalTitle" = "خدمات";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "uuB-p8-yTM"; */
+"uuB-p8-yTM.text" = "السلة";
+
+/* Class = "UILabel"; text = "* Only in Hawalli branch"; ObjectID = "vEf-2N-Q3c"; */
+"vEf-2N-Q3c.text" = "* Only in Hawalli branch";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "xBc-SG-axc"; */
+"xBc-SG-axc.text" = "2";
+
+/* Class = "UINavigationItem"; title = "Products Search"; ObjectID = "xQB-iD-xqj"; */
+"xQB-iD-xqj.title" = "بحث في المنتجات";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "yif-gB-ZZc"; */
+"yif-gB-ZZc.text" = "عروض";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "z3l-uq-oIj"; */
+"z3l-uq-oIj.placeholder" = "ابحث عن مراكز تجميل ، صالونات ، سبا";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "zjm-qM-5u4"; */
+"zjm-qM-5u4.text" = "خدمات";
+
+
+
+"AppRegularFont" = "JosefinSans-Light";
+"AppBoldFont" = "JosefinSans-Light";

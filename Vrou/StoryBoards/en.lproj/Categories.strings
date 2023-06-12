@@ -1,0 +1,357 @@
+
+/* Class = "UILabel"; text = "Beauty Sections"; ObjectID = "0mj-FN-HMs"; */
+"0mj-FN-HMs.text" = "Beauty Sections";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0qv-3h-MT8"; */
+"0qv-3h-MT8.text" = "Label";
+
+/* Class = "UILabel"; text = "Popular Center"; ObjectID = "0st-nk-XAt"; */
+"0st-nk-XAt.text" = "Popular Center";
+
+/* Class = "UILabel"; text = "No Services!"; ObjectID = "0tO-zB-fk9"; */
+"0tO-zB-fk9.text" = "No Services!";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "1Ez-RH-edF"; */
+"1Ez-RH-edF.text" = "VROU Sections";
+
+/* Class = "UILabel"; text = "Add to Cart"; ObjectID = "204-II-HFy"; */
+"204-II-HFy.text" = "Add to Cart";
+
+/* Class = "UILabel"; text = "Hair cut"; ObjectID = "2J3-wn-6BP"; */
+"2J3-wn-6BP.text" = "Hair cut";
+
+/* Class = "UINavigationItem"; title = "Center"; ObjectID = "2h9-kN-xJf"; */
+"2h9-kN-xJf.title" = "Center";
+
+/* Class = "UILabel"; text = "16 % discount"; ObjectID = "3cD-Yo-X98"; */
+"3cD-Yo-X98.text" = "16 % discount";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "501-21-XjW"; */
+"501-21-XjW.text" = "Offers";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "5b1-Em-zbK"; */
+"5b1-Em-zbK.normalTitle" = "Sign Out";
+
+/* Class = "UINavigationItem"; title = "Shop"; ObjectID = "7Hr-YI-fe7"; */
+"7Hr-YI-fe7.title" = "Shop";
+
+/* Class = "UILabel"; text = "No Centers"; ObjectID = "7un-M9-Akh"; */
+"7un-M9-Akh.text" = "No Centers";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "81W-g6-W3d"; */
+"81W-g6-W3d.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "9Bd-yT-01P"; */
+"9Bd-yT-01P.text" = "Label";
+
+/* Class = "UILabel"; text = "Offer Collection"; ObjectID = "9L5-lU-Kat"; */
+"9L5-lU-Kat.text" = "Offer Collection";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "9Ot-MJ-ThN"; */
+"9Ot-MJ-ThN.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "Watch"; ObjectID = "9VR-2j-Fcd"; */
+"9VR-2j-Fcd.text" = "Watch";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "9my-cf-FbA"; */
+"9my-cf-FbA.text" = "Home";
+
+/* Class = "UILabel"; text = "Nearby"; ObjectID = "9nF-yy-mDh"; */
+"9nF-yy-mDh.text" = "Nearby";
+
+/* Class = "UILabel"; text = "No offers!"; ObjectID = "As0-nn-Eru"; */
+"As0-nn-Eru.text" = "No offers!";
+
+/* Class = "UILabel"; text = "Miss Salon"; ObjectID = "B0e-pC-6HK"; */
+"B0e-pC-6HK.text" = "Miss Salon";
+
+/* Class = "UILabel"; text = "Open"; ObjectID = "BB0-W6-XKh"; */
+"BB0-W6-XKh.text" = "Open";
+
+/* Class = "UILabel"; text = "Full makeup"; ObjectID = "CDd-0i-Kym"; */
+"CDd-0i-Kym.text" = "Full makeup";
+
+/* Class = "UILabel"; text = "Beauty Sections"; ObjectID = "CWg-qq-L7f"; */
+"CWg-qq-L7f.text" = "Beauty Sections";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "CwE-RA-AMo"; */
+"CwE-RA-AMo.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "Make-up"; ObjectID = "DBZ-yp-u86"; */
+"DBZ-yp-u86.text" = "Make-up";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "DEo-jk-rZ1"; */
+"DEo-jk-rZ1.text" = "VROU Sections";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "DUO-hb-hCc"; */
+"DUO-hb-hCc.text" = "Label";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Dlz-lg-cxl"; */
+"Dlz-lg-cxl.text" = "1";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "EWK-ob-OJZ"; */
+"EWK-ob-OJZ.text" = "Label";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "Fh2-ud-DOP"; */
+"Fh2-ud-DOP.text" = "VROU Sections";
+
+/* Class = "UINavigationItem"; title = "Services"; ObjectID = "Fy0-Ak-aqx"; */
+"Fy0-Ak-aqx.title" = "Services";
+
+/* Class = "UINavigationItem"; title = "Places"; ObjectID = "G1l-uy-EM3"; */
+"G1l-uy-EM3.title" = "Places";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "GKu-pY-bhi"; */
+"GKu-pY-bhi.text" = "VROU Sections";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "HPr-0Z-YS2"; */
+"HPr-0Z-YS2.text" = "Label";
+
+/* Class = "UILabel"; text = "Special Offer"; ObjectID = "Hqy-TH-iHa"; */
+"Hqy-TH-iHa.text" = "Special Offer";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "IEp-0G-qa6"; */
+"IEp-0G-qa6.text" = "5";
+
+/* Class = "UIButton"; normalTitle = "Ratings"; ObjectID = "IFA-Rw-JqD"; */
+"IFA-Rw-JqD.normalTitle" = "Ratings";
+
+/* Class = "UILabel"; text = "Miss Salon"; ObjectID = "IK1-6m-6LD"; */
+"IK1-6m-6LD.text" = "Miss Salon";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "IWl-M3-nmX"; */
+"IWl-M3-nmX.text" = "2";
+
+/* Class = "UILabel"; text = "At Salon"; ObjectID = "IeU-ER-OAZ"; */
+"IeU-ER-OAZ.text" = "At Salon";
+
+/* Class = "UILabel"; text = "Beauty Sections"; ObjectID = "Ipq-UJ-0AH"; */
+"Ipq-UJ-0AH.text" = "Beauty Sections";
+
+/* Class = "UILabel"; text = "Offer Collection"; ObjectID = "JrI-49-JD9"; */
+"JrI-49-JD9.text" = "Offer Collection";
+
+/* Class = "UILabel"; text = "Vrou Offers"; ObjectID = "Kjp-9n-Wxq"; */
+"Kjp-9n-Wxq.text" = "Vrou Offers";
+
+/* Class = "UILabel"; text = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free"; ObjectID = "M77-gb-LKN"; */
+"M77-gb-LKN.text" = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free";
+
+/* Class = "UINavigationItem"; title = "Offers"; ObjectID = "MUO-Sw-ckg"; */
+"MUO-Sw-ckg.title" = "Offers";
+
+/* Class = "UILabel"; text = "Latest Offers"; ObjectID = "MZq-PX-nKi"; */
+"MZq-PX-nKi.text" = "Latest Offers";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "Nrg-lY-NCa"; */
+"Nrg-lY-NCa.text" = "Services";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "OaX-Vk-ALs"; */
+"OaX-Vk-ALs.text" = "Label";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Otl-yL-CX8"; */
+"Otl-yL-CX8.text" = "9";
+
+/* Class = "UILabel"; text = "At Home"; ObjectID = "PYq-aj-Qws"; */
+"PYq-aj-Qws.text" = "At Home";
+
+/* Class = "UILabel"; text = "128 Salons"; ObjectID = "QUg-C9-PuR"; */
+"QUg-C9-PuR.text" = "128 Salons";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "QWd-zz-0gk"; */
+"QWd-zz-0gk.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "No products!"; ObjectID = "QbB-bb-7yK"; */
+"QbB-bb-7yK.text" = "No products!";
+
+/* Class = "UILabel"; text = "Beauty Sections"; ObjectID = "T1R-j8-EgU"; */
+"T1R-j8-EgU.text" = "Beauty Sections";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "UI3-lR-NXa"; */
+"UI3-lR-NXa.text" = "5";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "V7F-Ce-iv1"; */
+"V7F-Ce-iv1.text" = "2";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "VAK-CZ-NT1"; */
+"VAK-CZ-NT1.text" = "2";
+
+/* Class = "UILabel"; text = "Help & Support"; ObjectID = "VCc-a1-upl"; */
+"VCc-a1-upl.text" = "Help & Support";
+
+/* Class = "UILabel"; text = "Vrou Offers"; ObjectID = "VUy-q8-S9K"; */
+"VUy-q8-S9K.text" = "Vrou Offers";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "VbW-cJ-G2X"; */
+"VbW-cJ-G2X.text" = "9";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "XPS-k0-WXP"; */
+"XPS-k0-WXP.text" = "Label";
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "Xgf-4y-Vm1"; */
+"Xgf-4y-Vm1.text" = "Guest";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "Xjq-cj-cRW"; */
+"Xjq-cj-cRW.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "About Vrou"; ObjectID = "XnT-jB-qls"; */
+"XnT-jB-qls.text" = "About Vrou";
+
+/* Class = "UILabel"; text = "Vrou Offers"; ObjectID = "YRh-sO-rRs"; */
+"YRh-sO-rRs.text" = "Vrou Offers";
+
+/* Class = "UILabel"; text = "Marketplace"; ObjectID = "Yk2-2e-PCV"; */
+"Yk2-2e-PCV.text" = "Marketplace";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "ZZp-6U-TZQ"; */
+"ZZp-6U-TZQ.text" = "VROU Sections";
+
+/* Class = "UILabel"; text = "Popular Center"; ObjectID = "aB3-GI-vCH"; */
+"aB3-GI-vCH.text" = "Popular Center";
+
+/* Class = "UILabel"; text = "Makeup"; ObjectID = "b6w-5T-Nhb"; */
+"b6w-5T-Nhb.text" = "Makeup";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bHh-va-arS"; */
+"bHh-va-arS.text" = "Label";
+
+/* Class = "UILabel"; text = "Beauty center"; ObjectID = "bnc-zC-Iry"; */
+"bnc-zC-Iry.text" = "Beauty center";
+
+/* Class = "UILabel"; text = "Face Powder"; ObjectID = "cEF-Sc-kN5"; */
+"cEF-Sc-kN5.text" = "Face Powder";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "dQA-8x-LZA"; */
+"dQA-8x-LZA.text" = "Settings";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dex-zk-R5J"; */
+"dex-zk-R5J.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Product Info"; ObjectID = "ef7-a4-zYg"; */
+"ef7-a4-zYg.normalTitle" = "Product Info";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "fLA-84-EDW"; */
+"fLA-84-EDW.text" = "VROU Sections";
+
+/* Class = "UILabel"; text = "abu halifa"; ObjectID = "fNz-Qi-UqN"; */
+"fNz-Qi-UqN.text" = "abu halifa";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "fak-yr-u3s"; */
+"fak-yr-u3s.text" = "2";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "fjV-fK-RgU"; */
+"fjV-fK-RgU.text" = "My Account";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "gT4-Zs-3lp"; */
+"gT4-Zs-3lp.text" = "Label";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "gzl-bA-tJi"; */
+"gzl-bA-tJi.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "h9N-KN-HMk"; */
+"h9N-KN-HMk.text" = "9";
+
+/* Class = "UILabel"; text = "Brand"; ObjectID = "iHG-EI-aTH"; */
+"iHG-EI-aTH.text" = "Brand";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jCJ-UD-Dp1"; */
+"jCJ-UD-Dp1.text" = "Label";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "lQp-Dl-ZB9"; */
+"lQp-Dl-ZB9.text" = "Cart";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "lSX-Bb-3bb"; */
+"lSX-Bb-3bb.text" = "2";
+
+/* Class = "UINavigationItem"; title = "Nearby"; ObjectID = "lVu-V2-HuD"; */
+"lVu-V2-HuD.title" = "Nearby";
+
+/* Class = "UINavigationItem"; title = "Marketplace"; ObjectID = "lWS-AW-Dcj"; */
+"lWS-AW-Dcj.title" = "Marketplace";
+
+/* Class = "UILabel"; text = "abu halifa"; ObjectID = "lZm-4l-ita"; */
+"lZm-4l-ita.text" = "abu halifa";
+
+/* Class = "UILabel"; text = "250,00 LE"; ObjectID = "lem-5g-fW7"; */
+"lem-5g-fW7.text" = "250,00 LE";
+
+/* Class = "UILabel"; text = "No Services!"; ObjectID = "mJg-lV-Z5G"; */
+"mJg-lV-Z5G.text" = "No Services!";
+
+/* Class = "UILabel"; text = "Beauty center"; ObjectID = "mKn-Tm-0fW"; */
+"mKn-Tm-0fW.text" = "Beauty center";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mLA-Yt-ftK"; */
+"mLA-Yt-ftK.text" = "Label";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "mQG-9A-CRX"; */
+"mQG-9A-CRX.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "Beauty Sections"; ObjectID = "mYx-BT-P4m"; */
+"mYx-BT-P4m.text" = "Beauty Sections";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "meo-vl-9VA"; */
+"meo-vl-9VA.text" = "Label";
+
+/* Class = "UILabel"; text = "Places"; ObjectID = "mlY-y5-nr7"; */
+"mlY-y5-nr7.text" = "Places";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "muK-cJ-alX"; */
+"muK-cJ-alX.text" = "VROU Sections";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "nRz-8A-JyX"; */
+"nRz-8A-JyX.text" = "2";
+
+/* Class = "UILabel"; text = "Farah Chic Salon"; ObjectID = "oQ9-2y-Ylp"; */
+"oQ9-2y-Ylp.text" = "Farah Chic Salon";
+
+/* Class = "UILabel"; text = "Hair"; ObjectID = "owb-j9-fNR"; */
+"owb-j9-fNR.text" = "Hair";
+
+/* Class = "UILabel"; text = "120 minutes"; ObjectID = "pJ0-bh-gPN"; */
+"pJ0-bh-gPN.text" = "120 minutes";
+
+/* Class = "UILabel"; text = "L’Oreal Paris Infallible 24H Face Foundation - 0.31 oz., 245 Warm Sand"; ObjectID = "qLt-o9-7y1"; */
+"qLt-o9-7y1.text" = "L’Oreal Paris Infallible 24H Face Foundation - 0.31 oz., 245 Warm Sand";
+
+/* Class = "UILabel"; text = "Open"; ObjectID = "qUi-zm-xse"; */
+"qUi-zm-xse.text" = "Open";
+
+/* Class = "UILabel"; text = "Farah Chic Salon"; ObjectID = "rnd-2I-z31"; */
+"rnd-2I-z31.text" = "Farah Chic Salon";
+
+/* Class = "UIButton"; normalTitle = "Informations"; ObjectID = "s0P-Wr-HS9"; */
+"s0P-Wr-HS9.normalTitle" = "Informations";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "szS-8C-n4S"; */
+"szS-8C-n4S.text" = "2";
+
+/* Class = "UILabel"; text = "93.00 LE"; ObjectID = "szq-Vd-qm3"; */
+"szq-Vd-qm3.text" = "93.00 LE";
+
+/* Class = "UILabel"; text = "Make-up"; ObjectID = "tRy-sD-O5R"; */
+"tRy-sD-O5R.text" = "Make-up";
+
+/* Class = "UILabel"; text = "Beauty Sections"; ObjectID = "vlV-hC-x4o"; */
+"vlV-hC-x4o.text" = "Beauty Sections";
+
+/* Class = "UILabel"; text = "* Only in Hawalli branch"; ObjectID = "vv1-6D-Pn2"; */
+"vv1-6D-Pn2.text" = "* Only in Hawalli branch";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "xHE-Sm-dLi"; */
+"xHE-Sm-dLi.text" = "VROU Sections";
+
+/* Class = "UILabel"; text = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free"; ObjectID = "yGx-3d-Vgf"; */
+"yGx-3d-Vgf.text" = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free";
+
+/* Class = "UILabel"; text = "Make-up"; ObjectID = "yuk-yB-Iqy"; */
+"yuk-yB-Iqy.text" = "Make-up";
+
+/* Class = "UILabel"; text = "Latest Offers"; ObjectID = "z9Y-7K-8at"; */
+"z9Y-7K-8at.text" = "Latest Offers";
+
+/* Class = "UINavigationItem"; title = "Offers"; ObjectID = "zlk-Te-Wdj"; */
+"zlk-Te-Wdj.title" = "Offers";
+
+"AppRegularFont" = "JosefinSans-Light";
+"AppBoldFont" = "JosefinSans-Light";

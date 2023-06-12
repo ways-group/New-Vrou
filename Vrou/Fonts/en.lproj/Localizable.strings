@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  Vrou
+
+  Created by Mac on 12/15/19.
+  Copyright © 2019 waysGroup. All rights reserved.
+*/
+
+"AppRegularFont" = "JosefinSans-SemiBold";
+"AppBoldFont" = "JosefinSans-Regular";
+
+
+"AppRegularFont_ar" = "Tajawal-Bold";
+"AppBoldFont_ar" = "Tajawal-Bold";
+
+"BSImagePicker.Done" = "Done";
+
+ 

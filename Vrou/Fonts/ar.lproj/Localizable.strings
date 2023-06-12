@@ -1,0 +1,100 @@
+/*
+  Localizable.strings
+  Vrou
+
+  Created by Mac on 12/15/19.
+  Copyright © 2019 waysGroup. All rights reserved.
+*/
+
+"AppRegularFont" = "JosefinSans-SemiBold";
+"AppBoldFont" = "JosefinSans-Regular";
+
+
+"AppRegularFont_ar" = "Tajawal-Bold";
+"AppBoldFont_ar" = "Tajawal-Bold";
+
+
+"BSImagePicker.Done" = "تم";
+
+// CommentsVC
+"Type a comment" = "اكتب تعليقاً";
+
+// WatchVC
+"Watching" = "مشاهدة";
+ 
+// Collections
+"Done" = "تم";
+"Create new collection" = "انشاء مجموعة جديدة";
+"Collections" = "مجموعات مختاره";
+"Collection" = "مجموعة مختاره";
+"Add the video to your collections" = "اضفِ الفيديو لمجموعاتِك";
+"Save" = "حفظ";
+"Cancel" = "الغاء";
+"Collection Name" = "اسم المجموعة";
+"Add the Offer to your collections" = "اضفِ العرض لمجموعاتِك";
+"New" = "اضافة";
+
+// Salon profile
+"Follow" = "متابعة";
+"Unfollow" = "عدم متابعة";
+"Followers" = "المتابِعون";
+"Main Branch" = "الفرع الرئيسي";
+
+// Offer related
+"Read all" = "قراءة الكل";
+"No Comments" = "لا توجد تعليقات";
+
+// Pin in
+"No Centers" = "لا توجد سنترز";
+
+// Salon
+"Open" = "مفتوح";
+"Close" = "مغلق";
+
+// This week on Vrou
+"This week \n on VROU" = "عروض الاسبوع\n في ڤرو";
+"Swipe up to show" = "اسحب للأعلى للبدء";
+
+// Events
+"New Event" = "مناسبة جديدة";
+"Event Name" = "اسم المناسبة";
+"Event Details" = "تفاصيل المناسبة";
+"Place" = "المكان";
+"Place of Service" = "مكان المناسبة";
+"Time" = "الوقت";
+"Select Service" = "اختاري الخدمة";
+"Publish" = "ارسال";
+"Please fill all fields" = "برجاء ادخال البيانات المطلوبة";
+"Choose place of Event" = "اختار مكان المناسبة";
+"Please choose city" = "برجاء اختيار المدينة";
+"OK" = "حسناً";
+
+"I need " = "";
+"Offers" = "عروض";
+">" = "<";
+"Notifications" = "الاشعارات";
+"Messages" = "الرسائل";
+"Requests" = "طلبات الصداقة";
+
+
+// UsersList
+
+"Users" = "المستخدمات";
+"Guest users" = "الزائرات";
+
+// Friend Requests
+
+"Accept" = "قبول";
+"Reject" = "رفض";
+
+"WALLET" = "المحفظة";
+
+// HOME
+
+"VROU World" = "عالم ڤرو";
+"Discover" = "اكتشف";
+"Your World" = "عالمك";
+
+"Popular Centers" = "اشهر الصالونات";
+"Sponsored Ads" = "اعلانات ممولة";
+

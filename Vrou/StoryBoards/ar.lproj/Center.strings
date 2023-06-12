@@ -1,0 +1,322 @@
+
+/* Class = "UILabel"; text = "Beauty center"; ObjectID = "01U-nL-H0p"; */
+"01U-nL-H0p.text" = "مراكز تجميل";
+
+/* Class = "UILabel"; text = "Comment Title"; ObjectID = "2rT-9S-wb8"; */
+"2rT-9S-wb8.text" = "Comment Title";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "2uu-v7-mx2"; */
+"2uu-v7-mx2.text" = "عروض";
+
+/* Class = "UIButton"; normalTitle = "Add a rating"; ObjectID = "3L5-D2-MoT"; */
+"3L5-D2-MoT.normalTitle" = "اضف تقييم";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3Lu-V8-zy4"; */
+"3Lu-V8-zy4.text" = "ملصق";
+
+/* Class = "UILabel"; text = "Shop"; ObjectID = "3P3-Z1-bOW"; */
+"3P3-Z1-bOW.text" = "متجر";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "3zy-H3-bNp"; */
+"3zy-H3-bNp.text" = "عن";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "48H-i5-TRK"; */
+"48H-i5-TRK.text" = "عروض";
+
+/* Class = "UILabel"; text = "out of 5"; ObjectID = "4Cf-0L-Rr3"; */
+"4Cf-0L-Rr3.text" = "من ٥";
+
+/* Class = "UILabel"; text = "Tutorial"; ObjectID = "6HP-ML-Ra1"; */
+"6HP-ML-Ra1.text" = "فيديو";
+
+/* Class = "UILabel"; text = "Select Branch"; ObjectID = "7P9-YS-R2P"; */
+"7P9-YS-R2P.text" = "اختر فرع";
+
+/* Class = "UILabel"; text = "Branches"; ObjectID = "7VA-Sj-DBD"; */
+"7VA-Sj-DBD.text" = "اتصل بنا";
+
+/* Class = "UILabel"; text = "Full makeup"; ObjectID = "AjD-lh-wvJ"; */
+"AjD-lh-wvJ.text" = "مكياج كامل";
+
+/* Class = "UIButton"; normalTitle = "Select Branch"; ObjectID = "Cnk-1I-MNq"; */
+"Cnk-1I-MNq.normalTitle" = "اختار فرع";
+
+/* Class = "UILabel"; text = "Features"; ObjectID = "D3C-X4-7Ob"; */
+"D3C-X4-7Ob.text" = "مميزات";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "DR1-Cc-jLP"; */
+"DR1-Cc-jLP.normalTitle" = "مشاركة";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "DbF-D5-FCL"; */
+"DbF-D5-FCL.text" = "خدمات";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "DzA-QA-2Da"; */
+"DzA-QA-2Da.text" = "عن";
+
+/* Class = "UIButton"; normalTitle = "Follow"; ObjectID = "FcN-za-RfE"; */
+"FcN-za-RfE.normalTitle" = "تابع";
+
+/* Class = "UILabel"; text = "Write a review"; ObjectID = "GRu-wJ-0EB"; */
+"GRu-wJ-0EB.text" = "اكتب تقييم";
+
+/* Class = "UILabel"; text = "Branches"; ObjectID = "GTM-Wx-Afu"; */
+"GTM-Wx-Afu.text" = "اتصل بنا";
+
+/* Class = "UILabel"; text = "Add to Cart"; ObjectID = "GdM-ST-s3R"; */
+"GdM-ST-s3R.text" = "اضف للسلة";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "HBQ-hk-D5L"; */
+"HBQ-hk-D5L.text" = "خدمات";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "HFY-da-5xp"; */
+"HFY-da-5xp.text" = "عروض";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IpC-wT-baL"; */
+"IpC-wT-baL.text" = "ملصق";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "J7S-GI-09I"; */
+"J7S-GI-09I.text" = "عروض";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "JAw-h8-n8K"; */
+"JAw-h8-n8K.text" = "1";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "JDa-fL-equ"; */
+"JDa-fL-equ.text" = "منتجات";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "JGg-P1-Zw0"; */
+"JGg-P1-Zw0.text" = "خدمات";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Jjr-Us-fBC"; */
+"Jjr-Us-fBC.text" = "9";
+
+/* Class = "UILabel"; text = "Tab a star to rate"; ObjectID = "Jrk-Lr-4xn"; */
+"Jrk-Lr-4xn.text" = "اختار مستوي للتقييم";
+
+/* Class = "UILabel"; text = "About Vrou"; ObjectID = "K89-cC-fb5"; */
+"K89-cC-fb5.text" = "عن ڤرو";
+
+/* Class = "UILabel"; text = "120 mins"; ObjectID = "Ker-1S-lZE"; */
+"Ker-1S-lZE.text" = "120 دقيقة";
+
+/* Class = "UILabel"; text = "Branches"; ObjectID = "L2N-Ti-qrl"; */
+"L2N-Ti-qrl.text" = "اتصل بنا";
+
+/* Class = "UILabel"; text = "No services!"; ObjectID = "LFQ-nY-HlG"; */
+"LFQ-nY-HlG.text" = "لا يوجد خدمات";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "LGn-QA-rSK"; */
+"LGn-QA-rSK.text" = "خدمات";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "Lho-nz-gud"; */
+"Lho-nz-gud.text" = "منتجات";
+
+/* Class = "UILabel"; text = "Tap a star to rate"; ObjectID = "MGO-At-mby"; */
+"MGO-At-mby.text" = "اختار مستوي للتقييم";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "MNe-66-90w"; */
+"MNe-66-90w.text" = "عن ";
+
+/* Class = "UITextField"; placeholder = "   Review"; ObjectID = "NIC-re-oK5"; */
+"NIC-re-oK5.placeholder" = "   تقييم";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "NKp-Me-kFH"; */
+"NKp-Me-kFH.text" = "2";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "Ryw-Ht-yxJ"; */
+"Ryw-Ht-yxJ.text" = "منتجات";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "SlF-jC-94A"; */
+"SlF-jC-94A.text" = "خدمات";
+
+/* Class = "UILabel"; text = "Reservation time"; ObjectID = "TIM-mZ-rVb"; */
+"TIM-mZ-rVb.text" = "وقت الحجز";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "UGc-Hg-K1N"; */
+"UGc-Hg-K1N.text" = "عن";
+
+/* Class = "UILabel"; text = "Choose a specialist"; ObjectID = "URa-Gr-iVf"; */
+"URa-Gr-iVf.text" = "اختار اخصائي";
+
+/* Class = "UILabel"; text = "Main Branch"; ObjectID = "V1w-uy-eFl"; */
+"V1w-uy-eFl.text" = "الفرع الرئيسي";
+
+/* Class = "UILabel"; text = "Free internet"; ObjectID = "V3S-0u-kd0"; */
+"V3S-0u-kd0.text" = "انترنت مجاني";
+
+/* Class = "UITextField"; placeholder = "   Title"; ObjectID = "V96-Wo-rkK"; */
+"V96-Wo-rkK.placeholder" = "   عنوان";
+
+/* Class = "UILabel"; text = "المزيد من العروض"; ObjectID = "VLg-s0-DQB"; */
+"VLg-s0-DQB.text" = "عروض ";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Vyu-Pu-dBa"; */
+"Vyu-Pu-dBa.text" = "9";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "acX-s6-OhV"; */
+"acX-s6-OhV.text" = "5";
+
+/* Class = "UIButton"; normalTitle = "Select Branch"; ObjectID = "bYZ-bw-sid"; */
+"bYZ-bw-sid.normalTitle" = "اختار فرع";
+
+/* Class = "UILabel"; text = "Specialists"; ObjectID = "cE5-3S-E7c"; */
+"cE5-3S-E7c.text" = "اخصائي";
+
+/* Class = "UILabel"; text = "Salon"; ObjectID = "cXd-Mm-KDV"; */
+"cXd-Mm-KDV.text" = "صالون";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "dI8-aa-HHJ"; */
+"dI8-aa-HHJ.text" = "تقييم";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "dXY-dR-H2f"; */
+"dXY-dR-H2f.text" = "عن";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "e5R-qD-83u"; */
+"e5R-qD-83u.text" = "خدمات";
+
+/* Class = "UIButton"; normalTitle = "Write a review >"; ObjectID = "fEU-pL-ASl"; */
+"fEU-pL-ASl.normalTitle" = "اكتب تقييم >";
+
+/* Class = "UILabel"; text = "Center"; ObjectID = "iJT-7b-PuN"; */
+"iJT-7b-PuN.text" = "سنتر";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "jCI-m3-t5l"; */
+"jCI-m3-t5l.text" = "منتجات";
+
+/* Class = "UILabel"; text = "Branches"; ObjectID = "jaw-KL-bFg"; */
+"jaw-KL-bFg.text" = "اتصل بنا";
+
+/* Class = "UILabel"; text = "Branches"; ObjectID = "jxT-8I-ZGJ"; */
+"jxT-8I-ZGJ.text" = "اتصل بنا";
+
+/* Class = "UILabel"; text = "Gallery"; ObjectID = "kXn-pz-Ds3"; */
+"kXn-pz-Ds3.text" = "البومات الصور";
+
+"hNy-zk-ADk.text" = "البومات الفيديو" ;
+
+/* Class = "UILabel"; text = "Reservation date"; ObjectID = "kgM-CK-CgV"; */
+"kgM-CK-CgV.text" = "تاريخ الحجز";
+
+/* Class = "UILabel"; text = "250,00 L.E"; ObjectID = "l0i-9F-YXn"; */
+"l0i-9F-YXn.text" = "250,00 L.E";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "mDG-ti-LXL"; */
+"mDG-ti-LXL.text" = "الاسم";
+
+/* Class = "UILabel"; text = "16 % discount"; ObjectID = "mG7-xf-plw"; */
+"mG7-xf-plw.text" = "16 % خصم";
+
+/* Class = "UITextField"; placeholder = "   Title"; ObjectID = "mJy-yP-4KU"; */
+"mJy-yP-4KU.placeholder" = "   عنوان";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "n3c-sE-jHv"; */
+"n3c-sE-jHv.text" = "2";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "nVH-G2-0rV"; */
+"nVH-G2-0rV.normalTitle" = "ارسل";
+
+/* Class = "UILabel"; text = "Reviews"; ObjectID = "nZL-tR-lif"; */
+"nZL-tR-lif.text" = "تقييم";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "oMN-sB-tdZ"; */
+"oMN-sB-tdZ.text" = "عن";
+
+/* Class = "UILabel"; text = "No products!"; ObjectID = "pNB-xC-qjJ"; */
+"pNB-xC-qjJ.text" = "لا يوجد منتجات";
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "qlQ-67-dHR"; */
+"qlQ-67-dHR.text" = "زائر";
+
+/* Class = "UITextField"; placeholder = "   Review"; ObjectID = "rFn-xz-UYj"; */
+"rFn-xz-UYj.placeholder" = "   تقييم";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "rhF-YK-yrx"; */
+"rhF-YK-yrx.normalTitle" = "ارسال";
+
+/* Class = "UILabel"; text = "Write a review"; ObjectID = "rjs-Bu-5aA"; */
+"rjs-Bu-5aA.text" = "اكتب تقييم";
+
+/* Class = "UILabel"; text = "Add to Cart"; ObjectID = "tMX-72-KYu"; */
+"tMX-72-KYu.text" = "اضف للسلة";
+
+/* Class = "UILabel"; text = "No offers!"; ObjectID = "tT9-Pi-csC"; */
+"tT9-Pi-csC.text" = "لا يوجد عروض";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "tcd-Rc-SkV"; */
+"tcd-Rc-SkV.normalTitle" = "خروج";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "u78-En-KCf"; */
+"u78-En-KCf.text" = "حسابي";
+
+/* Class = "UILabel"; text = "9:00 AM"; ObjectID = "uK5-wv-hAp"; */
+"uK5-wv-hAp.text" = "9:00 AM";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "vUj-8y-B7M"; */
+"vUj-8y-B7M.text" = "9";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "vhP-ls-GvB"; */
+"vhP-ls-GvB.text" = "الرئيسية";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "vxR-SC-xlF"; */
+"vxR-SC-xlF.text" = "عروض";
+
+/* Class = "UILabel"; text = "June 2017"; ObjectID = "wfs-cV-rzI"; */
+"wfs-cV-rzI.text" = "يوليو 2017";
+
+/* Class = "UILabel"; text = "Products"; ObjectID = "y86-Dy-PA0"; */
+"y86-Dy-PA0.text" = "منتجات";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "zNI-9V-vhK"; */
+"zNI-9V-vhK.text" = "عروض";
+
+"FQA-th-z21.text" = "* قد يحدث تغيير في مواعيد الحجز … سنخبرك عند حدوث ذلك" ;
+
+"Wh5-fu-Jma.text" = "زائر";
+
+"jVG-t2-dVw.text" = "الرئيسية";
+
+"Hjz-VK-WrY.text" = "أماكن";
+
+"LCy-5n-m8a.text" = "عروض";
+
+"jfJ-7E-ajO.text" = "خدمات";
+
+"epC-9g-2Rp.text" = "تسوق";
+
+"OI1-6P-JuL.text" = "السلة";
+
+"TRK-ct-N5H.text" = "الاقرب لك";
+
+"uIe-HJ-WRO.text" = "شاهد";
+
+"QqJ-6Q-rvS.text" = "الدعم و المساعدة";
+
+"yF3-g8-hfI.text" = "الاعدادات";
+
+"1Jn-GA-wEj.title" = "عن";
+
+"uBZ-hX-atm.text" = "عن" ;
+
+"VRE-Hp-K0T.text" = "عروض" ;
+
+"baa-e7-lY2.text" = "منتجات";
+
+"6bn-kY-ShG.text" = "خدمات";
+
+"olo-NH-77B.text" = "اتصل بنا";
+
+"cKe-1e-WNg.text" = "شروط الحجز";
+
+"qyT-Xa-IsH.text" =  "شروط الحجز";
+
+"ysR-7Y-Uoy.normalTitle" = "تأكيد" ;
+
+"o7S-f2-WXu.normalTitle" = "الغاء";
+
+"AppRegularFont" = "JosefinSans-Light";
+"AppBoldFont" = "JosefinSans-Light";
+
+"Bbr-Mj-7bF.text" = "عن";
+"IKq-H1-so7.text" = "عروض";
+"NTM-gQ-r4e.text" = "منتجات";
+"Hft-Ny-tfI.text" = "خدمات";
+"fJ6-fU-gDQ.text" = "اتصل بنا";

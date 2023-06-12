@@ -1,0 +1,282 @@
+
+/* Class = "UILabel"; text = "Beauty center"; ObjectID = "01U-nL-H0p"; */
+"01U-nL-H0p.text" = "Beauty center";
+
+/* Class = "UINavigationItem"; title = "                  "; ObjectID = "1Jn-GA-wEj"; */
+"1Jn-GA-wEj.title" = "                  ";
+
+/* Class = "UILabel"; text = "Comment Title"; ObjectID = "2rT-9S-wb8"; */
+"2rT-9S-wb8.text" = "Comment Title";
+
+/* Class = "UIButton"; normalTitle = "Add a rating"; ObjectID = "3L5-D2-MoT"; */
+"3L5-D2-MoT.normalTitle" = "Add a rating";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "3Lu-V8-zy4"; */
+"3Lu-V8-zy4.text" = "Label";
+
+/* Class = "UILabel"; text = "out of 5"; ObjectID = "4Cf-0L-Rr3"; */
+"4Cf-0L-Rr3.text" = "out of 5";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "4i9-yj-9Xv"; */
+"4i9-yj-9Xv.text" = "2";
+
+/* Class = "UILabel"; text = "Beauty center"; ObjectID = "6bL-5Z-kaS"; */
+"6bL-5Z-kaS.text" = "Beauty center";
+
+/* Class = "UILabel"; text = "Select Branch"; ObjectID = "7P9-YS-R2P"; */
+"7P9-YS-R2P.text" = "Select Branch";
+
+/* Class = "UIViewController"; title = "0"; ObjectID = "7eh-Yh-kiz"; */
+"7eh-Yh-kiz.title" = "0";
+
+/* Class = "UIViewController"; title = "3"; ObjectID = "8Xp-87-r3B"; */
+"8Xp-87-r3B.title" = "3";
+
+/* Class = "UILabel"; text = "Full makeup"; ObjectID = "AjD-lh-wvJ"; */
+"AjD-lh-wvJ.text" = "Full makeup";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "C2c-ys-HSS"; */
+"C2c-ys-HSS.text" = "5";
+
+/* Class = "UIButton"; normalTitle = "Select Branch"; ObjectID = "Cnk-1I-MNq"; */
+"Cnk-1I-MNq.normalTitle" = "Select Branch";
+
+/* Class = "UILabel"; text = "Features"; ObjectID = "D3C-X4-7Ob"; */
+"D3C-X4-7Ob.text" = "Features";
+
+/* Class = "UIButton"; normalTitle = "Share"; ObjectID = "DR1-Cc-jLP"; */
+"DR1-Cc-jLP.normalTitle" = "Share";
+
+/* Class = "UILabel"; text = "No Reviews !"; ObjectID = "Ddd-Ye-kA5"; */
+"Ddd-Ye-kA5.text" = "No Reviews !";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "EWM-Xu-MIA"; */
+"EWM-Xu-MIA.text" = "My Account";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "F88-LH-y2A"; */
+"F88-LH-y2A.text" = "2";
+
+/* Class = "UILabel"; text = "* If the booking date change, We will let you know"; ObjectID = "FQA-th-z21"; */
+"FQA-th-z21.text" = "* If the booking date change, We will let you know";
+
+/* Class = "UIButton"; normalTitle = "Follow"; ObjectID = "FcN-za-RfE"; */
+"FcN-za-RfE.normalTitle" = "Follow";
+
+/* Class = "UILabel"; text = "Write a review"; ObjectID = "GRu-wJ-0EB"; */
+"GRu-wJ-0EB.text" = "Write a review";
+
+/* Class = "UIViewController"; title = "4"; ObjectID = "GVC-mO-VLC"; */
+"GVC-mO-VLC.title" = "4";
+
+/* Class = "UILabel"; text = "Add to Cart"; ObjectID = "GdM-ST-s3R"; */
+"GdM-ST-s3R.text" = "Add to Cart";
+
+/* Class = "UILabel"; text = "Places"; ObjectID = "Hjz-VK-WrY"; */
+"Hjz-VK-WrY.text" = "Places";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "IpC-wT-baL"; */
+"IpC-wT-baL.text" = "Label";
+
+/* Class = "UILabel"; text = "dddddddddddddddddddddd"; ObjectID = "Jn1-fv-8Rz"; */
+"Jn1-fv-8Rz.text" = "dddddddddddddddddddddd";
+
+/* Class = "UILabel"; text = "Tab a star to rate"; ObjectID = "Jrk-Lr-4xn"; */
+"Jrk-Lr-4xn.text" = "Tab a star to rate";
+
+/* Class = "UILabel"; text = "120 mins"; ObjectID = "Ker-1S-lZE"; */
+"Ker-1S-lZE.text" = "120 mins";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "Kom-iV-rdl"; */
+"Kom-iV-rdl.text" = "5";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Kud-6C-S68"; */
+"Kud-6C-S68.text" = "9";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "LCy-5n-m8a"; */
+"LCy-5n-m8a.text" = "Offers";
+
+/* Class = "UILabel"; text = "No services!"; ObjectID = "LFQ-nY-HlG"; */
+"LFQ-nY-HlG.text" = "No services!";
+
+/* Class = "UILabel"; text = "Tap a star to rate"; ObjectID = "MGO-At-mby"; */
+"MGO-At-mby.text" = "Tap a star to rate";
+
+/* Class = "UITextField"; placeholder = "   Review"; ObjectID = "NIC-re-oK5"; */
+"NIC-re-oK5.placeholder" = "   Review";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "OI1-6P-JuL"; */
+"OI1-6P-JuL.text" = "Cart";
+
+/* Class = "UILabel"; text = "About Vrou"; ObjectID = "Ofj-G5-3eO"; */
+"Ofj-G5-3eO.text" = "About Vrou";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "PJP-w2-gRh"; */
+"PJP-w2-gRh.text" = "2";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "QDT-Wv-gFv"; */
+"QDT-Wv-gFv.text" = "2";
+
+/* Class = "UILabel"; text = "Beauty center"; ObjectID = "Qin-1J-iAr"; */
+"Qin-1J-iAr.text" = "Beauty center";
+
+/* Class = "UILabel"; text = "Help & Support"; ObjectID = "QqJ-6Q-rvS"; */
+"QqJ-6Q-rvS.text" = "Help & Support";
+
+/* Class = "UILabel"; text = "Reservation time"; ObjectID = "TIM-mZ-rVb"; */
+"TIM-mZ-rVb.text" = "Reservation time";
+
+/* Class = "UILabel"; text = "Nearby"; ObjectID = "TRK-ct-N5H"; */
+"TRK-ct-N5H.text" = "Nearby";
+
+/* Class = "UIViewController"; title = "1"; ObjectID = "TZp-YD-dxV"; */
+"TZp-YD-dxV.title" = "1";
+
+/* Class = "UILabel"; text = "Choose a specialist"; ObjectID = "URa-Gr-iVf"; */
+"URa-Gr-iVf.text" = "Choose a specialist";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Umm-Sw-nER"; */
+"Umm-Sw-nER.text" = "1";
+
+/* Class = "UILabel"; text = "Main Branch"; ObjectID = "V1w-uy-eFl"; */
+"V1w-uy-eFl.text" = "Main Branch";
+
+/* Class = "UILabel"; text = "Free internet"; ObjectID = "V3S-0u-kd0"; */
+"V3S-0u-kd0.text" = "Free internet";
+
+/* Class = "UITextField"; placeholder = "   Title"; ObjectID = "V96-Wo-rkK"; */
+"V96-Wo-rkK.placeholder" = "   Title";
+
+/* Class = "UILabel"; text = "Related Offers"; ObjectID = "VLg-s0-DQB"; */
+"VLg-s0-DQB.text" = "Related Offers";
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "Wh5-fu-Jma"; */
+"Wh5-fu-Jma.text" = "Guest";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "XaU-aV-bp2"; */
+"XaU-aV-bp2.text" = "2";
+
+/* Class = "UIButton"; normalTitle = "Select Branch"; ObjectID = "bYZ-bw-sid"; */
+"bYZ-bw-sid.normalTitle" = "Select Branch";
+
+/* Class = "UILabel"; text = "Specialists"; ObjectID = "cE5-3S-E7c"; */
+"cE5-3S-E7c.text" = "Specialists";
+
+/* Class = "UILabel"; text = "Reservation Policy"; ObjectID = "cKe-1e-WNg"; */
+"cKe-1e-WNg.text" = "Reservation Policy";
+
+/* Class = "UILabel"; text = "Salon"; ObjectID = "cXd-Mm-KDV"; */
+"cXd-Mm-KDV.text" = "Salon";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "d4V-1K-bTF"; */
+"d4V-1K-bTF.text" = "9";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "dI8-aa-HHJ"; */
+"dI8-aa-HHJ.text" = "Rating";
+
+/* Class = "UILabel"; text = "Marketplace"; ObjectID = "epC-9g-2Rp"; */
+"epC-9g-2Rp.text" = "Marketplace";
+
+/* Class = "UIButton"; normalTitle = "Write a review >"; ObjectID = "fEU-pL-ASl"; */
+"fEU-pL-ASl.normalTitle" = "Write a review >";
+
+/* Class = "UILabel"; text = "Tutorials Albums"; ObjectID = "hNy-zk-ADk"; */
+"hNy-zk-ADk.text" = "Tutorials Albums";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "iv5-wA-1PB"; */
+"iv5-wA-1PB.text" = "5";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "jVG-t2-dVw"; */
+"jVG-t2-dVw.text" = "Home";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "jfJ-7E-ajO"; */
+"jfJ-7E-ajO.text" = "Services";
+
+/* Class = "UILabel"; text = "Gallery Albums"; ObjectID = "kXn-pz-Ds3"; */
+"kXn-pz-Ds3.text" = "Gallery Albums";
+
+/* Class = "UILabel"; text = "Reservation date"; ObjectID = "kgM-CK-CgV"; */
+"kgM-CK-CgV.text" = "Reservation date";
+
+/* Class = "UILabel"; text = "250,00 L.E"; ObjectID = "l0i-9F-YXn"; */
+"l0i-9F-YXn.text" = "250,00 L.E";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "mDG-ti-LXL"; */
+"mDG-ti-LXL.text" = "Name";
+
+/* Class = "UILabel"; text = "16 % discount"; ObjectID = "mG7-xf-plw"; */
+"mG7-xf-plw.text" = "16 % discount";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mJD-RV-GR5"; */
+"mJD-RV-GR5.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "   Title"; ObjectID = "mJy-yP-4KU"; */
+"mJy-yP-4KU.placeholder" = "   Title";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "nVH-G2-0rV"; */
+"nVH-G2-0rV.normalTitle" = "Send";
+
+/* Class = "UILabel"; text = "Reviews"; ObjectID = "nZL-tR-lif"; */
+"nZL-tR-lif.text" = "Reviews";
+
+/* Class = "UIButton"; normalTitle = "Cancel"; ObjectID = "o7S-f2-WXu"; */
+"o7S-f2-WXu.normalTitle" = "Cancel";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "o92-fj-xZW"; */
+"o92-fj-xZW.text" = "2";
+
+/* Class = "UILabel"; text = "About"; ObjectID = "oMN-sB-tdZ"; */
+"oMN-sB-tdZ.text" = "About";
+
+/* Class = "UILabel"; text = "No products!"; ObjectID = "pNB-xC-qjJ"; */
+"pNB-xC-qjJ.text" = "No products!";
+
+/* Class = "UILabel"; text = "Reservation Policy"; ObjectID = "qyT-Xa-IsH"; */
+"qyT-Xa-IsH.text" = "Reservation Policy";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "r0l-5a-pXG"; */
+"r0l-5a-pXG.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "   Review"; ObjectID = "rFn-xz-UYj"; */
+"rFn-xz-UYj.placeholder" = "   Review";
+
+/* Class = "UIButton"; normalTitle = "Send"; ObjectID = "rhF-YK-yrx"; */
+"rhF-YK-yrx.normalTitle" = "Send";
+
+/* Class = "UILabel"; text = "Write a review"; ObjectID = "rjs-Bu-5aA"; */
+"rjs-Bu-5aA.text" = "Write a review";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "sVK-94-IoI"; */
+"sVK-94-IoI.text" = "9";
+
+/* Class = "UILabel"; text = "Add to Cart"; ObjectID = "tMX-72-KYu"; */
+"tMX-72-KYu.text" = "Add to Cart";
+
+/* Class = "UILabel"; text = "No offers!"; ObjectID = "tT9-Pi-csC"; */
+"tT9-Pi-csC.text" = "No offers!";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "ty3-z6-GiU"; */
+"ty3-z6-GiU.normalTitle" = "Sign Out";
+
+/* Class = "UILabel"; text = "Watch"; ObjectID = "uIe-HJ-WRO"; */
+"uIe-HJ-WRO.text" = "Watch";
+
+/* Class = "UILabel"; text = "9:00 AM"; ObjectID = "uK5-wv-hAp"; */
+"uK5-wv-hAp.text" = "9:00 AM";
+
+/* Class = "UILabel"; text = "June 2017"; ObjectID = "wfs-cV-rzI"; */
+"wfs-cV-rzI.text" = "June 2017";
+
+/* Class = "UIViewController"; title = "2"; ObjectID = "xru-aS-DPB"; */
+"xru-aS-DPB.title" = "2";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "yF3-g8-hfI"; */
+"yF3-g8-hfI.text" = "Settings";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "ysR-7Y-Uoy"; */
+"ysR-7Y-Uoy.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "zGG-AR-4Fp"; */
+"zGG-AR-4Fp.text" = "2";
+
+"AppRegularFont" = "JosefinSans-Light";
+"AppBoldFont" = "JosefinSans-Light";

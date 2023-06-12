@@ -1,0 +1,208 @@
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "04l-CK-fiU"; */
+"04l-CK-fiU.placeholder" = "ابحث عن مراكز تجميل ، صالونات ، سبا";
+
+/* Class = "UINavigationItem"; title = "VROU Salon"; ObjectID = "0pQ-PW-FCA"; */
+"0pQ-PW-FCA.title" = "ڤرو";
+
+/* Class = "UIButton"; normalTitle = "VROU World"; ObjectID = "1sj-Q4-gXC"; */
+"1sj-Q4-gXC.normalTitle" = "عالم ڤرو";
+
+/* Class = "UINavigationItem"; title = "VROU Salon"; ObjectID = "2qH-tX-KEf"; */
+"2qH-tX-KEf.title" = "ڤرو";
+
+/* Class = "UIButton"; normalTitle = "VROU World"; ObjectID = "2sf-xp-eDW"; */
+"2sf-xp-eDW.normalTitle" = "عالم ڤرو";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "39e-Qu-EaF"; */
+"39e-Qu-EaF.text" = "5";
+
+/* Class = "UILabel"; text = "Add to Cart"; ObjectID = "3lH-UR-E8a"; */
+"3lH-UR-E8a.text" = "اضف للسلة";
+
+/* Class = "UILabel"; text = "About Vrou"; ObjectID = "3x6-au-Ddb"; */
+"3x6-au-Ddb.text" = "عن ڤرو";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "5CJ-ia-OUY"; */
+"5CJ-ia-OUY.text" = "خدمات";
+
+/* Class = "UIButton"; normalTitle = "Discover"; ObjectID = "5vi-WY-aQK"; */
+"5vi-WY-aQK.normalTitle" = "اكتشفي";
+
+/* Class = "UILabel"; text = "Best Specialists"; ObjectID = "A7k-qt-A8B"; */
+"A7k-qt-A8B.text" = "اشهر الاخصائيين";
+
+/* Class = "UILabel"; text = "Shop"; ObjectID = "Dks-1V-9L7"; */
+"Dks-1V-9L7.text" = "متجر";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "ETp-b8-BlT"; */
+"ETp-b8-BlT.normalTitle" = "خروج";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "Ei4-yZ-YCA"; */
+"Ei4-yZ-YCA.text" = "حسابي";
+
+/* Class = "UIButton"; normalTitle = "Discover"; ObjectID = "FH8-X0-Yev"; */
+"FH8-X0-Yev.normalTitle" = "اكتشفي";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "GGD-dc-j2z"; */
+"GGD-dc-j2z.text" = "9";
+
+/* Class = "UILabel"; text = "Center"; ObjectID = "Hba-BJ-Q7n"; */
+"Hba-BJ-Q7n.text" = "سنتر";
+
+/* Class = "UILabel"; text = "Latest Offers"; ObjectID = "I6T-XN-ZXv"; */
+"I6T-XN-ZXv.text" = "اخر العروض";
+
+/* Class = "UIButton"; normalTitle = "Your World"; ObjectID = "JHE-fu-0hA"; */
+"JHE-fu-0hA.normalTitle" = "عالمك";
+
+/* Class = "UIButton"; normalTitle = "Your World"; ObjectID = "KyZ-Bf-pDq"; */
+"KyZ-Bf-pDq.normalTitle" = "عالمك";
+
+/* Class = "UILabel"; text = "Famous Salons"; ObjectID = "MK0-Dn-D4k"; */
+"MK0-Dn-D4k.text" = "اشهر الصالونات";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "N9N-nQ-2Fz"; */
+"N9N-nQ-2Fz.normalTitle" = "تسجيل دخول";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "Nae-K6-6Ff"; */
+"Nae-K6-6Ff.text" = "9";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "Pga-yM-yZQ"; */
+"Pga-yM-yZQ.text" = "عروض";
+
+/* Class = "UILabel"; text = "Sponsored Ads"; ObjectID = "Pxi-x7-zq2"; */
+"Pxi-x7-zq2.text" = "اعلانات ممولة";
+
+/* Class = "UIButton"; normalTitle = "Discover"; ObjectID = "Rc0-bx-dLS"; */
+"Rc0-bx-dLS.normalTitle" = "اكتشفي";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "Ten-KK-zzF"; */
+"Ten-KK-zzF.placeholder" = "ابحث عن مراكز تجميل ، صالونات ، سبا";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Tge-T0-pGC"; */
+"Tge-T0-pGC.text" = "ملصق";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vx6-tr-vfM"; */
+"Vx6-tr-vfM.text" = "ملصق";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "WQs-MN-ek9"; */
+"WQs-MN-ek9.text" = "2";
+
+/* Class = "UILabel"; text = "Sign in is required"; ObjectID = "Whb-fB-EoQ"; */
+"Whb-fB-EoQ.text" = "يجب تسجيل الدخول ";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "XZb-8b-7pi"; */
+"XZb-8b-7pi.placeholder" = "ابحث عن مراكز تجميل ، صالونات ، سبا";
+
+/* Class = "UIButton"; normalTitle = "Select Branch"; ObjectID = "a0n-cb-UN1"; */
+"a0n-cb-UN1.normalTitle" = "اختار فرع";
+
+/* Class = "UINavigationItem"; title = "VROU Salon"; ObjectID = "aQa-j8-wfz"; */
+"aQa-j8-wfz.title" = "ڤرو";
+
+/* Class = "UILabel"; text = "In Store"; ObjectID = "aZl-99-SfT"; */
+"aZl-99-SfT.text" = "في المتجر";
+
+/* Class = "UIButton"; normalTitle = "Your World"; ObjectID = "bvE-N1-TxT"; */
+"bvE-N1-TxT.normalTitle" = "عالمك";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "cDq-G1-scJ"; */
+"cDq-G1-scJ.text" = "أقسام ڤرو";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "d3C-gG-ejz"; */
+"d3C-gG-ejz.text" = "الرئيسية";
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "eK5-bn-u2g"; */
+"eK5-bn-u2g.text" = "زائر";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "gkv-m4-9TC"; */
+"gkv-m4-9TC.text" = "9";
+
+/* Class = "UILabel"; text = "Sponsored Ads"; ObjectID = "guM-22-4wT"; */
+"guM-22-4wT.text" = "اعلانات ممولة";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "jN1-s0-Z7P"; */
+"jN1-s0-Z7P.text" = "أقسام ڤرو";
+
+/* Class = "UILabel"; text = "Today's Deals"; ObjectID = "lFr-Zk-8F2"; */
+"lFr-Zk-8F2.text" = "عروض اليوم";
+
+/* Class = "UILabel"; text = "Popular Center"; ObjectID = "leU-cL-6na"; */
+"leU-cL-6na.text" = "الاكثر شعبية";
+
+/* Class = "UILabel"; text = "Sponsored Ads"; ObjectID = "ojd-AO-S6r"; */
+"ojd-AO-S6r.text" = "اعلانات ممولة";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "rF2-gO-vgM"; */
+"rF2-gO-vgM.text" = "1";
+
+/* Class = "UIButton"; normalTitle = "VROU World"; ObjectID = "seJ-IZ-yHH"; */
+"seJ-IZ-yHH.normalTitle" = "عالم ڤرو";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "xTv-M1-gPR"; */
+"xTv-M1-gPR.text" = "2";
+
+"3zn-wj-3T7.text" = "الاكثر شعبية";
+
+"fEO-TI-fUE.text" = "زائر";
+
+"6UM-DU-b8C.text" = "الرئيسية";
+
+"rq7-ek-Z6J.text" = "أماكن";
+
+"2gE-SJ-A5T.text" = "عروض" ;
+
+"2ew-NV-ANw.text" = "خدمات";
+
+"RKh-Ea-3rk.text" = "تسوق";
+
+"GZp-72-lnN.text" = "السلة";
+
+"NBD-mO-AGa.text" = "الاقرب لك" ;
+
+"4f3-m9-bag.text" = "شاهد";
+
+"CMw-iT-nsF.text" = "الدعم و المساعدة";
+
+"TR2-xz-in6.text" = "الاعدادات";
+
+"Pnk-1u-CG7.text" = "تغيير معاد الحجز";
+
+"PUO-PF-oEw.text" = "من";
+
+"z9Z-jV-UoB.text" = "إلى";
+
+"Tk0-vc-s4Q.normalTitle" = "تأكيد";
+
+"3s6-uJ-uOm.normalTitle" = "الغاء الحجز" ;
+
+"MNQ-Ht-G14.normalTitle" = "عرض الكل";
+"atd-zr-tLX.normalTitle" = "عرض الكل";
+"6nU-Qg-49n.normalTitle" = "عرض الكل";
+"6tK-MB-SIc.normalTitle" = "عرض الكل";
+"ks1-wH-Wc0.normalTitle" = "عرض الكل";
+
+"8fb-Uf-Tsn.text" = "اشهر الخدمات";
+
+
+
+"AppRegularFont" = "JosefinSans-Light";
+"AppBoldFont" = "JosefinSans-Light";
+
+
+"Bdf-H2-ic9.title" = "ڤرو";
+"NF5-Ye-HtU.title" = "ڤرو";
+
+
+"VCL-Gx-wj4.normalTitle" = "عالمك";
+"IpV-nM-Cer.normalTitle" = "اكتشفي";
+"4aT-fp-vGF.normalTitle" = "عالم ڤرو";
+
+
+"AOz-VB-IOO.normalTitle" = "عالمك";
+"KG6-1N-Gw8.normalTitle" = "اكتشفي";
+"XHF-D6-VHb.normalTitle" = "عالم ڤرو";
+
+"5Me-jn-1nR.text" = "يرجى تسجيل الدخول";
+"BiQ-2f-DNK.normalTitle" = "تسجيل الدخول";

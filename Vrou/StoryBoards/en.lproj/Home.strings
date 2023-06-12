@@ -1,0 +1,246 @@
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "04l-CK-fiU"; */
+"04l-CK-fiU.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "0Fk-0l-Ayb"; */
+"0Fk-0l-Ayb.text" = "Label";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "0gj-Lw-gmx"; */
+"0gj-Lw-gmx.text" = "2";
+
+/* Class = "UINavigationItem"; title = "VROU Beauty"; ObjectID = "0pQ-PW-FCA"; */
+"0pQ-PW-FCA.title" = "VROU Beauty";
+
+/* Class = "UIButton"; normalTitle = "VROU World"; ObjectID = "1sj-Q4-gXC"; */
+"1sj-Q4-gXC.normalTitle" = "VROU World";
+
+/* Class = "UILabel"; text = "Services"; ObjectID = "2ew-NV-ANw"; */
+"2ew-NV-ANw.text" = "Services";
+
+/* Class = "UILabel"; text = "Offers"; ObjectID = "2gE-SJ-A5T"; */
+"2gE-SJ-A5T.text" = "Offers";
+
+/* Class = "UILabel"; text = "16 % discount"; ObjectID = "2jg-Y1-gWS"; */
+"2jg-Y1-gWS.text" = "16 % discount";
+
+/* Class = "UINavigationItem"; title = "VROU Beauty"; ObjectID = "2qH-tX-KEf"; */
+"2qH-tX-KEf.title" = "VROU Beauty";
+
+/* Class = "UIButton"; normalTitle = "VROU World"; ObjectID = "2sf-xp-eDW"; */
+"2sf-xp-eDW.normalTitle" = "VROU World";
+
+/* Class = "UILabel"; text = "Add to Cart"; ObjectID = "3lH-UR-E8a"; */
+"3lH-UR-E8a.text" = "Add to Cart";
+
+/* Class = "UIButton"; normalTitle = "Cancel Reservation"; ObjectID = "3s6-uJ-uOm"; */
+"3s6-uJ-uOm.normalTitle" = "Cancel Reservation";
+
+/* Class = "UILabel"; text = "Popular center"; ObjectID = "3zn-wj-3T7"; */
+"3zn-wj-3T7.text" = "Popular center";
+
+/* Class = "UILabel"; text = "Watch"; ObjectID = "4f3-m9-bag"; */
+"4f3-m9-bag.text" = "Watch";
+
+/* Class = "UIButton"; normalTitle = "Discover"; ObjectID = "5vi-WY-aQK"; */
+"5vi-WY-aQK.normalTitle" = "Discover";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "6UM-DU-b8C"; */
+"6UM-DU-b8C.text" = "Home";
+
+/* Class = "UIButton"; normalTitle = "view all"; ObjectID = "6nU-Qg-49n"; */
+"6nU-Qg-49n.normalTitle" = "view all";
+
+/* Class = "UIButton"; normalTitle = "view all"; ObjectID = "6tK-MB-SIc"; */
+"6tK-MB-SIc.normalTitle" = "view all";
+
+/* Class = "UILabel"; text = "100.00 EGP"; ObjectID = "8ZW-L9-DVZ"; */
+"8ZW-L9-DVZ.text" = "100.00 EGP";
+
+/* Class = "UILabel"; text = "Top Services"; ObjectID = "8fb-Uf-Tsn"; */
+"8fb-Uf-Tsn.text" = "Top Services";
+
+/* Class = "UILabel"; text = "Best Specialists"; ObjectID = "A7k-qt-A8B"; */
+"A7k-qt-A8B.text" = "Best Specialists";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "C1E-TO-k6h"; */
+"C1E-TO-k6h.text" = "2";
+
+/* Class = "UILabel"; text = "Help & Support"; ObjectID = "CMw-iT-nsF"; */
+"CMw-iT-nsF.text" = "Help & Support";
+
+/* Class = "UIButton"; normalTitle = "Discover"; ObjectID = "FH8-X0-Yev"; */
+"FH8-X0-Yev.normalTitle" = "Discover";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "Fa4-GM-X3h"; */
+"Fa4-GM-X3h.text" = "2";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "GZp-72-lnN"; */
+"GZp-72-lnN.text" = "Cart";
+
+/* Class = "UILabel"; text = "Latest Offers"; ObjectID = "I6T-XN-ZXv"; */
+"I6T-XN-ZXv.text" = "Latest Offers";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "IUT-BY-xdf"; */
+"IUT-BY-xdf.text" = "2";
+
+/* Class = "UIButton"; normalTitle = "Your World"; ObjectID = "JHE-fu-0hA"; */
+"JHE-fu-0hA.normalTitle" = "Your World";
+
+/* Class = "UIButton"; normalTitle = "Your World"; ObjectID = "KyZ-Bf-pDq"; */
+"KyZ-Bf-pDq.normalTitle" = "Your World";
+
+/* Class = "UILabel"; text = "Famous Salons"; ObjectID = "MK0-Dn-D4k"; */
+"MK0-Dn-D4k.text" = "Famous Salons";
+
+/* Class = "UIButton"; normalTitle = "view all"; ObjectID = "MNQ-Ht-G14"; */
+"MNQ-Ht-G14.normalTitle" = "view all";
+
+/* Class = "UIButton"; normalTitle = "Sign in"; ObjectID = "N9N-nQ-2Fz"; */
+"N9N-nQ-2Fz.normalTitle" = "Sign in";
+
+/* Class = "UILabel"; text = "Nearby"; ObjectID = "NBD-mO-AGa"; */
+"NBD-mO-AGa.text" = "Nearby";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "P77-tt-3As"; */
+"P77-tt-3As.text" = "5";
+
+/* Class = "UILabel"; text = "From :"; ObjectID = "PUO-PF-oEw"; */
+"PUO-PF-oEw.text" = "From :";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Pky-Do-iTo"; */
+"Pky-Do-iTo.text" = "1";
+
+/* Class = "UILabel"; text = "Reservation Reschedule"; ObjectID = "Pnk-1u-CG7"; */
+"Pnk-1u-CG7.text" = "Reservation Reschedule";
+
+/* Class = "UILabel"; text = "Sponsored Ads"; ObjectID = "Pxi-x7-zq2"; */
+"Pxi-x7-zq2.text" = "Sponsored Ads";
+
+/* Class = "UILabel"; text = "Marketplace"; ObjectID = "RKh-Ea-3rk"; */
+"RKh-Ea-3rk.text" = "Marketplace";
+
+/* Class = "UIButton"; normalTitle = "Discover"; ObjectID = "Rc0-bx-dLS"; */
+"Rc0-bx-dLS.normalTitle" = "Discover";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "TR2-xz-in6"; */
+"TR2-xz-in6.text" = "Settings";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "Ten-KK-zzF"; */
+"Ten-KK-zzF.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Tge-T0-pGC"; */
+"Tge-T0-pGC.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "Tk0-vc-s4Q"; */
+"Tk0-vc-s4Q.normalTitle" = "Confirm";
+
+/* Class = "UILabel"; text = "10:00 PM"; ObjectID = "Ud4-bq-qSg"; */
+"Ud4-bq-qSg.text" = "10:00 PM";
+
+/* Class = "UILabel"; text = "My Account"; ObjectID = "VYI-Rk-K4f"; */
+"VYI-Rk-K4f.text" = "My Account";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Vx6-tr-vfM"; */
+"Vx6-tr-vfM.text" = "Label";
+
+/* Class = "UILabel"; text = "Sign in is required"; ObjectID = "Whb-fB-EoQ"; */
+"Whb-fB-EoQ.text" = "Sign in is required";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "XZb-8b-7pi"; */
+"XZb-8b-7pi.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "Z6p-DP-C71"; */
+"Z6p-DP-C71.text" = "5";
+
+/* Class = "UIButton"; normalTitle = "Select Branch"; ObjectID = "a0n-cb-UN1"; */
+"a0n-cb-UN1.normalTitle" = "Select Branch";
+
+/* Class = "UILabel"; text = "10:00 PM"; ObjectID = "aC5-P4-Bxn"; */
+"aC5-P4-Bxn.text" = "10:00 PM";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "aNe-mW-0ke"; */
+"aNe-mW-0ke.text" = "2";
+
+/* Class = "UINavigationItem"; title = "VROU Beauty"; ObjectID = "aQa-j8-wfz"; */
+"aQa-j8-wfz.title" = "VROU Beauty";
+
+/* Class = "UILabel"; text = "In Store"; ObjectID = "aZl-99-SfT"; */
+"aZl-99-SfT.text" = "In Store";
+
+/* Class = "UIButton"; normalTitle = "view all"; ObjectID = "atd-zr-tLX"; */
+"atd-zr-tLX.normalTitle" = "view all";
+
+/* Class = "UIButton"; normalTitle = "Your World"; ObjectID = "bvE-N1-TxT"; */
+"bvE-N1-TxT.normalTitle" = "Your World";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "cDq-G1-scJ"; */
+"cDq-G1-scJ.text" = "VROU Sections";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "cOO-3P-awY"; */
+"cOO-3P-awY.text" = "9";
+
+/* Class = "UILabel"; text = "About Vrou"; ObjectID = "dba-Yp-XIw"; */
+"dba-Yp-XIw.text" = "About Vrou";
+
+/* Class = "UIButton"; normalTitle = "Sign Out"; ObjectID = "eO8-RT-IVd"; */
+"eO8-RT-IVd.normalTitle" = "Sign Out";
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "fEO-TI-fUE"; */
+"fEO-TI-fUE.text" = "Guest";
+
+/* Class = "UILabel"; text = "Salon was reschedule your reservation time to be"; ObjectID = "ftE-0Z-of4"; */
+"ftE-0Z-of4.text" = "Salon was reschedule your reservation time to be";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "gWI-em-dnp"; */
+"gWI-em-dnp.text" = "9";
+
+/* Class = "UILabel"; text = "Sponsored Ads"; ObjectID = "guM-22-4wT"; */
+"guM-22-4wT.text" = "Sponsored Ads";
+
+/* Class = "UILabel"; text = "VROU Sections"; ObjectID = "jN1-s0-Z7P"; */
+"jN1-s0-Z7P.text" = "VROU Sections";
+
+/* Class = "UIButton"; normalTitle = "view all"; ObjectID = "ks1-wH-Wc0"; */
+"ks1-wH-Wc0.normalTitle" = "view all";
+
+/* Class = "UILabel"; text = "Today's Deals"; ObjectID = "lFr-Zk-8F2"; */
+"lFr-Zk-8F2.text" = "Today's Deals";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "lbb-rD-Rcf"; */
+"lbb-rD-Rcf.text" = "2";
+
+/* Class = "UILabel"; text = "Popular Center"; ObjectID = "leU-cL-6na"; */
+"leU-cL-6na.text" = "Popular Center";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "mdV-q9-MSD"; */
+"mdV-q9-MSD.text" = "2";
+
+/* Class = "UILabel"; text = "Sponsored Ads"; ObjectID = "ojd-AO-S6r"; */
+"ojd-AO-S6r.text" = "Sponsored Ads";
+
+/* Class = "UILabel"; text = "Places"; ObjectID = "rq7-ek-Z6J"; */
+"rq7-ek-Z6J.text" = "Places";
+
+/* Class = "UIButton"; normalTitle = "VROU World"; ObjectID = "seJ-IZ-yHH"; */
+"seJ-IZ-yHH.normalTitle" = "VROU World";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "umo-vX-hRb"; */
+"umo-vX-hRb.text" = "Label";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "uql-dl-WOA"; */
+"uql-dl-WOA.text" = "Label";
+
+/* Class = "UILabel"; text = "9"; ObjectID = "uuQ-U0-zdw"; */
+"uuQ-U0-zdw.text" = "9";
+
+/* Class = "UILabel"; text = "16 % discount"; ObjectID = "xtW-Mp-mVq"; */
+"xtW-Mp-mVq.text" = "16 % discount";
+
+/* Class = "UILabel"; text = "ServiceName"; ObjectID = "yPA-Ty-EGg"; */
+"yPA-Ty-EGg.text" = "ServiceName";
+
+/* Class = "UILabel"; text = "To :"; ObjectID = "z9Z-jV-UoB"; */
+"z9Z-jV-UoB.text" = "To :";
+
+"AppRegularFont" = "JosefinSans-Light";
+"AppBoldFont" = "JosefinSans-Light";
