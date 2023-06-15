@@ -72,4 +72,5 @@ struct ServiceSearchData:Decodable {
    var service_price:String?
    var currency: String?
    var rate: String?
+    var salon_id:Int?
 }

@@ -15,7 +15,7 @@ import SDWebImage
 import SideMenu
 import MOLH
 
-class BeautyWorldVC: UIViewController , UIScrollViewDelegate{
+class BeautyWorldVC:  BaseVC<BeautyWorldPresenter, BaseItem> , UIScrollViewDelegate{
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var SponsoredAdsCollection: UICollectionView!
@@ -127,48 +127,13 @@ class BeautyWorldVC: UIViewController , UIScrollViewDelegate{
         
         FamousSalonCollectionViewLayout.minimumLineSpacing = 0
 
-        setupSideMenu()
+      
         GetBeatyWorldData()
         SetUpRefresh()
         
         
     }
-    
-    
-    private func setupSideMenu() {
-        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
-        
-    }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let sideMenuNavigationController = segue.destination as? SideMenuNavigationController else { return }
-        sideMenuNavigationController.settings = makeSettings()
-        
-        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
-            
-            sideMenuNavigationController.leftSide = false
-        }
-        
-        
-       }
-
-    private func makeSettings() -> SideMenuSettings {
-        let presentationStyle = selectedPresentationStyle()
-        presentationStyle.menuStartAlpha = 1.0
-        presentationStyle.onTopShadowOpacity = 0.0
-        presentationStyle.presentingEndAlpha = 1.0
-        
-        var settings = SideMenuSettings()
-        settings.presentationStyle = presentationStyle
-        settings.menuWidth = min(view.frame.width, view.frame.height)  * 0.9
-        settings.statusBarEndAlpha = 0
-        
-        return settings
-    }
-    
-    private func selectedPresentationStyle() -> SideMenuPresentationStyle {
-        return .viewSlideOutMenuIn
-    }
     
     func SetUpRefresh() {
         scrollView.refreshControl =  UIRefreshControl()
@@ -355,15 +320,15 @@ extension BeautyWorldVC { //HTTPS requests functions
                     let schedule_reservation = self.beautyWorld.data?.schedule_reservation
 
                     if schedule_reservation?.id != nil && User.shared.isLogedIn() {
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RescheduleReservationVC") as! RescheduleReservationVC
-                         vc.serviceName = schedule_reservation?.msg_two ?? ""
-                         vc.servicePrice = schedule_reservation?.msg_three ?? ""
-                         vc.message = schedule_reservation?.msg_one ?? ""
-                         vc.Reservation_id = "\(schedule_reservation?.id ?? Int())"
-                         vc.from = schedule_reservation?.from ?? ""
-                         vc.to = schedule_reservation?.to ?? ""
-                         vc.modalPresentationStyle = .overCurrentContext
-                         self.present(vc, animated: true, completion: nil)
+//                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "RescheduleReservationVC") as! RescheduleReservationVC
+//                         vc.serviceName = schedule_reservation?.msg_two ?? ""
+//                         vc.servicePrice = schedule_reservation?.msg_three ?? ""
+//                         vc.message = schedule_reservation?.msg_one ?? ""
+//                         vc.Reservation_id = "\(schedule_reservation?.id ?? Int())"
+//                         vc.from = schedule_reservation?.from ?? ""
+//                         vc.to = schedule_reservation?.to ?? ""
+//                         vc.modalPresentationStyle = .overCurrentContext
+//                         self.present(vc, animated: true, completion: nil)
                     }
                     
                     if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {

@@ -44,7 +44,7 @@ class CategoryServicesVC: UIViewController {
        mainView.isShimmering = true
        mainView.shimmeringSpeed = 550
        mainView.shimmeringOpacity = 1
-       setupSideMenu()
+      // setupSideMenu()
        GetServicesData()
     }
     
@@ -201,13 +201,14 @@ extension CategoryServicesVC: UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = UIStoryboard(name: "SalonProfile", bundle: nil).instantiateViewController(withIdentifier: "ReservationViewController") as! ReservationViewController
+        vc.ServiceID = "\(services.data?.services?[indexPath.row].id ?? Int())"
+        vc.salonID = "\(services.data?.services?[indexPath.row].Salon_id ?? "")"
         
-        let vc = UIStoryboard(name: "Center", bundle: nil).instantiateViewController(withIdentifier: "ReservationVC") as! ReservationVC
-            vc.ServiceID = "\(services.data?.services?[indexPath.row].id ?? Int())"
         if Home == "1" {
             vc.FromHome = true
-            }
-            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        self.navigationController?.pushViewController(vc, animated: true)
     }
  
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

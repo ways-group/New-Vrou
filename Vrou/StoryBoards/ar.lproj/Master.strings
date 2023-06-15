@@ -1,0 +1,111 @@
+
+/* Class = "UILabel"; text = "9"; ObjectID = "0AS-9P-RHL"; */
+"0AS-9P-RHL.text" = "9";
+
+/* Class = "UILabel"; text = "Services In Salon"; ObjectID = "2gQ-YG-JFu"; */
+"2gQ-YG-JFu.text" = "في الصالون";
+
+/* Class = "UIButton"; normalTitle = "Arabic"; ObjectID = "5Eb-BK-j54"; */
+"5Eb-BK-j54.normalTitle" = "عربي";
+
+/* Class = "UILabel"; text = "Settings"; ObjectID = "7tz-tV-Uca"; */
+"7tz-tV-Uca.text" = "الاعدادات";
+
+/* Class = "UILabel"; text = "title"; ObjectID = "9lt-gl-W98"; */
+"9lt-gl-W98.text" = "title";
+
+/* Class = "UILabel"; text = "No offers!"; ObjectID = "Bgz-GA-Mys"; */
+"Bgz-GA-Mys.text" = "لا يوجد عروض!";
+
+/* Class = "UILabel"; text = "Type"; ObjectID = "DM7-hf-wfn"; */
+"DM7-hf-wfn.text" = "Type";
+
+/* Class = "UILabel"; text = "Places"; ObjectID = "Dst-DP-6mu"; */
+"Dst-DP-6mu.text" = "أماكن";
+
+/* Class = "UIButton"; normalTitle = "English"; ObjectID = "EGS-ym-buN"; */
+"EGS-ym-buN.normalTitle" = "English";
+
+/* Class = "UILabel"; text = "Vrou Offer"; ObjectID = "ETc-Re-LIn"; */
+"ETc-Re-LIn.text" = "عروض";
+
+/* Class = "UILabel"; text = "Services In Home"; ObjectID = "Fr5-Yg-Lav"; */
+"Fr5-Yg-Lav.text" = "في المنزل";
+
+/* Class = "UILabel"; text = "Sign out"; ObjectID = "Gcv-XV-018"; */
+"Gcv-XV-018.text" = "تسجيل الخروج";
+
+/* Class = "UILabel"; text = "No Services!"; ObjectID = "Glc-H6-tgH"; */
+"Glc-H6-tgH.text" = "لا يوجد خدمات!";
+
+/* Class = "UILabel"; text = "Help & Support"; ObjectID = "Hc1-Go-N2d"; */
+"Hc1-Go-N2d.text" = "الدعم والمساعدة";
+
+/* Class = "UILabel"; text = "Offer End Today"; ObjectID = "Hth-me-cfi"; */
+"Hth-me-cfi.text" = "ينتهي العرض اليوم";
+
+/* Class = "UILabel"; text = "250 EGP"; ObjectID = "MO4-yP-jZD"; */
+"MO4-yP-jZD.text" = "250 EGP";
+
+/* Class = "UILabel"; text = "Watch"; ObjectID = "NaV-c9-8lo"; */
+"NaV-c9-8lo.text" = "شاهد";
+
+/* Class = "UILabel"; text = "Cart"; ObjectID = "Oh2-Yr-D06"; */
+"Oh2-Yr-D06.text" = "السلة";
+
+/* Class = "UILabel"; text = "Your world"; ObjectID = "P1l-DA-ptK"; */
+"P1l-DA-ptK.text" = "عالمك";
+
+/* Class = "UIButton"; normalTitle = "Filter"; ObjectID = "P9n-bP-jqg"; */
+"P9n-bP-jqg.normalTitle" = "فلتر";
+
+/* Class = "UIButton"; normalTitle = "Skip"; ObjectID = "QCT-Tf-yxS"; */
+"QCT-Tf-yxS.normalTitle" = "تخطي";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "Qcx-fB-Jcp"; */
+"Qcx-fB-Jcp.text" = "1";
+
+/* Class = "UILabel"; text = "Nearby"; ObjectID = "Rsa-fF-Xy4"; */
+"Rsa-fF-Xy4.text" = "الاقرب لك";
+
+/* Class = "UILabel"; text = "Rating"; ObjectID = "a18-3U-krM"; */
+"a18-3U-krM.text" = "التقييم";
+
+/* Class = "UILabel"; text = "Sort"; ObjectID = "e4t-Ux-qgk"; */
+"e4t-Ux-qgk.text" = "ترتيب";
+
+/* Class = "UILabel"; text = "2"; ObjectID = "fmP-Ew-GmC"; */
+"fmP-Ew-GmC.text" = "2";
+
+/* Class = "UILabel"; text = "You can change the language again through the settings"; ObjectID = "g3Y-26-k5U"; */
+"g3Y-26-k5U.text" = "";
+
+/* Class = "UIBarButtonItem"; title = "Hi,"; ObjectID = "hqp-93-IbP"; */
+"hqp-93-IbP.title" = "Hi,";
+
+/* Class = "UILabel"; text = "Price"; ObjectID = "k1X-of-FVm"; */
+"k1X-of-FVm.text" = "السعر";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "mDu-NI-LDa"; */
+"mDu-NI-LDa.text" = "5";
+
+/* Class = "UILabel"; text = "5"; ObjectID = "oQl-lX-dL3"; */
+"oQl-lX-dL3.text" = "5";
+
+/* Class = "UILabel"; text = "Tutorial"; ObjectID = "peS-0e-UJe"; */
+"peS-0e-UJe.text" =  "توتريال";
+
+/* Class = "UILabel"; text = "Guest"; ObjectID = "rEL-go-7Lw"; */
+"rEL-go-7Lw.text" = "زائر";
+
+/* Class = "UILabel"; text = "Home"; ObjectID = "rWB-I5-WMD"; */
+"rWB-I5-WMD.text" = "الرئيسية";
+
+/* Class = "UIButton"; normalTitle = "Reset"; ObjectID = "tGE-Gn-6Pi"; */
+"tGE-Gn-6Pi.normalTitle" = "Reset";
+
+/* Class = "UILabel"; text = "Offer"; ObjectID = "u1f-b7-YV2"; */
+"u1f-b7-YV2.text" = "العروض";
+
+/* Class = "UIButton"; normalTitle = "view all"; ObjectID = "v0s-60-1yT"; */
+"v0s-60-1yT.normalTitle" = "عرض الكل";

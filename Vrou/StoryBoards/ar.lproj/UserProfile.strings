@@ -1,0 +1,102 @@
+
+/* Class = "UILabel"; text = "Friend"; ObjectID = "0cx-rV-U0s"; */
+"0cx-rV-U0s.text" = "اصدقاء";
+
+/* Class = "UILabel"; text = "Orders"; ObjectID = "3hU-Pc-vCN"; */
+"3hU-Pc-vCN.text" = "طلب";
+
+/* Class = "UILabel"; text = "Collection"; ObjectID = "89K-da-llZ"; */
+"89K-da-llZ.text" = "المجموعات المختارة";
+
+/* Class = "UILabel"; text = "....."; ObjectID = "9Ne-bh-Qww"; */
+"9Ne-bh-Qww.text" = ".....";
+
+/* Class = "UILabel"; text = "Coming Reservation"; ObjectID = "BET-2C-3zz"; */
+"BET-2C-3zz.text" = "الحجز القادم";
+
+/* Class = "UILabel"; text = "0 EGP"; ObjectID = "Bdy-aQ-jQT"; */
+"Bdy-aQ-jQT.text" = "0 EGP";
+
+/* Class = "UILabel"; text = "....."; ObjectID = "KiU-3y-bHQ"; */
+"KiU-3y-bHQ.text" = ".....";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "LR2-Op-sow"; */
+"LR2-Op-sow.text" = "0";
+
+/* Class = "UILabel"; text = "Videos"; ObjectID = "NK9-x1-0bg"; */
+"NK9-x1-0bg.text" = "فيديوهات";
+
+/* Class = "UIBarButtonItem"; title = "hi"; ObjectID = "O7B-iv-uZs"; */
+"O7B-iv-uZs.title" = "hi";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "OVJ-HT-9Q5"; */
+"OVJ-HT-9Q5.text" = "0";
+
+/* Class = "UILabel"; text = "Check In"; ObjectID = "Ovk-pU-QqL"; */
+"Ovk-pU-QqL.text" = "تم زيارته";
+
+/* Class = "UILabel"; text = "Images"; ObjectID = "PTT-tX-hV5"; */
+"PTT-tX-hV5.text" = "صور";
+
+/* Class = "UIButton"; normalTitle = "New"; ObjectID = "PYc-CG-PJk"; */
+"PYc-CG-PJk.normalTitle" = "جديد";
+
+/* Class = "UILabel"; text = "Following"; ObjectID = "Pc1-Mu-2nA"; */
+"Pc1-Mu-2nA.text" = "متابعة";
+
+/* Class = "UIButton"; normalTitle = "View All"; ObjectID = "QPd-L1-028"; */
+"QPd-L1-028.normalTitle" = "عرض الكل";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "Qro-4M-EPr"; */
+"Qro-4M-EPr.text" = "0";
+
+/* Class = "UILabel"; text = "Alexandria"; ObjectID = "Uiw-w6-Kak"; */
+"Uiw-w6-Kak.text" = "Alexandria";
+
+/* Class = "UILabel"; text = "---"; ObjectID = "VX2-i8-aNm"; */
+"VX2-i8-aNm.text" = "---";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "aJG-Nz-TdR"; */
+"aJG-Nz-TdR.text" = "0";
+
+/* Class = "UILabel"; text = "Wallet"; ObjectID = "dZX-XM-8cC"; */
+"dZX-XM-8cC.text" = "المحفظة";
+
+/* Class = "UIButton"; normalTitle = "Follow"; ObjectID = "erC-P1-hrO"; */
+"erC-P1-hrO.normalTitle" = "متابعة";
+
+/* Class = "UILabel"; text = "Favorite"; ObjectID = "fch-jM-C6L"; */
+"fch-jM-C6L.text" = "المفضلة";
+
+/* Class = "UIButton"; normalTitle = "New"; ObjectID = "frl-Jg-9TU"; */
+"frl-Jg-9TU.normalTitle" = "جديد";
+
+/* Class = "UIButton"; normalTitle = "Follow"; ObjectID = "hDV-7f-eIf"; */
+"hDV-7f-eIf.normalTitle" = "متابعة";
+
+/* Class = "UILabel"; text = "Followers"; ObjectID = "hhn-ZO-wXs"; */
+"hhn-ZO-wXs.text" = "متابعين";
+
+/* Class = "UILabel"; text = "Reviews"; ObjectID = "inR-Sx-prB"; */
+"inR-Sx-prB.text" = "تقييمات";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "nyK-vf-fJc"; */
+"nyK-vf-fJc.text" = "0";
+
+/* Class = "UILabel"; text = "Hala Mohammed"; ObjectID = "oas-fY-Ktc"; */
+"oas-fY-Ktc.text" = "Hala Mohammed";
+
+/* Class = "UILabel"; text = "Gallery"; ObjectID = "phv-tz-yvJ"; */
+"phv-tz-yvJ.text" = "صور وفيديوهات";
+
+/* Class = "UILabel"; text = "...."; ObjectID = "q5h-zj-ALz"; */
+"q5h-zj-ALz.text" = "....";
+
+/* Class = "UILabel"; text = "Reservation"; ObjectID = "vyr-fF-9eS"; */
+"vyr-fF-9eS.text" = "حجز";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "y2G-TN-un0"; */
+"y2G-TN-un0.text" = "0";
+
+/* Class = "UILabel"; text = "Event"; ObjectID = "zG2-sN-MHV"; */
+"zG2-sN-MHV.text" = "فاعلية";

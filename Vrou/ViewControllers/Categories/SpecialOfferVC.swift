@@ -34,7 +34,7 @@ class SpecialOfferVC: UIViewController , MXParallaxHeaderDelegate {
      var imageSource = [InputSource]()
      var Offers = OfferCategoryDetails()
     
-     var categoryID = ""
+     var categoryID = "2"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,8 @@ class SpecialOfferVC: UIViewController , MXParallaxHeaderDelegate {
         SpecialOffersTable.parallaxHeader.height = 300
         SpecialOffersTable.parallaxHeader.mode = .fill
         SpecialOffersTable.parallaxHeader.delegate = self
-        
+        headerView.widthAnchor.constraint(equalTo: SpecialOffersTable.widthAnchor).isActive = true
+       // SpecialOffersTable.tableHeaderView = headerView
         GetSectionsData()
        
     }

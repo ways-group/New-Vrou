@@ -23,6 +23,7 @@ class ReservationVC: UIViewController, MXParallaxHeaderDelegate{
     @IBOutlet weak var SalonLogo: UIImageView!
     @IBOutlet weak var SalonName: UILabel!
     @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet weak var calendarHeightConstraint: NSLayoutConstraint!
     @IBOutlet var headerView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -92,6 +93,7 @@ class ReservationVC: UIViewController, MXParallaxHeaderDelegate{
        
         calendar.delegate = self
         calendar.allowsMultipleSelection = false
+         self.calendar.scope = .week
        
         // ScrollHeaderSetup
         scrollView.parallaxHeader.view = headerView
@@ -117,9 +119,12 @@ class ReservationVC: UIViewController, MXParallaxHeaderDelegate{
 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-         selectedDate = dateFormatter.string(from: Date())
+         
+        dateFormatter.locale = NSLocale(localeIdentifier: "en") as Locale
+        selectedDate = dateFormatter.string(from: Date())
+        print(selectedDate)
         
-        GetReservationData(ServiceID: ServiceID, date: FormatDate(date: Date()))
+        GetReservationData(ServiceID: ServiceID, date:selectedDate)
         
         
         ServiceImage.image = serviceImage
@@ -141,14 +146,14 @@ class ReservationVC: UIViewController, MXParallaxHeaderDelegate{
             return dateFormatter.string(from: date)
     }
     
-    // MARK: - SalonLogoBtn
+    // MARK: - SalonLogoBtn Done
     @IBAction func SalonLogoBtn_pressed(_ sender: Any) {
         if !FromSalonVC {
             NavigationUtils.goToSalonProfile(from: self, salon_id: serviceDetails.data?.salon?.id ?? 0)
         }
     }
     
-    // MARK: - SelectBranchPressed
+    // MARK: - SelectBranchPressed Done
     @IBAction func SelectBranch_pressed(_ sender: Any) {
         
         let selectionMenu =  RSSelectionMenu(dataSource: branchesNames) { (cell, object, indexPath) in
@@ -179,36 +184,41 @@ class ReservationVC: UIViewController, MXParallaxHeaderDelegate{
         
     }
     
- // MARK: - AddCartBtn
+ // MARK: - AddCartBtn Done
     @IBAction func AddCartBtn_pressed(_ sender: Any) {
-            if User.shared.isLogedIn() {
+        if User.shared.isLogedIn() {
+            
+            let police = serviceDetails.data?.salon?.reservation_policy ?? ""
+            if  police == "" && selectedTime != ""{
+                if FromHome {
+                    AddToCart(home: 1)
+                }else {
+                    AddToCart(home: 0)
+                }
                 
-                if serviceDetails.data?.salon?.reservation_policy ?? "" == "" || serviceDetails.data?.salon?.reservation_policy  == nil {
-                    if FromHome {
-                        AddToCart(home: 1)
-                    }else {
-                        AddToCart(home: 0)
-                    }
-                   
-                }else {
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReservationPolicyPopUpVC") as! ReservationPolicyPopUpVC
-                          vc.modalPresentationStyle = .overCurrentContext
-                          vc.delegate = self
-                          vc.polictTxt = serviceDetails.data?.salon?.reservation_policy ?? ""
-                          self.present(vc, animated: true, completion: nil)
-                }
-                }else {
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginRequiredNavController") as! LoginRequiredNavController
-                    vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
-                    self.present(vc, animated: true, completion: nil)
-                }
+            }
+            else if selectedTime == "" {
+                HUD.flash(.label("Please select reservation time!".ar()) , onView: self.view , delay: 1.6 , completion: nil)
+            }
+            else {
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "ReservationPolicyPopUpVC") as! ReservationPolicyPopUpVC
+                vc.modalPresentationStyle = .overCurrentContext
+                vc.delegate = self
+                vc.polictTxt = serviceDetails.data?.salon?.reservation_policy ?? ""
+                self.present(vc, animated: true, completion: nil)
+            }
+        }else {
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginRequiredNavController") as! LoginRequiredNavController
+            vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     
 }
 
 
-// MARK: - CalendarDelegate
+// MARK: - CalendarDelegate Done
 extension ReservationVC : FSCalendarDelegate {
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -228,6 +238,7 @@ extension ReservationVC : FSCalendarDelegate {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
+        dateFormatter.locale = NSLocale(localeIdentifier: "en") as Locale
         let selectedDate = dateFormatter.string(from: date)
        
         let t1 = dateFormatter.string(from: Date())
@@ -266,10 +277,15 @@ extension ReservationVC : FSCalendarDelegate {
         
     }
     
+    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
+        self.calendarHeightConstraint.constant = bounds.height
+        self.view.layoutIfNeeded()
+    }
+    
 }
 
 
-
+//done
 extension ReservationVC  {
     
     // MARK: - ServiceData_API
@@ -277,9 +293,9 @@ extension ReservationVC  {
         var FinalURL = ""
         
         if User.shared.isLogedIn() {
-              FinalURL = "\(ApiManager.Apis.ServiceDetials.description)service_id=\(ServiceID)&date=\(date)&user_hash_id=\(User.shared.TakeHashID())"
+              FinalURL = "\(ApiManager.Apis.ServiceDetials.description)service_id=\(ServiceID)&user_hash_id=\(User.shared.TakeHashID())&date=\(date)"
         }else {
-              FinalURL = "\(ApiManager.Apis.ServiceDetials.description)service_id=\(ServiceID)&date=\(date)&user_hash_id=0"
+              FinalURL = "\(ApiManager.Apis.ServiceDetials.description)service_id=\(ServiceID)&user_hash_id=0&date=\(date)"
         }
       
         
@@ -295,6 +311,7 @@ extension ReservationVC  {
                    
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "HH:mm"
+                    dateFormatter.locale = NSLocale(localeIdentifier: "en") as Locale
                     
                     var xx = dateFormatter.date(from:  branch.today_work_times?.from ?? "00:00")!
                     
@@ -440,7 +457,7 @@ extension ReservationVC  {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "'T'HH:mm"
-        
+        dateFormatter.locale = NSLocale(localeIdentifier: "en") as Locale
         
         while timeSlot != endTime && Int(timeSlot.replacingOccurrences(of: ":", with: ""))! < Int(endTime.replacingOccurrences(of: ":", with: ""))! && (dateFormatter.date(from: "T\(timeSlot)"))! < dateFormatter.date(from: "T\(endTime)")!  {
             
@@ -468,6 +485,7 @@ extension ReservationVC  {
     func GetTimeSlot(startTime:String, duration:String) -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm"
+        dateFormatter.locale = NSLocale(localeIdentifier: "en") as Locale
         let date = dateFormatter.date(from: "\(selectedDate)T\(startTime)")
         let calendar = Calendar.current
         let comp = calendar.dateComponents([.year, .month , .hour, .minute], from: date!)

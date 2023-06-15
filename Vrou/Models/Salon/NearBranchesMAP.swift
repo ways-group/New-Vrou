@@ -32,4 +32,10 @@ struct SalonMapBranch:Decodable {
     var salon_category_name:String?
     var work_times: [WorkTime]?
     var salon_rate: String?
+    var city_name: String?
+}
+
+
+struct Areas:Decodable {
+    var data: [Area]?
 }

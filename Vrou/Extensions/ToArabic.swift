@@ -40,6 +40,7 @@ class ToArabic {
     func LeftButtonAlignment(Button:UIButton) {
         Button.contentHorizontalAlignment = .left
     }
+  
     
     func ReverseCollectionDirection(collectionView:UICollectionView) {
         
@@ -62,3 +63,35 @@ class ToArabic {
     
 }
 
+
+extension UIButton {
+    
+}
+
+extension UITextField {
+    
+    func ReverseTxtField() {
+        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
+            self.textAlignment = .right
+        }else {
+            self.textAlignment = .left
+        }
+    }
+}
+
+class lbl: UILabel {
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
+            self.textAlignment = .right
+        }else {
+            self.textAlignment = .left
+        }
+    }
+}

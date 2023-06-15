@@ -36,7 +36,7 @@ struct OfferItem:Decodable {
     var offer_description: String?
     var image: String?
 
-    var new_price: String?
+    var sales_price: String?
     var currency: String?
 
     

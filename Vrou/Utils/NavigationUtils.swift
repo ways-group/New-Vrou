@@ -27,10 +27,9 @@ class NavigationUtils {
     //Go to Salon Profile
     static func goToSalonProfile(from: UIViewController, salon_id : Int) {
      
-    let vc = UIStoryboard.init(name: center_storyboard, bundle: nil).instantiateViewController(withIdentifier: "SalonProfileRootViewController") as! SalonProfileRootViewController
-     
-        vc.salon_id = salon_id
-   //  vc.show_dismiss_adv = show_dismiss_adv
+//    let vc = UIStoryboard.init(name: center_storyboard, bundle: nil).instantiateViewController(withIdentifier: "SalonProfileRootViewController") as! SalonProfileRootViewController
+     let vc = UIStoryboard.init(name: "SalonProfile", bundle: nil).instantiateViewController(withIdentifier: "SalonProfileRootView") as! SalonProfileRootView
+    vc.salonId = salon_id
      from.navigationController?.pushViewController(vc, animated: true)
  }
     

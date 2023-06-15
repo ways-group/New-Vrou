@@ -15,7 +15,7 @@ class ApiManager {
     
     static let shared = ApiManager()
     private init() {}
-    private let url = "https://vrouapp.com/api"
+    private let url = "https://devbeauty.vrouapp.com/api"
     let AuthHeaders = [
         "Authorization": "Bearer \(User.shared.TakeToken())",
         "Accept": "application/json"
@@ -42,12 +42,14 @@ class ApiManager {
     
     enum Apis {
         
-        case  Login, ResetPassword, CountriesList, CitiesList, Register, YourWorld, Discover, BeautyWorld, SalonAbout, SalonOffers, ServicesCategories, SalonServices, ProductCategories, SalonProducts, SalonBranches, RecommendSalons, FollowSalon , unfollowSalon, TermsConditions, Sections, CenterList, OfferCategories, OfferList, OfferDetails, ServiceDetials, InServicesCategories, ServicesList, OfferCategoryDetails, ProductCategoriesII, ProductList, ProductDetails, ServicesListHomeSalon, FreeAdsList, NearBranchesMAP, profile, AboutURLs, AddOfferProductToCart, AddServiceToCart, ServiceCartDetails, RemoveOfferProductFromCart, ContactUs, advertise, ChangePassword, Logout, LanguagesList, UpdateSettings, GetOfferPtoductCart, RemoveServiceFromCart, addSalonReview, SalonReviews, RemoveProductFromCart, CheckPromoCode, checkout, updateProfile , RefreshDeviceToken, MyReservations, Mypurchases, MyFavourites, AddToFavourite, RemoveFromFavourite, BeautyWorldAuth, DiscoverAuth, Search, salonsVideo, SocialLogin, NotificationsList, SetNotificationsSeen, ConfirmReservationReschedule, AlbumData, CommentsList, AddComment, DeleteComment, LikeComment, CreateCollection_addItem, DeleteColleciton, CollectionList, AddDeleteVisitSalon, UserSalonsReviews, uploadUserMedia, ShareItem, Like_Dislike, CreateEvent, AcceptRejectEvent, EventsList, EventDetails, AreasList, VisitedSalon, WeekOffers, WatchingList, FollowUnfollowUser, UserProfile, RequestsList, AcceptRejectRequest
+        case  Login, ResetPassword, CountriesList, CitiesList, Register, YourWorld, Discover, BeautyWorld, SalonAbout, SalonOffers, ServicesCategories, SalonServices, ProductCategories, SalonProducts, SalonBranches, RecommendSalons, FollowSalon , unfollowSalon, TermsConditions, Sections, CenterList, OfferCategories, OfferList, OfferDetails, ServiceDetials, InServicesCategories, ServicesList, OfferCategoryDetails, ProductCategoriesII, ProductList, ProductDetails, ServicesListHomeSalon, FreeAdsList, NearBranchesMAP, profile, AboutURLs, AddOfferProductToCart, AddServiceToCart, ServiceCartDetails, RemoveOfferProductFromCart, ContactUs, advertise, ChangePassword, Logout, LanguagesList, UpdateSettings, GetOfferPtoductCart, RemoveServiceFromCart, addSalonReview, SalonReviews, RemoveProductFromCart, CheckPromoCode, checkout, updateProfile , RefreshDeviceToken, MyReservations, Mypurchases, MyFavourites, AddToFavourite, RemoveFromFavourite, BeautyWorldAuth, DiscoverAuth, Search, salonsVideo, SocialLogin, NotificationsList, SetNotificationsSeen, ConfirmReservationReschedule, AlbumData, CommentsList, AddComment, DeleteComment, LikeComment, CreateCollection_addItem, DeleteColleciton, CollectionList, AddDeleteVisitSalon, UserSalonsReviews, uploadUserMedia, ShareItem, Like_Dislike, CreateEvent, AcceptRejectEvent, EventsList, EventDetails, AreasList, VisitedSalon, WeekOffers, WatchingList, FollowUnfollowUser, UserProfile, RequestsList, AcceptRejectRequest, getTutorials, HomeOffers, CheckEmailExist, getUserGallery,
+        ReservationDetails, branchAvailableTime, AddMultiServiceToCart
         
         var description: String {
-           // let url =    "https://vrouapp.com/api-v2"
-           // let url = "https://beauty-apps.com/api-v2"
-           let url = "https://beauty.vrouapp.com/api-v2"
+            // let url =    "https://vrouapp.com/api-v2"
+            //    let url = "https://beauty-apps.com/api-v2"
+            let url = "https://beauty.vrouapp.com/api-v3"
+            // let url = "https://devbeauty.vrouapp.com/api-v3"
             
             switch self {
             case .Login:   return url + "/auth/login"
@@ -70,7 +72,7 @@ class ApiManager {
             case .unfollowSalon:   return url + "/user/unfollow"
             case .TermsConditions:   return url + "/common/settings"
             case .Sections:   return url + "/categories/sections"
-            case .CenterList:   return url + "/categories/list?category_id="
+            case .CenterList:   return url + "/categories/list"
             case .OfferCategories:   return url + "/offers/offers-categories?type="
             case .OfferList:   return url + "/offers/offers-list?category_id="
             case .OfferDetails:   return url + "/offers/offer-details"
@@ -79,7 +81,7 @@ class ApiManager {
             case .ServicesList:   return url + "/services/services-list?service_category_id="
             case .OfferCategoryDetails:   return url + "/offers/offer-category-details?offerCategory_id="
             case .ProductCategoriesII:   return url + "/stores/products-categories?category_id="
-            case .ProductList:   return url + "/stores/products-list?product_category_id="
+            case .ProductList:   return url + "/stores/products-list"
             case .ProductDetails:   return url + "/stores/products-details"
             case .ServicesListHomeSalon:   return url + "/services/services-categories-salon-home?home_status="
             case .FreeAdsList:   return url + "/ads/free?"
@@ -143,6 +145,13 @@ class ApiManager {
             case .UserProfile:   return url + "/user/user-profile?user_id="
             case .RequestsList:   return url + "/user/following-requests-list"
             case .AcceptRejectRequest:   return url + "/user/accept-reject-following-requests"
+            case .getTutorials : return  url + "/tutorials/list"
+            case .HomeOffers : return  url + "/home/offers"
+            case .CheckEmailExist : return  url + "/auth/check-mail-exist"
+            case .getUserGallery: return url + "/user/gallery"
+            case .ReservationDetails: return url + "/services/common-branches?"
+            case .branchAvailableTime: return url + "/salon/branch-available-time?"
+            case .AddMultiServiceToCart:  return url + "/order/services/add-multi-to-cart"
             }
         }
     }
@@ -169,21 +178,23 @@ class ApiManager {
                     completion(response.data,"ERROR")
                     //  HUD.flash(.labeledError(title: "\(response.error?[0])", subtitle: <#T##String?#>))
                     do {
-                        let er = try JSONDecoder().decode(ErrorMsg.self, from: response.data!)
-                        HUD.flash(.label("\(er.msg?[0] ?? "")") , onView: view , delay: 2 , completion: nil)
-                        print(response.value ?? "ERRor")
-                        print(response.result.error ?? "ERRor")
-                        print(response.response?.statusCode ?? "ERRor")
-                        if temp == 401 {
-                            HUD.flash(.label("Server Maintenance \nWe've got something special in store for you.\nAnd we can't wait for you to see it.\nPlease check back soon"), onView: view, delay: 3.0, completion: { (tmp) in
-                                completion(response.data,"401")
+                        
+                        if temp == 404 {
+                            HUD.flash(.label("Page "), onView: view, delay: 3.0, completion: { (tmp) in
+                                completion(response.data,"404")
                             })
-                        }else if temp == 404 {
-                        HUD.flash(.label("Page "), onView: view, delay: 3.0, completion: { (tmp) in
-                            completion(response.data,"404")
-                        })
-                            
+                        }else if temp == 401 {
+                            completion(response.data,"401")
+                        }else if temp == 402 {
+                            completion(response.data,"402")
+                        } else {
+                            let er = try JSONDecoder().decode(ErrorMsg.self, from: response.data!)
+                            HUD.flash(.label("\(er.msg?[0] ?? "")") , onView: view , delay: 2 , completion: nil)
+                            print(response.value ?? "ERRor")
+                            print(response.result.error ?? "ERRor")
+                            print(response.response?.statusCode ?? "ERRor")
                         }
+                        
                     }catch {
                         HUD.flash(.label("Something went wrong Please try again later") , onView: view , delay: 2 , completion: nil)
                     }
@@ -204,4 +215,5 @@ class ApiManager {
     
     
 }
+
 

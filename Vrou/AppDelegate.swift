@@ -11,7 +11,6 @@ import GoogleMaps
 import GooglePlaces
 import MOLH
 import FirebaseCore
-import FirebaseMessaging
 import UserNotifications
 import Alamofire
 import SwiftyJSON
@@ -19,15 +18,17 @@ import PKHUD
 import FacebookCore
 import IQKeyboardManagerSwift
 import GoogleSignIn
+import FirebaseMessaging
+import FirebaseAuth
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNotificationCenterDelegate, MessagingDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNotificationCenterDelegate {
     
     var launchedShortcutItem: UIApplicationShortcutItem?
     var window: UIWindow?
-
+   
     func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
-                
+        
         switch shortcutItem.type {
         case "com.Vrou.Offers":
             let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "OffersNavController") as! OffersNavController
@@ -79,11 +80,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         
     }
  
+    
+    
     func application(
         _ app: UIApplication,
         open url: URL,
-        options: [UIApplication.OpenURLOptionsKey : Any] = [:]
-    ) -> Bool {
+        options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         let facebookValue = ApplicationDelegate.shared.application(
             app,
             open: url,
@@ -98,7 +100,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
     func reset() {
         setupGlobalAppearance()
     }
-    
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -128,7 +129,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         
         GMSServices.provideAPIKey(GoogleClientID)
         GMSPlacesClient.provideAPIKey(GoogleClientID)
-        
+
         MOLHLanguage.setDefaultLanguage("en")
 
         MOLH.shared.activate(true)
@@ -147,8 +148,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
                 options: authOptions,
                 completionHandler: {granted,error in
             })
-            // For iOS 10 data message (sent via FCM
-            Messaging.messaging().delegate = self
         } else {
             let settings: UIUserNotificationSettings =
                 UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
@@ -157,7 +156,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         }
         
         application.registerForRemoteNotifications()
-                
+        
+        
+        
         print(Messaging.messaging().fcmToken as Any)
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
         if launchedBefore  {
@@ -191,7 +192,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
                 }
             }
         }
-        
         return shouldPerformAdditionalDelegateHandling
     }
     
@@ -209,10 +209,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         // Note: This callback is fired at each app startup and whenever a new token is generated.
         RefreshDeviceToken()
     }
-
+    
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         Messaging.messaging().apnsToken = deviceToken
     }
+    
+    
     
     func applicationWillResignActive(_ application: UIApplication) {
 //        AppEvents.activateApp()

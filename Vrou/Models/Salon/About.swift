@@ -49,7 +49,9 @@ struct SalonAboutDataAbout:Decodable {
     var reviews_count: String?
     var category: Category?
     var city: City?
+    var area: Area?
     var qr_code: String?
+    var reservation_policy: String?
     var features: [SalonFeatures]?
     var verify_image: String?
     var albums_images: [SalonAlbum]?

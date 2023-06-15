@@ -98,3 +98,75 @@
 "Popular Centers" = "اشهر الصالونات";
 "Sponsored Ads" = "اعلانات ممولة";
 
+"Login is required" = "";
+"Vrou World" = "عالم ڤرو";
+"Offers" = "عروض";
+"Services" = "خدمات";
+"Marketplace" = "تسوق";
+"About" = "عن";
+"Products" = "منتجات";
+"Review" = "تقييم";
+"Edit profile" = "تعديل الحساب";
+"Check in" = "تم زيارته";
+"Share" = "مشاركة";
+"Direction" = "الاتجاه";
+"Reservation policy" = "شروط الحجز";
+
+"Sponsored ads" = "اعلانات ممولة";
+"Tutorial" = "توتريال";
+"Tutorial " = "ألبومات الڤيديو";
+
+"Recently Joined" = "حديثا";
+"Most Popular" = "الاكثر شهرة";
+"Beauty Center" = "بيوتي سنتر";
+"Salon" = "صالون";
+"Spa" = "سبا";
+"Makeup Artist" = "اخصائية تجميل";
+"Specialists" = "متخصصين";
+"Stores" = "محلات";
+
+"Hi beautiful.." = "مرحبا بك في ڤرو..";
+"Create an account or login" = "انشاء حساب او الدخول";
+
+"Gallery" = "ألبومات الصور";
+"Specialists" = "الاخصائيين";
+"Features" = "مميزات";
+
+"Now open" = "مفتوح";
+"All" = "الكل";
+"Reservation" = "حجز";
+
+//auth
+"LOGIN WITH FACE ID" = "تسجيل الدخول ببصمت الوجهه";
+"HIDE" = "اخفي";
+"SHOW" = "اظهر";
+"Required Field" = "بيانات مطلوبة";
+"Password must be at least 8 characters" = "كلمة المرور على الأقل ٨ أحرف";
+"Please Enter valid email" = "الرجاء ادخال ايميل صحيح";
+"Register to VROU to enable TouchID/FaceID next login" = "يجب التسجيل في فرو أولا لتمكين البصمة";
+"Phone number length must be" = "عدد الارقام في رقم الهاتف يجب ان تكون";
+"Email is Already exist" = "الايميل بالفعل موجود";
+"Phone is Already exist" = "الهاتف بالفعل موجود";
+"City" = "المدينة";
+"A 6-digit confirmation code has been sent to Your Email" = "تم ارسال رمز تأكيد مكون من ٦ ارقام الى الايميل الخاص بك";
+"and Send to" = "و تم ارساله إلى";
+"via SMS" = "برسالة SMS";
+
+"People Followers" = "المتابعون";
+"reviews" = "تقييمات";
+
+"minutes" = "دقيقة";
+
+"Login" = "تسجيل الدخول";
+
+"Please select reservation time!" = "اختر موعد الحجز!";
+"Please select a specialist!" = "الرجاء اختيار متخصص";
+
+"Continue" = "متابعة";
+"Cart" = "السلة";
+
+"Select Branch" = "اختر الفرع";
+"Reservation date" = "تاريخ الحجز";
+"Reservation time" = "وقت الحجز";
+"Choose a specialist" = "اختر متخصص";
+"mins" = "دقيقة";

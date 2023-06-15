@@ -142,6 +142,9 @@
 
 /* Class = "UINavigationItem"; title = "Cart"; ObjectID = "9g5-6q-nWc"; */
 "9g5-6q-nWc.title" = "السلة";
+"L0u-Gn-kdl.title" = "السلة";
+"BJU-1L-0Oa.text" = "السلة";
+"eHc-wj-wDc.text" = "السلة";
 
 /* Class = "UIButton"; normalTitle = "Login"; ObjectID = "9nS-5B-Ley"; */
 "9nS-5B-Ley.normalTitle" = "الدخول";
@@ -256,9 +259,6 @@
 
 /* Class = "UITextField"; placeholder = "Email"; ObjectID = "Kr4-oM-ZOf"; */
 "Kr4-oM-ZOf.placeholder" = "البريد الاللكتروني";
-
-/* Class = "UINavigationItem"; title = "Cart"; ObjectID = "L0u-Gn-kdl"; */
-"L0u-Gn-kdl.title" = "السلة";
 
 /* Class = "UIViewController"; title = "My Favorite"; ObjectID = "LJJ-JD-rsV"; */
 "LJJ-JD-rsV.title" = "مفضلتي";
@@ -441,6 +441,8 @@
 
 /* Class = "UINavigationItem"; title = "About App"; ObjectID = "d61-hn-pnz"; */
 "d61-hn-pnz.title" = "عن التطبيق";
+"Nmr-r8-7dc.text" = "عن التطبيق";
+"jaB-aY-uAA.text" = "تواصل معنا";
 
 /* Class = "UILabel"; text = "Hair cut Hair cutHair cut Hair cut"; ObjectID = "dCj-pt-ToU"; */
 "dCj-pt-ToU.text" = "قص شعر";
@@ -669,6 +671,8 @@
 
 /* Class = "UINavigationItem"; title = "Change Password"; ObjectID = "tir-cP-KJO"; */
 "tir-cP-KJO.title" = "تغيير كلمة المرور";
+"lLb-Nz-2nZ.text" = "تغيير كلمة المرور";
+
 
 /* Class = "UIButton"; normalTitle = "CHECKOUT"; ObjectID = "u8Q-AX-4mM"; */
 "u8Q-AX-4mM.normalTitle" = "الدفع";
@@ -699,6 +703,8 @@
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "vm1-GM-zRx"; */
 "vm1-GM-zRx.title" = "الاعدادات";
+"5Xx-JG-5mH.text" = "الاعدادات";
+
 
 /* Class = "UIButton"; normalTitle = "Address Reservations"; ObjectID = "vqK-8g-cSS"; */
 "vqK-8g-cSS.normalTitle" = "عنوان الحجز";
@@ -758,10 +764,15 @@
 "nMM-3n-25z.text" = "الاعدادات";
 
 "joF-Xt-L6k.title" =  "مركز الاشعارات" ;
+"q79-GE-Nf7.text" =  "مركز الاشعارات" ;
+"6uQ-D9-9yL.text" =  "مركز الاشعارات" ;
+"CA9-Cy-vQc.text" =  "مركز الاشعارات" ;
+
 
 "xyN-mS-MWx.title" = "مركز الاشعارات";
 
 "nGV-Ib-ycT.title" = "شاهد";
+"iDW-tr-ZeO.text" = "شاهد";
 
 "pZf-78-v7g.normalTitle" =  "الاشعارات";
 

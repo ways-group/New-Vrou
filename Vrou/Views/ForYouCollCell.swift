@@ -26,15 +26,25 @@ class ForYouCollCell: UICollectionViewCell {
     @IBOutlet weak var FollowBtn: UIButton!
     
     @IBOutlet weak var FollowLbl: UILabel!
+    @IBOutlet weak var salonImageView: UIView!
+    
+    
     var delegate : FollowProtocol!
     var id = ""
+    
+    @IBOutlet weak var salonViewWidthConstraint: NSLayoutConstraint!
+    
     override func awakeFromNib() {
         // SalonImage.cornerRadius = self.bounds.height/3
         // SalonImage.cornerRadius = SalonImage.bounds.height/2.5
     }
     
     func UpdateView(height:CGSize, salon:Salon) {
-        SalonImage.cornerRadius = height.height/2.6
+        salonImageView.clipsToBounds = true
+        
+        salonViewWidthConstraint.constant = height.height - 20
+        
+        salonImageView.cornerRadius =  salonViewWidthConstraint.constant/2
         
         SetImage(image: SalonImage, link: salon.salon_logo ?? "")
         SalonName.text = salon.salon_name ?? ""

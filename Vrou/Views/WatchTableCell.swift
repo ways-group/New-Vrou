@@ -64,9 +64,9 @@ class WatchTableCell: UITableViewCell {
         is_like = "\(video.is_liked ?? Int())"
         
         if is_like == "0" {
-            heartImage.image = #imageLiteral(resourceName: "HeartPink")
+            heartImage.image = #imageLiteral(resourceName: "unlike")
         }else if is_like == "1" {
-            heartImage.image = #imageLiteral(resourceName: "SocialHeart")
+            heartImage.image = #imageLiteral(resourceName: "liked")
         }
         
         FavouriteCountLbl.text = video.likes_count ?? ""

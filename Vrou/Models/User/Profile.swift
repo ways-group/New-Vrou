@@ -13,6 +13,8 @@ struct Profile:Decodable {
 }
 struct PorfileData:Decodable {
     var user:ProfileDataUser?
+    var images:[UserMedia]?
+    var videos:[UserMedia]?
 }
 
 struct ProfileDataUser:Decodable {

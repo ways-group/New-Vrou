@@ -17,6 +17,7 @@ struct BeautyWorldData:Decodable {
     var bottom_ads:[Ad]?
     var main_ads : MainAd?
     var categories : [Category]?
+    
     var today_offers: [Offer]?
     var top_services: [Category]?
     var slider_famous_salons: [Salon]?
@@ -27,8 +28,25 @@ struct BeautyWorldData:Decodable {
     var slider_store_products: [Product]?
     var main_store_products: [Product]?
     var schedule_reservation: schedule_reservation?
+ 
+    var tutorials: [TutorialDetailsModel]?
+    var recently_joined_salons: [Salon]?
+    var most_popular_salons: [Salon]?
+    var in_store: [Product]?
+   
+    var beauty_centers: [Salon]?
+    var beauty_center_category_id :Int?
+    var salons: [Salon]?
+    var salon_category_id: Int?
+    var spa:[Salon]?
+    var spa_category_id:Int?
+    var makeup_artists:[Salon]?
+    var makeup_artists_category_id: Int?
+    var specialists: [Salon]?
+    var specialists_category_id: Int?
+    var stores: [Salon]?
+    var stores_category_id: Int?
 }
-
 struct MainAd:Decodable {
     var id: Int?
     var ads_name: String?
@@ -69,11 +87,12 @@ struct Specialist:Decodable {
 }
 
 
-struct Product:Decodable {
+struct Product : Decodable {
     var id: Int?
     var product_name: String?
     var product_description: String?
     var main_image: String?
+    var brand_image: String?
     var store_name: String?
     var old_price: String?
     var new_price: String?
@@ -83,6 +102,11 @@ struct Product:Decodable {
     var store_type: String?
     var sales_price:String?
     var product_status:String?
+    var category_id: String?
+    var cost_price: String?
+    var branch_name: String?
+    var rate: Int?
+    var is_favourite:Int?
 }
 
 struct schedule_reservation:Decodable {

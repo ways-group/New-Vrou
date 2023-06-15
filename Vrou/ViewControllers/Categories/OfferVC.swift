@@ -116,7 +116,7 @@ class OfferVC: UIViewController {
     
     @IBAction func AddToFavouriteBtn_pressed(_ sender: Any) {
         if User.shared.isLogedIn() {
-            if productDetails.data?.is_favorite == 0 {
+            if productDetails.data?.is_favourite == 0 {
                  AddToFavourite()
             }else {
                 RemoveFromFavourite()
@@ -153,7 +153,7 @@ extension OfferVC {
                     self.ProductName.text = self.productDetails.data?.product_name ?? ""
                     self.ShortDescription.text = self.productDetails.data?.product_description ?? ""
                     self.SetImage(image: self.BrandImage, link: self.productDetails.data?.category_logo ?? "")
-                    self.StarsRating.value = CGFloat(truncating: NumberFormatter().number(from: self.productDetails.data?.rate ?? "0") ?? 0)
+                    self.StarsRating.value = CGFloat(truncating: NumberFormatter().number(from: "\(self.productDetails.data?.rate ?? Int())") ?? 0)
                     if self.productDetails.data?.branches?.count ?? 0 > 0 {
                         self.NewPrice.text = "\(self.productDetails.data?.branches?[0].pivot?.sales_price ?? "") \(self.productDetails.data?.branches?[0].currency?.currency_name ?? "")"
                     }
@@ -164,7 +164,7 @@ extension OfferVC {
                     self.SalonName.text = self.productDetails.data?.salon_name ?? ""
                     self.SalonCategory.text = self.productDetails.data?.salon_category_name ?? ""
                     self.SetImage(image: self.SalonImage, link: self.productDetails.data?.salon_logo ?? "")
-                    if self.productDetails.data?.is_favorite == 1 {
+                    if self.productDetails.data?.is_favourite == 1 {
                         self.FavoriteBtn.setImage(#imageLiteral(resourceName: "WhiteHeart"), for: .normal)
                     }
                     

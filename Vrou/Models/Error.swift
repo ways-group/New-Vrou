@@ -21,6 +21,7 @@ struct paginationModel : Decodable{
 
 
 struct ErrorMsg:Decodable {
+    var status:Bool?
     var msg : [String]?
 }
 

@@ -17,7 +17,7 @@ class CenterServicesTableCell: UITableViewCell {
     @IBOutlet weak var OfferDescription: UILabel!
     @IBOutlet weak var OfferTime: UILabel!
     @IBOutlet weak var OfferPrice: UILabel!
-    
+    @IBOutlet weak var buyBtn: UIButton!
     @IBOutlet weak var ServiceDuration: UILabel!
     
     var mins = 0
@@ -111,7 +111,7 @@ class CenterServicesTableCell: UITableViewCell {
     }
     
     
-    func UpdateView(service:SalonService , price:String , currency:String) {
+    func UpdateView(service:Service , price:String , currency:String) {
         
         SetImage(image: OfferImage, link: service.image ?? "")
         //  SetImage(image: Salonlogo, link: offer.salon_logo ?? "") //To be EDITED
@@ -134,13 +134,12 @@ class CenterServicesTableCell: UITableViewCell {
             
         }
         
-        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "en" {
-            ServiceDuration.text = "\(service.service_duration ?? "0") minutes"
+      
+        ServiceDuration.text = "\(service.service_duration ?? "0") " + "minutes".ar()
             
-        }else if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
-            ServiceDuration.text = "\(service.service_duration ?? "0") دقيقة"
+        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
+            buyBtn.setImage(UIImage(named: "ar_reservation_icon"), for: .normal)
         }
-        
         
     }
     

@@ -52,6 +52,8 @@ class TodayOfferVC: UIViewController {
     @IBOutlet weak var usersCollection: UICollectionView!
     
     @IBOutlet weak var SelectBranchBtnHeight: NSLayoutConstraint!
+    @IBOutlet weak var commentsImage: UIImageView!
+    
     var offerDetails = OfferDetails()
     var SelectedBranchID = ""
     var branches = [String]()
@@ -126,11 +128,7 @@ class TodayOfferVC: UIViewController {
     
     @IBAction func AddToFavouriteBtn_pressed(_ sender: Any) {
         if User.shared.isLogedIn() {
-            if offerDetails.data?.offer?.is_favorite == 0 {
-                AddToFavourite()
-            }else {
-                RemoveFromFavourite()
-            }
+               LikeOffer(action: "\( offerDetails.data?.offer?.is_liked ?? Int())")
         }else {
             let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginRequiredNavController") as! LoginRequiredNavController
             vc.modalPresentationStyle = .fullScreen //or .overFullScreen for transparency
@@ -280,11 +278,13 @@ extension TodayOfferVC {
                     self.SetUpSlideShow()
                     self.mainView.isHidden = true
                     self.mainView.isShimmering = false
-                    if self.offerDetails.data?.offer?.is_favorite == 1 {
-                        self.HeartLogo.image = #imageLiteral(resourceName: "SocialHeart")
+                    
+                    if self.offerDetails.data?.offer?.is_liked == 1 {
+                        self.HeartLogo.image = #imageLiteral(resourceName: "liked")
                     }else {
-                        self.HeartLogo.image = #imageLiteral(resourceName: "HeartPink")
+                        self.HeartLogo.image = #imageLiteral(resourceName: "unlike")
                     }
+                    
                     
                     self.NewPrice.text = "\(self.offerDetails.data?.offer?.new_price ?? "") \(self.offerDetails.data?.offer?.currency ?? "")"
                     
@@ -293,7 +293,7 @@ extension TodayOfferVC {
                     self.watchingsLbl.text = "\(self.offerDetails.data?.offer?.mobile_views ?? "0")"
                     
                     self.sharesLbl.text  = "\(self.offerDetails.data?.offer?.share_count ?? "0")"
-                    self.favouritesLbl.text = "\(self.offerDetails.data?.offer?.wish_lists_count ?? "0")"
+                    self.favouritesLbl.text = "\(self.offerDetails.data?.offer?.like_counts ?? "0")"
                     self.commentsLbl.text = self.offerDetails.data?.offer?.comments_count ?? "0"
                     self.collectionsLbl.text = self.offerDetails.data?.offer?.collections_count ?? "0"
                     
@@ -350,51 +350,28 @@ extension TodayOfferVC {
     
     
     
-    func AddToFavourite() {
+// MARK: - AddToFavourite_API
+    func LikeOffer(action:String) {
         HUD.show(.progress , onView: view)
-        ApiManager.shared.ApiRequest(URL: ApiManager.Apis.AddToFavourite.description, method: .post, parameters: ["item_id":OfferID , "item_type":"offer"], encoding: URLEncoding.default, Header: [ "Authorization": "Bearer \(User.shared.TakeToken())","Accept": "application/json", "locale":UserDefaults.standard.string(forKey: "Language") ?? "en" , "timezone": TimeZoneValue.localTimeZoneIdentifier ],
+        ApiManager.shared.ApiRequest(URL: ApiManager.Apis.Like_Dislike.description, method: .post, parameters: ["likeable_id":OfferID , "likeable_type":"offer" , "action_type": action], encoding: URLEncoding.default, Header: [ "Authorization": "Bearer \(User.shared.TakeToken())","Accept": "application/json", "locale":UserDefaults.standard.string(forKey: "Language") ?? "en" , "timezone": TimeZoneValue.localTimeZoneIdentifier ],
                    ExtraParams: "", view: self.view) { (data, tmp) in
-                         if tmp == nil {
-                             HUD.hide()
-                             do {
-                                self.GetOfferDetails()
-                             }catch {
-                                 HUD.flash(.label("Something went wrong Please try again later") , onView: self.view , delay: 1.6 , completion: nil)
-                             }
-                             
-                         }else if tmp == "401" {
-                             let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                             keyWindow?.rootViewController = vc
-                             
-                         }
-                         
-                     }
-                 }
-    
-    
-    
-    func RemoveFromFavourite() {
-          HUD.show(.progress , onView: view)
-          ApiManager.shared.ApiRequest(URL: ApiManager.Apis.RemoveFromFavourite.description, method: .post, parameters: ["item_id":OfferID , "item_type":"offer"], encoding: URLEncoding.default, Header: [ "Authorization": "Bearer \(User.shared.TakeToken())","Accept": "application/json" , "locale":UserDefaults.standard.string(forKey: "Language") ?? "en" , "timezone": TimeZoneValue.localTimeZoneIdentifier ],
-                     ExtraParams: "", view: self.view) { (data, tmp) in
-                           if tmp == nil {
-                               HUD.hide()
-                               do {
-                                self.GetOfferDetails()
-                                   
-                               }catch {
-                                   HUD.flash(.label("Something went wrong Please try again later") , onView: self.view , delay: 1.6 , completion: nil)
-                               }
-                               
-                           }else if tmp == "401" {
-                               let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                               keyWindow?.rootViewController = vc
-                               
-                           }
-                           
-                       }
-                   }
-    
+                    if tmp == nil {
+                        HUD.hide()
+                        do {
+                            self.GetOfferDetails()
+                        }catch {
+                            HUD.flash(.label("Something went wrong Please try again later") , onView: self.view , delay: 1.6 , completion: nil)
+                        }
+                        
+                    }else if tmp == "401" {
+                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+                        keyWindow?.rootViewController = vc
+                        
+                    }
+                    
+        }
+    }
+
     
     
     func AddedToCartPopUp(header:String) {

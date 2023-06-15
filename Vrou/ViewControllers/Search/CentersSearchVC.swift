@@ -33,11 +33,6 @@ class CentersSearchVC: UIViewController,MXParallaxHeaderDelegate {
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let nav = self.navigationController {
-            uiSUpport.TransparentNavigationController(navController: nav)
-        }
-        
         SearchBar.delegate = self
         SetUpCollectionView(collection: CentersCollection)
         SearchBar.becomeFirstResponder()
@@ -46,7 +41,6 @@ class CentersSearchVC: UIViewController,MXParallaxHeaderDelegate {
              HUD.show(.progress , onView: view)
             GetSearchResult()
         }
-        setupSideMenu()
     }
     
     
@@ -58,36 +52,9 @@ class CentersSearchVC: UIViewController,MXParallaxHeaderDelegate {
     }
     
     // MARK: - SetupSideMenu
-    private func setupSideMenu() {
-        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
+    @IBAction func openSideMenu(_ button: UIButton){
+           Vrou.openSideMenu(vc: self)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let sideMenuNavigationController = segue.destination as? SideMenuNavigationController else { return }
-        sideMenuNavigationController.settings = makeSettings()
-        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
-            sideMenuNavigationController.leftSide = false
-        }
-    }
-    
-    private func makeSettings() -> SideMenuSettings {
-        let presentationStyle = selectedPresentationStyle()
-        presentationStyle.menuStartAlpha = 1.0
-        presentationStyle.onTopShadowOpacity = 0.0
-        presentationStyle.presentingEndAlpha = 1.0
-        
-        var settings = SideMenuSettings()
-        settings.presentationStyle = presentationStyle
-        settings.menuWidth = min(view.frame.width, view.frame.height)  * 0.9
-        settings.statusBarEndAlpha = 0
-        
-        return settings
-    }
-    
-    private func selectedPresentationStyle() -> SideMenuPresentationStyle {
-        return .viewSlideOutMenuIn
-    }
-    
     // MARK: - OffersBtn
     @IBAction func OffersBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "OffersSearchNavController") as! OffersSearchNavController

@@ -24,10 +24,10 @@
 "48H-i5-TRK.text" = "عروض";
 
 /* Class = "UILabel"; text = "out of 5"; ObjectID = "4Cf-0L-Rr3"; */
-"4Cf-0L-Rr3.text" = "من ٥";
+"4Cf-0L-Rr3.text" = "من 5";
 
 /* Class = "UILabel"; text = "Tutorial"; ObjectID = "6HP-ML-Ra1"; */
-"6HP-ML-Ra1.text" = "فيديو";
+"6HP-ML-Ra1.text" =  "توتريال";
 
 /* Class = "UILabel"; text = "Select Branch"; ObjectID = "7P9-YS-R2P"; */
 "7P9-YS-R2P.text" = "اختر فرع";

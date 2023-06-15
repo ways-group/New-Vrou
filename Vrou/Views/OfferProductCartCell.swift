@@ -44,7 +44,7 @@ class OfferProductCartCell: SwipeTableViewCell {
         SetImage(image: offerImage, link: offer.item?.image ?? "")
         offerName.text = offer.item?.offer_name ?? ""
         offerDescription.text = offer.item?.offer_description ?? ""
-        offerPrice.text = "\(offer.item?.new_price ?? "") \(offer.item?.currency ?? "")"
+        offerPrice.text = "\(offer.item?.sales_price ?? "") \(offer.item?.currency ?? "")"
         counterView.isHidden = true
         id = "\(offer.item?.id ?? Int())"
     }
@@ -54,7 +54,7 @@ class OfferProductCartCell: SwipeTableViewCell {
         SetImage(image: offerImage, link: product.item?.main_image ?? "")
         offerName.text = product.item?.product_name ?? ""
         offerDescription.text = product.item?.product_description ?? ""
-        offerPrice.text = "\(product.item?.new_price ?? "") \(product.item?.currency ?? "")"
+        offerPrice.text = "\(product.item?.sales_price ?? "") \(product.item?.currency ?? "")"
         counterView.isHidden = false
         Number.text = "\(product.qty ?? "1")"
         id = "\(product.item?.id ?? Int())"

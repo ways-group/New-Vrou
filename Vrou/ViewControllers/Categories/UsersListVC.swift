@@ -178,10 +178,18 @@ extension UsersListVC: UITableViewDelegate, UITableViewDataSource, FollowUnfollo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
-        vc.FriendProfile = true
-        vc.userID = "\(watchingList.data?.watching_users?[indexPath.row].id ?? Int())"
-        self.navigationController?.pushViewController(vc, animated: true)
+        let user = watchingList.data?.watching_users?[indexPath.row]
+        if (user?.following_status == 2){
+            let vc =  View.userProfileVC.identifyViewController(viewControllerType: ProfileVC.self)
+            vc.FriendProfile = true
+            vc.userID = "\(user?.id ?? 0)"
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else{
+            let vc =  View.PersonProfileVC.identifyViewController(viewControllerType: PersonProfileVC.self)
+            vc.userData =  user
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     

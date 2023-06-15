@@ -15,6 +15,9 @@ struct ServiceDetials:Decodable {
 struct ServiceDetialsData:Decodable {
     var salon : Salon?
     var service : Service?
+    var services : [Service]?
+    var branches: [SalonBranch]?
+    var specialists: [Employee]?
 }
 
 struct Service:Decodable {
@@ -29,9 +32,11 @@ struct Service:Decodable {
     var branches: [SalonBranch]?
     var salon_price: String?
     var home_price: String?
+    var service_price:String?
     var currency: String?
     var rate: String?
     var salon_name:String?
     var salon_logo: String?
     var Salon_id: String?
 }
+

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="JosefinSans-Regular.ttf">
+            <string>JosefinSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="376" id="KGk-i7-Jjw" customClass="TodayOfferTableCell" customModule="Vrou" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="518" height="376"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="518" height="376"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opZ-q8-KDR">
+                        <rect key="frame" x="10" y="20" width="508" height="300"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offer End Today" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZW-Fx-eDv">
+                                <rect key="frame" x="0.0" y="0.0" width="128.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="SnY-ts-joU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="JosefinSans-Regular" family="Josefin Sans" pointSize="17"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysb-m2-u0Y">
+                                <rect key="frame" x="0.0" y="275" width="48.5" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="ijd-LW-HYI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="JosefinSans-Regular" family="Josefin Sans" pointSize="17"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.40784313729999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="V2O-dF-S5O">
+                                <rect key="frame" x="0.0" y="35" width="508" height="220"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ynH-Vr-P1N">
+                                    <size key="itemSize" width="184" height="160"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ysb-m2-u0Y" firstAttribute="top" secondItem="V2O-dF-S5O" secondAttribute="bottom" constant="20" id="CKP-xb-5Vu"/>
+                            <constraint firstAttribute="height" constant="300" id="Ctk-vU-uuS"/>
+                            <constraint firstItem="MZW-Fx-eDv" firstAttribute="leading" secondItem="opZ-q8-KDR" secondAttribute="leading" id="NmH-9f-UAp"/>
+                            <constraint firstAttribute="trailing" secondItem="V2O-dF-S5O" secondAttribute="trailing" id="Sus-Ni-Az9"/>
+                            <constraint firstAttribute="bottom" secondItem="ysb-m2-u0Y" secondAttribute="bottom" id="THN-tX-QrG"/>
+                            <constraint firstItem="ysb-m2-u0Y" firstAttribute="leading" secondItem="MZW-Fx-eDv" secondAttribute="leading" id="goq-oV-RUV"/>
+                            <constraint firstItem="V2O-dF-S5O" firstAttribute="leading" secondItem="opZ-q8-KDR" secondAttribute="leading" id="jLH-Pt-bAS"/>
+                            <constraint firstItem="MZW-Fx-eDv" firstAttribute="top" secondItem="opZ-q8-KDR" secondAttribute="top" id="qu4-8W-6YA"/>
+                            <constraint firstItem="V2O-dF-S5O" firstAttribute="top" secondItem="MZW-Fx-eDv" secondAttribute="bottom" constant="10" id="s9q-ru-qqc"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="opZ-q8-KDR" secondAttribute="bottom" id="Wc9-rQ-8nw"/>
+                    <constraint firstItem="opZ-q8-KDR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="duE-3k-cJk"/>
+                    <constraint firstAttribute="trailing" secondItem="opZ-q8-KDR" secondAttribute="trailing" id="kJd-uD-7Ly"/>
+                    <constraint firstItem="opZ-q8-KDR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="n69-2w-ctI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="TodayOfferCollection" destination="V2O-dF-S5O" id="gE5-Wv-H2p"/>
+                <outlet property="offersHeight" destination="ijd-LW-HYI" id="J3n-sb-Jua"/>
+                <outlet property="offersLbl" destination="ysb-m2-u0Y" id="H4k-9a-b0o"/>
+                <outlet property="offersUpperSpace" destination="CKP-xb-5Vu" id="Ci4-Bs-NZI"/>
+            </connections>
+            <point key="canvasLocation" x="124.6376811594203" y="149.33035714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

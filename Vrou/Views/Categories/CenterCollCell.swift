@@ -20,6 +20,8 @@ class CenterCollCell: UICollectionViewCell {
     @IBOutlet weak var CenterOpenState: UILabel!
     @IBOutlet weak var StarsRate: HCSStarRatingView!
     
+    @IBOutlet weak var directionView: UIView!
+    
     @IBOutlet weak var arrow: UIImageView!
     @IBOutlet weak var verficationImage: UIImageView!
     
@@ -38,17 +40,20 @@ class CenterCollCell: UICollectionViewCell {
       
         StarsRate.value = CGFloat(Double(salon.rating ?? "0.0") ?? 0.0)
         
-        verficationImage.sd_setImage(with: URL(string: salon.verify_image ?? ""), placeholderImage: UIImage(), options: .highPriority , completed: nil)
+        directionView.layer.cornerRadius = 5
+        directionView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
         
-        if salon.is_open_now == 0 {
-            CenterOpenState.text = NSLocalizedString("Close", comment: "")
-        }else if salon.is_open_now == 1 {
-            CenterOpenState.text = NSLocalizedString("Open", comment: "")
-        }
+      //  verficationImage.sd_setImage(with: URL(string: salon.verify_image ?? ""), placeholderImage: UIImage(), options: .highPriority , completed: nil)
+        
+       // if salon.is_open_now == 0 {
+        //    CenterOpenState.text = NSLocalizedString("Close", comment: "")
+       // }else if salon.is_open_now == 1 {
+        //    CenterOpenState.text = NSLocalizedString("Open", comment: "")
+       // }
             
-        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
-            toArabic.ReverseImage(Image: arrow)
-        }
+//        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
+//            toArabic.ReverseImage(Image: arrow)
+//        }
         
     }
     

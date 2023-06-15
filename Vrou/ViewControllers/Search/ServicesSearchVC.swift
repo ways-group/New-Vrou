@@ -43,8 +43,6 @@ class ServicesSearchVC: UIViewController {
              HUD.show(.progress , onView: view)
             GetSearchResult()
         }
-        setupSideMenu()
-        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -52,36 +50,9 @@ class ServicesSearchVC: UIViewController {
     }
     
     // MARK: - setupSideMenu
-    private func setupSideMenu() {
-        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let sideMenuNavigationController = segue.destination as? SideMenuNavigationController else { return }
-        sideMenuNavigationController.settings = makeSettings()
-        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
-            sideMenuNavigationController.leftSide = false
-        }
-    }
-    
-    private func makeSettings() -> SideMenuSettings {
-        let presentationStyle = selectedPresentationStyle()
-        presentationStyle.menuStartAlpha = 1.0
-        presentationStyle.onTopShadowOpacity = 0.0
-        presentationStyle.presentingEndAlpha = 1.0
-        
-        var settings = SideMenuSettings()
-        settings.presentationStyle = presentationStyle
-        settings.menuWidth = min(view.frame.width, view.frame.height)  * 0.9
-        settings.statusBarEndAlpha = 0
-        
-        return settings
-    }
-    
-    private func selectedPresentationStyle() -> SideMenuPresentationStyle {
-        return .viewSlideOutMenuIn
-    }
-    
+  @IBAction func openSideMenu(_ button: UIButton){
+         Vrou.openSideMenu(vc: self)
+  }
      // MARK: - CenterBtn
     @IBAction func CentersBtn_pressed(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
@@ -261,12 +232,12 @@ extension ServicesSearchVC: UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let vc = UIStoryboard(name: "Center", bundle: nil).instantiateViewController(withIdentifier: "ReservationVC") as! ReservationVC
+        let vc = UIStoryboard(name: "SalonProfile", bundle: nil).instantiateViewController(withIdentifier: "ReservationViewController") as! ReservationViewController
         vc.ServiceID = "\(serviceSearch?[indexPath.row].id ?? Int())"
+        vc.salonID = "\(serviceSearch?[indexPath.row].salon_id ?? Int())"
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
+    
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         

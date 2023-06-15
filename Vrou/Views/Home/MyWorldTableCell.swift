@@ -144,7 +144,7 @@ class MyWorldTableCell: UITableViewCell{
         guestNum  = (Int(offer.mobile_views ?? "0") ?? 0) - (offer.watching_users_count ?? 0)
         
         
-        if offer.is_favorite ?? 0 == 0 {
+        if offer.is_favourite ?? 0 == 0 {
             is_like = "0"
             HeartLogo.image = #imageLiteral(resourceName: "heartPinkBorder")
         }else {
@@ -192,7 +192,7 @@ class MyWorldTableCell: UITableViewCell{
         imageLink = offer.image ?? ""
        
         
-        if offer.is_favorite ?? 0 == 0 {
+        if offer.is_favourite ?? 0 == 0 {
             is_like = "0"
         }else {
             is_like = "1"

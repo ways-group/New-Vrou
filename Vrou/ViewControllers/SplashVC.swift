@@ -9,82 +9,60 @@
 import UIKit
 import RevealingSplashView
 
-class SplashVC: UIViewController {
+class SplashVC: BaseVC<BasePresenter, BaseItem> {
     
     @IBOutlet weak var LogoView: UIView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // MARK: - Initialize a revealing Splash with with the iconImage, the initial size and the background color
+     //   setTransparentNavagtionBar(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), "", true)
         let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "VrouLogo"),iconInitialSize: CGSize(width: 200, height: 200), backgroundColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0))
-        
-        
-        
-        // MARK: - Adds the revealing splash view as a sub view
         self.view.addSubview(revealingSplashView)
-        
-        
-        
-        
-        // MARK: - Starts animation
         revealingSplashView.startAnimation(){
-            if !Shortcuts.shortcut {
-            if User.shared.isLogedIn() {
-                if User.shared.fetchUser() {
-                    
-                    if User.shared.data?.user?.country_id != "0" && User.shared.data?.user?.country_id != nil {
-//                        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldNavController") as!  BeautyWorldNavController
-//                        keyWindow?.rootViewController = vc
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-                        keyWindow?.rootViewController = vc
-                    }else {
-                        let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-                        keyWindow?.rootViewController = vc
-                    }
-                }
-            }else {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "LoginNavController") as! LoginNavController
-                keyWindow?.rootViewController = vc
-            }
-            }else {
-                Shortcuts.shortcut = false
-                switch Shortcuts.ID {
-                    
-                case "com.Vrou.Offers":
-                    let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "OffersNavController") as! OffersNavController
-                    Shortcuts.ID = ""
-                    keyWindow?.rootViewController = vc
-                    
-                case "com.Vrou.Places":
-                    let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "CenterNavController") as! CenterNavController
-                     Shortcuts.ID = ""
-                    keyWindow?.rootViewController = vc
-                case "com.Vrou.Services":
-                    let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ServicesNavController") as! ServicesNavController
-                     Shortcuts.ID = ""
-                    keyWindow?.rootViewController = vc
-                case "com.Vrou.Marketplace":
-                    let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ShopNavController") as! ShopNavController
-                     Shortcuts.ID = ""
-                    keyWindow?.rootViewController = vc
-                default:
-                    break
-                }
-                
-                
-            }
+            !Shortcuts.shortcut ? self.openfirstAds() : self.openShortcut()
         }
-            
-        
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+         setTransparentNavagtionBar(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), "", true)
+        
+    }
+    func openfirstAds(){
+        if  !UserDefaults.standard.bool(forKey: "changelang") {
+            UserDefaults.standard.set(true, forKey: "changelang")
+            RouterManager(self).push(view: View.changeLanguageView, presenter: BasePresenter.self, item: BaseItem())
+        }
+        else {
+            RouterManager(self).push(view: View.firstAdVC, presenter: BasePresenter.self, item: BaseItem())
+        }
+    }
     
+    func openShortcut(){
+        Shortcuts.shortcut = false
+        switch Shortcuts.ID {
+        case "com.Vrou.Offers":
+            let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "OffersNavController") as! OffersNavController
+            Shortcuts.ID = ""
+            keyWindow?.rootViewController = vc
+            
+        case "com.Vrou.Places":
+            let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "CenterNavController") as! CenterNavController
+             Shortcuts.ID = ""
+            keyWindow?.rootViewController = vc
+        case "com.Vrou.Services":
+            let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ServicesNavController") as! ServicesNavController
+             Shortcuts.ID = ""
+            keyWindow?.rootViewController = vc
+        case "com.Vrou.Marketplace":
+            let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "ShopNavController") as! ShopNavController
+             Shortcuts.ID = ""
+            keyWindow?.rootViewController = vc
+        default:
+            break
+        }
+    }
 }
-
-
 struct Shortcuts {
     static var shortcut = false
     static var ID = ""

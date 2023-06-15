@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class SponsorsSliderCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-     }
-
+    @IBOutlet weak var img: UIImageView!
+    
+    func configure(item: Ad){
+        img.sd_setImage(with: URL.init(string: item.image ?? ""), completed: nil)
+    }
+    func configureMainAds(item: MainAd)  {
+         img.sd_setImage(with: URL.init(string: item.image ?? ""), completed: nil)
+    }
 }

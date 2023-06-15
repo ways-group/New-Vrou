@@ -20,22 +20,22 @@ class RescheduleReservationVC: UIViewController {
     @IBOutlet weak var FromLbl: UILabel!
     @IBOutlet weak var ToLbl: UILabel!
     
-    var Reservation_id = ""
-    var serviceName = ""
-    var servicePrice = ""
-    var message = ""
-    var from = ""
-    var to = ""
-    
+//    var Reservation_id = ""
+//    var serviceName = ""
+//    var servicePrice = ""
+//    var message = ""
+//    var from = ""
+//    var to = ""
+    var info:(String, String, String, String, String, String) = ("","","","","","")
     var success = ErrorMsg()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        ServiceNameLbl.text = serviceName
-        PriceLbl.text = servicePrice
-        MessageLbl.text = message
-        FromLbl.text = from
-        ToLbl.text = to
+        ServiceNameLbl.text = info.1
+        PriceLbl.text = info.2
+        MessageLbl.text = info.3
+        FromLbl.text = info.4
+        ToLbl.text = info.5
         // Do any additional setup after loading the view.
     }
     
@@ -55,7 +55,7 @@ extension RescheduleReservationVC {
     
     
     func SendAnswer(confirmStatus:String) {
-        ApiManager.shared.ApiRequest(URL: ApiManager.Apis.ConfirmReservationReschedule.description, method: .post, parameters: ["reservation_id":Reservation_id , "confirmation_status":confirmStatus],encoding: URLEncoding.default, Header:["Authorization": "Bearer \(User.shared.TakeToken())", "Accept": "application/json" , "locale" : UserDefaults.standard.string(forKey: "Language") ?? "en", "timezone": TimeZoneValue.localTimeZoneIdentifier ],ExtraParams: "", view: self.view) { (data, tmp) in
+        ApiManager.shared.ApiRequest(URL: ApiManager.Apis.ConfirmReservationReschedule.description, method: .post, parameters: ["reservation_id":info.0 , "confirmation_status":confirmStatus],encoding: URLEncoding.default, Header:["Authorization": "Bearer \(User.shared.TakeToken())", "Accept": "application/json" , "locale" : UserDefaults.standard.string(forKey: "Language") ?? "en", "timezone": TimeZoneValue.localTimeZoneIdentifier ],ExtraParams: "", view: self.view) { (data, tmp) in
                  if tmp == nil {
                      HUD.hide()
                      do {

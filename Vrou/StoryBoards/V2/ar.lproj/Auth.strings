@@ -1,0 +1,186 @@
+
+/* Class = "UIButton"; normalTitle = "SIGN IN"; ObjectID = "02q-xO-Eok"; */
+"02q-xO-Eok.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free"; ObjectID = "0ZL-cl-4Df"; */
+"0ZL-cl-4Df.text" = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free";
+
+/* Class = "UILabel"; text = "No products!"; ObjectID = "0lb-Eb-50A"; */
+"0lb-Eb-50A.text" = "لا توجد منتجات !";
+
+/* Class = "UIButton"; normalTitle = "Create now"; ObjectID = "2g0-RV-e0X"; */
+"2g0-RV-e0X.normalTitle" = "إنشاء حساب";
+
+/* Class = "UILabel"; text = "The code is wrong"; ObjectID = "3Ld-dK-bkI"; */
+"3Ld-dK-bkI.text" = "الرمز غير صحيح";
+
+/* Class = "UITextField"; placeholder = "Phone number"; ObjectID = "3fa-Z3-wfC"; */
+"3fa-Z3-wfC.placeholder" = "رقم الهاتف";
+
+/* Class = "UILabel"; text = "Face Powder"; ObjectID = "4EM-7T-lvz"; */
+"4EM-7T-lvz.text" = "Face Powder";
+
+/* Class = "UILabel"; text = "Don't have an account ?"; ObjectID = "8U1-ik-vHQ"; */
+"8U1-ik-vHQ.text" = "ليس لديك حساب ؟";
+
+/* Class = "UILabel"; text = "16 % discount"; ObjectID = "8oy-ht-Jtb"; */
+"8oy-ht-Jtb.text" = "16 % discount";
+
+/* Class = "UIButton"; normalTitle = "City"; ObjectID = "8vm-Qa-QDv"; */
+"8vm-Qa-QDv.normalTitle" = "المدينة";
+
+/* Class = "UIViewController"; title = "3"; ObjectID = "AHt-th-sz5"; */
+"AHt-th-sz5.title" = "3";
+
+/* Class = "UIButton"; normalTitle = "SHOW"; ObjectID = "AKw-hF-MV5"; */
+"AKw-hF-MV5.normalTitle" = "اظهر";
+
+/* Class = "UIButton"; normalTitle = "Resend Code"; ObjectID = "BD8-uE-cJK"; */
+"BD8-uE-cJK.normalTitle" = "اعادة ارسال";
+
+/* Class = "UILabel"; text = "150,00EGP "; ObjectID = "GbZ-DJ-OY6"; */
+"GbZ-DJ-OY6.text" = "150,00EGP ";
+
+/* Class = "UILabel"; text = "A 6-digit confirmation code has been sent \nto Your Email ahmadkli@gmail.com\nand Send to 2010-1066-6908 via SMS"; ObjectID = "IwR-Rm-mRF"; */
+"IwR-Rm-mRF.text" = "A 6-digit confirmation code has been sent \nto Your Email ahmadkli@gmail.com\nand Send to 2010-1066-6908 via SMS";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "J3b-He-iZn"; */
+"J3b-He-iZn.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "150,00EGP "; ObjectID = "JBQ-gY-6kV"; */
+"JBQ-gY-6kV.text" = "150,00EGP ";
+
+/* Class = "UIButton"; normalTitle = "Forget your password ?"; ObjectID = "KFI-WR-bVH"; */
+"KFI-WR-bVH.normalTitle" = "نسيت كلمة المرور ؟";
+
+/* Class = "UISearchBar"; placeholder = "Look for beauty salon, spa, makeup"; ObjectID = "KrT-Vj-oKF"; */
+"KrT-Vj-oKF.placeholder" = "Look for beauty salon, spa, makeup";
+
+/* Class = "UILabel"; text = "Make-up"; ObjectID = "LT6-9u-NPV"; */
+"LT6-9u-NPV.text" = "Make-up";
+
+/* Class = "UILabel"; text = "Send"; ObjectID = "MRf-IM-Nus"; */
+"MRf-IM-Nus.text" = "ارسال";
+
+/* Class = "UILabel"; text = "Follow"; ObjectID = "N0F-PY-zZJ"; */
+"N0F-PY-zZJ.text" = "تابع";
+
+/* Class = "UILabel"; text = "Sign up"; ObjectID = "NHj-lE-B3d"; */
+"NHj-lE-B3d.text" = "تسجيل";
+
+/* Class = "UIButton"; normalTitle = "Close"; ObjectID = "Nav-Wo-wpV"; */
+"Nav-Wo-wpV.normalTitle" = "اغلاق";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "Nb6-nE-ZfY"; */
+"Nb6-nE-ZfY.placeholder" = "كلمة المرور";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "O6h-7p-pjT"; */
+"O6h-7p-pjT.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UILabel"; text = "I agree to the terms and conditions"; ObjectID = "Onb-dH-uNC"; */
+"Onb-dH-uNC.text" = "أوافق على الشروط و الأحكام";
+
+/* Class = "UILabel"; text = "No Products!"; ObjectID = "PWi-AK-6ny"; */
+"PWi-AK-6ny.text" = "لا توجد منتجات !";
+
+/* Class = "UILabel"; text = "Full makeup"; ObjectID = "Q9z-OD-MqS"; */
+"Q9z-OD-MqS.text" = "Full makeup";
+
+/* Class = "UILabel"; text = "Start a new experience with Beauty For a better start you can choose between the best salons, spa, specialists and stores to follow their offers and take advantage of discounts"; ObjectID = "QZp-lQ-Sd7"; */
+"QZp-lQ-Sd7.text" = "آبدئي تجربة جديدة مع ڤرو عروض و منتجات و خصومات  غير محدودة من اشهر الصالونات و مزاكز التجميل و المايكاب ارتست";
+
+/* Class = "UIViewController"; title = "3"; ObjectID = "XTX-ji-67F"; */
+"XTX-ji-67F.title" = "3";
+
+/* Class = "UILabel"; text = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free"; ObjectID = "YLh-3T-dI8"; */
+"YLh-3T-dI8.text" = "Cut your hair in any hairstyle you prefer and get a classic hairstyle for free";
+
+/* Class = "UILabel"; text = "Makeup"; ObjectID = "aFU-rt-YKc"; */
+"aFU-rt-YKc.text" = "Makeup";
+
+/* Class = "UINavigationItem"; title = "Marketplace"; ObjectID = "b3q-R7-iya"; */
+"b3q-R7-iya.title" = "تسوق";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "bGM-c9-SH6"; */
+"bGM-c9-SH6.text" = "Label";
+
+/* Class = "UILabel"; text = "Welcome in VROU"; ObjectID = "bTx-Vr-DM9"; */
+"bTx-Vr-DM9.text" = "مرحبا بك في فرو";
+
+/* Class = "UILabel"; text = "16 % discount"; ObjectID = "bme-47-lcj"; */
+"bme-47-lcj.text" = "16 % discount";
+
+/* Class = "UIButton"; normalTitle = "Create Account"; ObjectID = "cPM-jz-0yc"; */
+"cPM-jz-0yc.normalTitle" = "حساب جديد";
+
+/* Class = "UILabel"; text = "Let's Start"; ObjectID = "elX-AV-5qH"; */
+"elX-AV-5qH.text" = "لنبدأ";
+
+/* Class = "UILabel"; text = "SIGN IN"; ObjectID = "fa4-3n-KCI"; */
+"fa4-3n-KCI.text" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "L’Oreal Paris Infallible 24H Face Foundation - 0.31 oz., 245 Warm Sand"; ObjectID = "fno-D7-Y6P"; */
+"fno-D7-Y6P.text" = "L’Oreal Paris Infallible 24H Face Foundation - 0.31 oz., 245 Warm Sand";
+
+/* Class = "UIButton"; normalTitle = "NEXT"; ObjectID = "gJP-Sl-D7x"; */
+"gJP-Sl-D7x.normalTitle" = "التالي";
+
+/* Class = "UIButton"; normalTitle = "LOGIN WITH TOUCH ID"; ObjectID = "gOz-U9-dmA"; */
+"gOz-U9-dmA.normalTitle" = "التسجيل عن طريق البصمة";
+
+/* Class = "UILabel"; text = "93.00 LE"; ObjectID = "hTD-1t-dXZ"; */
+"hTD-1t-dXZ.text" = "93.00 LE";
+
+/* Class = "UILabel"; text = "No services!"; ObjectID = "hbD-lt-OeQ"; */
+"hbD-lt-OeQ.text" = "لا توجد خدمات !";
+
+/* Class = "UILabel"; text = "VALIDATE"; ObjectID = "hdX-xn-1ul"; */
+"hdX-xn-1ul.text" = "رمز التأكيد";
+
+/* Class = "UILabel"; text = "120 minutes"; ObjectID = "hoJ-PS-z7v"; */
+"hoJ-PS-z7v.text" = "120 minutes";
+
+/* Class = "UIButton"; normalTitle = "Fotget your pasword ?"; ObjectID = "iSL-VG-uaP"; */
+"iSL-VG-uaP.normalTitle" = "نسيت كلمة المرور ؟";
+
+/* Class = "UILabel"; text = "Full makeup"; ObjectID = "k4v-7z-kBM"; */
+"k4v-7z-kBM.text" = "Full makeup";
+
+/* Class = "UITextField"; placeholder = "Username"; ObjectID = "oEl-7B-n9o"; */
+"oEl-7B-n9o.placeholder" = "اسم المستخدم";
+
+/* Class = "UILabel"; text = "Vrou Offers"; ObjectID = "pDp-t1-A19"; */
+"pDp-t1-A19.text" = "عروض فرو";
+
+/* Class = "UIButton"; normalTitle = "SHOW"; ObjectID = "pza-ty-RXz"; */
+"pza-ty-RXz.normalTitle" = "اظهر";
+
+/* Class = "UILabel"; text = "Already have account !"; ObjectID = "rgq-X4-9OH"; */
+"rgq-X4-9OH.text" = "لديك بالفعل حساب ؟";
+
+/* Class = "UITextField"; placeholder = "Your password"; ObjectID = "sXI-DB-HYv"; */
+"sXI-DB-HYv.placeholder" = "كلمة مرور";
+
+/* Class = "UILabel"; text = "Start"; ObjectID = "scN-1F-bHQ"; */
+"scN-1F-bHQ.text" = "ابدأ";
+
+/* Class = "UIButton"; normalTitle = "Login now"; ObjectID = "ucS-YR-d5Q"; */
+"ucS-YR-d5Q.normalTitle" = "تسجيل الدخول";
+
+/* Class = "UILabel"; text = "We recommend you"; ObjectID = "ul6-BM-VEr"; */
+"ul6-BM-VEr.text" = "اخترنا لك";
+
+/* Class = "UILabel"; text = "Don’t you have an account?"; ObjectID = "veu-DL-8h4"; */
+"veu-DL-8h4.text" = "ليس لديك حساب ؟";
+
+/* Class = "UILabel"; text = "SIGN UP"; ObjectID = "wXG-qO-gQP"; */
+"wXG-qO-gQP.text" = "التسجيل";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "wqi-LQ-Yjm"; */
+"wqi-LQ-Yjm.placeholder" = "البريد الإلكتروني";
+
+/* Class = "UITextField"; placeholder = "Your password"; ObjectID = "yO7-zr-BxK"; */
+"yO7-zr-BxK.placeholder" = "كلمة المرور";
+
+/* Class = "UILabel"; text = "Terms and Conditions"; ObjectID = "z6u-oh-DwC"; */
+"z6u-oh-DwC.text" = "الشروط و الأحكام";

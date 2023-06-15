@@ -41,7 +41,8 @@ struct Offer:Decodable {
     var category: OfferCategory?
     var branches: [SalonBranch]?
     var images: [ImageModel]?
-    var is_favorite: Int?
+    var is_favourite: Int?
+    var is_liked: Int?
     var mobile_views:String?
     var share_count:String?
     var comments_count:String?
@@ -51,6 +52,8 @@ struct Offer:Decodable {
     var wish_lists_count:String?
     var watching_users: [WatchUser]?
     var watching_users_count:Int?
+    var city_name:String?
+    var like_counts: String?
 }
 
 struct Ad:Decodable {
@@ -76,6 +79,7 @@ struct SliderPopularSalon:Decodable {
     var salon_logo: String?
     var salon_background: String?
     var salon_name:String?
+    var category:Category?
 }
 
 struct Salon:Decodable {
@@ -104,9 +108,10 @@ struct Salon:Decodable {
     var verify_image: String?
     var category_name: String?
     var reservation_policy: String?
-    var area:Area?
+    var area: Area?
     var currency:Currency?
     var rating:String?
+    var search_category_name: String?
 }
 
 struct OfferCategory:Decodable {

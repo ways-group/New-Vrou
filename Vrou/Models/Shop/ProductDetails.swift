@@ -18,7 +18,7 @@ struct ProductDetailsData:Decodable {
     var product_description: String?
     var main_image: String?
     var category_id: String?
-    var rate: String?
+    var rate: Int?
     var category_name: String?
     var category_logo: String?
     var salon_name: String?
@@ -28,7 +28,7 @@ struct ProductDetailsData:Decodable {
     var product_informations: String?
     var branches: [SalonBranch]?
     var reviews: [Review]?
-    var is_favorite: Int?
+    var is_favourite: Int?
     var sales_price : String?
     var currency: String?
 }
@@ -48,4 +48,6 @@ struct Review:Decodable {
 struct ReviewUser:Decodable {
     var id: Int?
     var name: String?
+    var image: String?
+    var city: City?
 }

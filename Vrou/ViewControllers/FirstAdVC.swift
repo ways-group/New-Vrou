@@ -12,7 +12,7 @@ import SwiftyJSON
 import PKHUD
 import CoreLocation
 
-class FirstAdVC: UIViewController , CLLocationManagerDelegate{
+class FirstAdVC: BaseVC<BasePresenter, BaseItem> , CLLocationManagerDelegate{
     // MARK: - IBOutlet
     @IBOutlet weak var mainView: FBShimmeringView!
     @IBOutlet weak var logo: UIImageView!
@@ -29,31 +29,31 @@ class FirstAdVC: UIViewController , CLLocationManagerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let nav = self.navigationController {
-            uiSUpport.TransparentNavigationController(navController: nav)
-        }
-        
+//        if let nav = self.navigationController {
+//            uiSUpport.TransparentNavigationController(navController: nav)
+//        }
+        hideNavigationBar()
         mainView.contentView = logo
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550
         mainView.shimmeringOpacity = 1
         
         // For use in foreground
-        DispatchQueue.global().async {
-            let manager = CLLocationManager()
-            switch manager.authorizationStatus {
-            case .authorizedWhenInUse, .authorizedAlways:
-                self.locationManager.delegate = self
-                self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-                self.locationManager.startUpdatingLocation()
-                
-            default:
-                self.GetAdsData()
-            }
+        self.locationManager.requestWhenInUseAuthorization()
+        let status = CLLocationManager.authorizationStatus()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            locationManager.startUpdatingLocation()
+        }else {
+            GetAdsData()
         }
+        
     }
-    
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        showNavigationBar()
+    }
     
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -87,20 +87,15 @@ class FirstAdVC: UIViewController , CLLocationManagerDelegate{
     
  // MARK: - SkipBtn
     @IBAction func SkipBtn_pressed(_ sender: Any) {
-        let nulls = ["0" , nil , ""]
-        if User.shared.isLogedIn() && !nulls.contains(User.shared.data?.user?.country_id) && !nulls.contains(User.shared.data?.user?.city_id) && !nulls.contains(User.shared.data?.user?.phone){
-            let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "BeautyWorldVC") as! BeautyWorldVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        }else {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
-            self.navigationController?.pushViewController(vc, animated: true)
-        }
+      //  goToHome()
+        goToPushHome()
     }
     
      // MARK: - GetAdsData
     func GetAdsData() {
         var headerData = [String:String]()
         if User.shared.isLogedIn() {
+            User.shared.fetchUser()
             headerData =  [
                 "Authorization": "Bearer \(User.shared.TakeToken())",
                 "Accept": "application/json",

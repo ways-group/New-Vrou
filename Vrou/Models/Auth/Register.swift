@@ -108,10 +108,23 @@ struct Country:Decodable {
     var id: Int?
     var country_name: String?
     var phone_code: String?
+    var flag_icon: String?
+    var phone_length: String?
+    var phone_min_length: String?
 }
 
 struct City:Decodable {
     var id: Int?
     var city_name: String?
     var country_id: String?
+}
+
+
+struct CheckEmailPhone:Decodable {
+    var data : CheckEmailPhoneData?
+}
+
+struct CheckEmailPhoneData:Decodable {
+    var email_status: Bool?
+    var phone_status: Bool?
 }

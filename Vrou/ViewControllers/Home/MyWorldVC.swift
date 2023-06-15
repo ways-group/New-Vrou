@@ -14,7 +14,7 @@ import PKHUD
 import SideMenu
 import MOLH
 
-class MyWorldVC: UIViewController , UIScrollViewDelegate{
+class MyWorldVC: BaseVC<YourWorldPresenter, BaseItem> , UIScrollViewDelegate{
 
     @IBOutlet weak var ServicesTable: UITableView!
     @IBOutlet weak var AdsCollection: UICollectionView!
@@ -404,7 +404,7 @@ extension MyWorldVC: UITableViewDelegate , UITableViewDataSource,  MyWorldDelega
             AddToFavourite(id: offerID)
             let newCount = Int(yourWorld.data?.offers?[index].favorites_count ?? "0")! + 1
             yourWorld.data?.offers?[index].favorites_count = "\(newCount)"
-            yourWorld.data?.offers?[index].is_favorite = 1
+            yourWorld.data?.offers?[index].is_favourite = 1
             self.ServicesTable.reloadData()
             self.ServicesTable2.reloadData()
             self.ServicesTable3.reloadData()
@@ -413,7 +413,7 @@ extension MyWorldVC: UITableViewDelegate , UITableViewDataSource,  MyWorldDelega
             
             let newCount = Int(yourWorld.data?.offers?[index].favorites_count ?? "0")! - 1
             yourWorld.data?.offers?[index].favorites_count = "\(newCount)"
-            yourWorld.data?.offers?[index].is_favorite = 0
+            yourWorld.data?.offers?[index].is_favourite = 0
             RemoveFromFavourite(id: offerID)
             self.ServicesTable.reloadData()
             self.ServicesTable2.reloadData()

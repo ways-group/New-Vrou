@@ -44,4 +44,6 @@ struct SalonProduct:Decodable {
     var sales_price: String?
     var currency: String?
     var product_status:String?
+    var brand_image:String?
+    var is_favourite:Int?
 }

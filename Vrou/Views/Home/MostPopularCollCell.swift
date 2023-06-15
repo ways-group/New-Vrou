@@ -14,6 +14,7 @@ class MostPopularCollCell: UICollectionViewCell {
     @IBOutlet weak var BackImage: UIImageView!
     @IBOutlet weak var CenterLogo: UIImageView!
     @IBOutlet weak var CenterName: UILabel!
+    @IBOutlet weak var CenterCategory: UILabel!
     
     var size = CGRect()
     
@@ -28,6 +29,16 @@ class MostPopularCollCell: UICollectionViewCell {
         SetImage(image: BackImage, link: center.salon_background ?? "")
         SetImage(image: CenterLogo, link: center.salon_logo ?? "")
         CenterName.text = center.salon_name ?? ""
+    }
+    
+    func SetData(center:SliderPopularSalon) {
+        SetImage(image: BackImage, link: center.salon_background ?? "")
+        SetImage(image: CenterLogo, link: center.salon_logo ?? "")
+        CenterName.text = center.salon_name ?? ""
+        CenterCategory.text = center.category?.category_name ?? ""
+        
+        BackImage.layer.cornerRadius = 8
+        BackImage.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner]
     }
     
     func AddBackgroundEffect(image:UIImageView) {

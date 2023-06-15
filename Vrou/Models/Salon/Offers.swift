@@ -14,8 +14,8 @@ struct SalonOffers:Decodable {
 }
 
 struct SalonOfferData:Decodable {
-    var salon: Salon?
-    var offers: [SalonOffer]?
+    var offers_end_today: [Offer]?
+    var offersList: [Offer]?
 }
 
 struct SalonOffer:Decodable {
@@ -34,7 +34,7 @@ struct SalonOffer:Decodable {
     var hours: String?
     var minutes: String?
     var branches: [SalonBranch]?
-    var currency: Currency?
+    var currency: String?
     var seconds: String?
 }
 

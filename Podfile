@@ -28,13 +28,19 @@ pod 'GooglePlaces', '8.0.0'
 pod 'ImageSlideshow/Alamofire'
 pod 'MOLH'
 pod 'SwipeCellKit'
-
+pod 'XLPagerTabStrip', '~> 9.0'
 pod 'FirebaseMessaging'
 pod 'FirebaseAnalytics'
 pod 'FirebasePerformance'
 pod 'FirebaseCrashlytics'
+pod 'FirebaseAuth'
+pod 'FirebaseFirestore'
 pod 'GoogleSignIn'
 pod 'ActiveLabel'
+pod 'MultiSlider'
+pod 'FacebookCore'
+pod 'FacebookLogin'
+pod 'FacebookShare'
 
     post_install do |installer|
       installer.pods_project.targets.each do |target|

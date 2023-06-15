@@ -1,0 +1,37 @@
+
+/* Class = "UILabel"; text = "---"; ObjectID = "1aq-Bv-CtV"; */
+"1aq-Bv-CtV.text" = "---";
+
+/* Class = "UIButton"; normalTitle = "follow"; ObjectID = "2hZ-b6-G1S"; */
+"2hZ-b6-G1S.normalTitle" = "متابعة";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "3aF-AN-Qbt"; */
+"3aF-AN-Qbt.text" = "----";
+
+/* Class = "UILabel"; text = "-------"; ObjectID = "NqP-mJ-4fg"; */
+"NqP-mJ-4fg.text" = "-------";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "X2C-Hu-fbe"; */
+"X2C-Hu-fbe.text" = "----";
+
+/* Class = "UILabel"; text = "----"; ObjectID = "biU-FW-2N6"; */
+"biU-FW-2N6.text" = "----";
+
+/* Class = "UILabel"; text = "---"; ObjectID = "djv-3h-tCY"; */
+"djv-3h-tCY.text" = "---";
+
+/* Class = "UIButton"; normalTitle = "Book An Appointmen"; ObjectID = "eGX-Vc-XXN"; */
+"eGX-Vc-XXN.normalTitle" = "حجز موعد";
+
+/* Class = "UILabel"; text = "---"; ObjectID = "g7w-rn-XhS"; */
+"g7w-rn-XhS.text" = "---";
+
+/* Class = "UILabel"; text = "---"; ObjectID = "mSP-Qb-u1w"; */
+"mSP-Qb-u1w.text" = "---";
+
+
+"ZM9-3n-iK3.text" = "حجز";
+"ZcQ-tZ-CHk.text" = "اختر خدمة";
+
+"kOg-nb-2j4.normalTitle" = " تم ";
+"t5n-qL-aXS.text" = "اختر الخدمات";

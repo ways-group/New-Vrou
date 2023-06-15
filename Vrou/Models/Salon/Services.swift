@@ -18,7 +18,7 @@ struct SalonServices:Decodable {
 }
 
 struct SalonServicesData:Decodable {
-    var services:[SalonService]?
+    var services:[Service]?
     var random_order_key:Int?
 }
 

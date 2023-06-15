@@ -13,7 +13,7 @@ import SwiftyJSON
 import PKHUD
 
 
-class YourWorldVC: UIViewController {
+class YourWorldVC: BaseVC<YourWorldPresenter, BaseItem> {
     
     // MARK:- IBOutlets
     @IBOutlet weak var YourWorldCollection: UICollectionView!
@@ -23,7 +23,7 @@ class YourWorldVC: UIViewController {
     @IBOutlet weak var vrouWorldBtn: UIButton!
     @IBOutlet weak var discoverBtn: UIButton!
     @IBOutlet weak var yourWorldBtn: UIButton!
-    
+    @IBOutlet weak var helloUser : Hi!
     
     // MARK:- Variables
     var yourWorld = YourWorld()
@@ -41,7 +41,8 @@ class YourWorldVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        helloUser.vc = self
+         setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", false)
         if User.shared.isLogedIn() {
             mainView.contentView = logo
             mainView.isShimmering = true
@@ -55,35 +56,32 @@ class YourWorldVC: UIViewController {
           SetUpCollectionView(collection: YourWorldCollection)
           YourWorldCollection.register(UINib(nibName: "LoadingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LoadingCollectionViewCell")
         
-          if let nav = self.navigationController {
-              uiSupport.TransparentNavigationController(navController: nav)
-          }
-          
-//        vrouWorldBtn.setTitle(NSLocalizedString("VROU World", comment: ""), for: .normal)
-//        discoverBtn.setTitle(NSLocalizedString("Discover", comment: ""), for: .normal)
-//        yourWorldBtn.setTitle(NSLocalizedString("Your World", comment: ""), for: .normal)
-        
+//          if let nav = self.navigationController {
+//              uiSupport.TransparentNavigationController(navController: nav)
+//          }
+
           SetUpRefresh()
-          setupSideMenu()
           GetYourWorld()
      
     }
     
     
-    // MARK:- ButtonsActions
-    @IBAction func VrouWorldBtn_pressed(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
-        keyWindow?.rootViewController = vc
-        
+//    // MARK:- ButtonsActions
+//    @IBAction func VrouWorldBtn_pressed(_ sender: Any) {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "BeautyWorldNavController") as! BeautyWorldNavController
+//        keyWindow?.rootViewController = vc
+//
+//    }
+//
+//
+//    @IBAction func DiscoverBtn_pressed(_ sender: Any) {
+//        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeDiscoverNavController") as! HomeDiscoverNavController
+//        keyWindow?.rootViewController = vc
+//    }
+    
+    @IBAction func openSideMenu(_ button: UIButton){
+           Vrou.openSideMenu(vc: self)
     }
-    
-    
-    @IBAction func DiscoverBtn_pressed(_ sender: Any) {
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeDiscoverNavController") as! HomeDiscoverNavController
-        keyWindow?.rootViewController = vc
-    }
-    
-    
     @IBAction func SearchBtn_pressed(_ sender: Any) {
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CentersSearchNavController") as! CentersSearchNavController
         keyWindow?.rootViewController = vc
@@ -98,39 +96,7 @@ class YourWorldVC: UIViewController {
          collection.dataSource = self
     }
     
-    
-    // MARK:- SetUp SideMenu
-    private func setupSideMenu() {
-        SideMenuManager.default.leftMenuNavigationController = storyboard?.instantiateViewController(withIdentifier: "LeftMenuNavigationController") as? SideMenuNavigationController
-        
-    }
 
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let sideMenuNavigationController = segue.destination as? SideMenuNavigationController else { return }
-        sideMenuNavigationController.settings = makeSettings()
-        if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
-            sideMenuNavigationController.leftSide = false
-        }
-    }
-
-    private func makeSettings() -> SideMenuSettings {
-        let presentationStyle = selectedPresentationStyle()
-        presentationStyle.menuStartAlpha = 1.0
-        presentationStyle.onTopShadowOpacity = 0.0
-        presentationStyle.presentingEndAlpha = 1.0
-        
-        var settings = SideMenuSettings()
-        settings.presentationStyle = presentationStyle
-        settings.menuWidth = min(view.frame.width, view.frame.height)  * 0.9
-        settings.statusBarEndAlpha = 0
-        
-        return settings
-    }
-    
-    private func selectedPresentationStyle() -> SideMenuPresentationStyle {
-        return .viewSlideOutMenuIn
-    }
-    
     
     // MARK:- SetUpRefresh
     func SetUpRefresh() {
@@ -319,14 +285,14 @@ extension YourWorldVC :  UICollectionViewDelegate, UICollectionViewDataSource , 
             AddToFavourite(id: offerID)
             let newCount = Int(yourWorld.data?.offers?[index].favorites_count ?? "0")! + 1
             yourWorld.data?.offers?[index].favorites_count = "\(newCount)"
-            yourWorld.data?.offers?[index].is_favorite = 1
+            yourWorld.data?.offers?[index].is_favourite = 1
             self.YourWorldCollection.reloadData()
             
         }else if isLike == "1" {
             
             let newCount = Int(yourWorld.data?.offers?[index].favorites_count ?? "0")! - 1
             yourWorld.data?.offers?[index].favorites_count = "\(newCount)"
-            yourWorld.data?.offers?[index].is_favorite = 0
+            yourWorld.data?.offers?[index].is_favourite = 0
             RemoveFromFavourite(id: offerID)
             self.YourWorldCollection.reloadData()
         }
