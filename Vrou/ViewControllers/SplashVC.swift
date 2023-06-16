@@ -15,7 +15,6 @@ class SplashVC: BaseVC<BasePresenter, BaseItem> {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-     //   setTransparentNavagtionBar(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), "", true)
         let revealingSplashView = RevealingSplashView(iconImage: #imageLiteral(resourceName: "VrouLogo"),iconInitialSize: CGSize(width: 200, height: 200), backgroundColor: #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0))
         self.view.addSubview(revealingSplashView)
         revealingSplashView.startAnimation(){
@@ -25,9 +24,9 @@ class SplashVC: BaseVC<BasePresenter, BaseItem> {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-         setTransparentNavagtionBar(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), "", true)
-        
+        setTransparentNavagtionBar()
     }
+    
     func openfirstAds(){
         if  !UserDefaults.standard.bool(forKey: "changelang") {
             UserDefaults.standard.set(true, forKey: "changelang")

@@ -492,6 +492,10 @@ extension ShopViewController : UICollectionViewDelegate, UICollectionViewDataSou
            return offersCategories.data?.count ?? 0
         }
         
+        offerCollectionHeight.constant = 0
+        headerHeight = 100
+        ProductsCollection.parallaxHeader.height = headerHeight
+
         if collectionView == SubCategoryCollection {
             
             if productCategories.data?.product_categories?.count ?? 0 == 0 && requested {

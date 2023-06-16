@@ -44,7 +44,7 @@ class HomeRootView: BaseButtonBarPagerTabStripViewController<HomeRootTabsCollect
             newCell?.newCellConfigure()
         }
          super.viewDidLoad()
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", false)
+        setCustomNavagationBar()
         presenter = HomeRootPresenter(router: RouterManager(self))
         helloUser.vc = self
         myView.layer.cornerRadius = 10
@@ -52,7 +52,7 @@ class HomeRootView: BaseButtonBarPagerTabStripViewController<HomeRootTabsCollect
         self.view.layoutIfNeeded()
     }
     override func viewWillAppear(_ animated: Bool) {
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", false)
+        setCustomNavagationBar()
         super.viewWillAppear(animated)
         if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
         containerView.isScrollEnabled = false
@@ -60,7 +60,7 @@ class HomeRootView: BaseButtonBarPagerTabStripViewController<HomeRootTabsCollect
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", false)
+        setCustomNavagationBar()
         super.viewDidAppear(animated)
          self.view.layoutIfNeeded()
     }

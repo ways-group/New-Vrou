@@ -21,7 +21,7 @@ class loginRequiredVC: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setTransparentNavagtionBar(UIColor.init(named: "mainColor")!,"", true)
+        setTransparentNavagtionBar()
     }
    
     @IBAction func SignInBtn_pressed(_ sender: Any) {

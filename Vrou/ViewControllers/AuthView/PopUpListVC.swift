@@ -41,7 +41,7 @@ class PopUpListVC: UIViewController {
         super.viewDidLoad()
         ListTable.delegate = self
         ListTable.dataSource = self
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar()
 
     }
     

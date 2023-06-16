@@ -33,6 +33,7 @@ class CentersSearchVC: UIViewController,MXParallaxHeaderDelegate {
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCustomNavagationBar()
         SearchBar.delegate = self
         SetUpCollectionView(collection: CentersCollection)
         SearchBar.becomeFirstResponder()

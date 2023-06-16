@@ -26,6 +26,7 @@ class WebVC: UIViewController , WKNavigationDelegate {
         let url = URL(string: link) ?? URL(string: "https://vrouapp.com/en")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
+        setCustomNavagationBar()
     }
     
 }

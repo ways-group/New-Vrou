@@ -59,7 +59,7 @@ class LoginVC: BaseVC<BasePresenter, BaseItem>, ASAuthorizationControllerDelegat
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar()
         
         UserNameTxtField.delegate = self
         PasswordTxtField.delegate = self
@@ -94,7 +94,7 @@ class LoginVC: BaseVC<BasePresenter, BaseItem>, ASAuthorizationControllerDelegat
  
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", false)
+        setCustomNavagationBar()
     }
         
     func CheckArabic() {

@@ -33,7 +33,7 @@ class SMSAuthVC: UIViewController {
             txtField.delegate = self
         }
         backImage.AddBlurEffect(blueEffectStrength: 0.4)
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar()
     }
 
     

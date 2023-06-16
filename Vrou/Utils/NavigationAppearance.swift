@@ -9,24 +9,38 @@
 import UIKit
 
 extension UIViewController{
-    func setTransparentNavagtionBar(_ barColor: UIColor = UIColor(named: "mainColor")!, _ title:String = "",_ isTranslucent:Bool = false){
-        self.navigationController?.navigationBar.isTranslucent = isTranslucent
-        self.navigationController?.navigationBar.barTintColor = barColor
-        self.navigationController?.navigationBar.tintColor = UIColor(named: "whiteColor")!
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "whiteColor")!]
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationItem.title = title
-        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    func setTransparentNavagtionBar(with tintColor: UIColor = UIColor.white) {
+        navigationController?.navigationBar.backgroundColor = .clear
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.isTranslucent = true
+        navigationController?.setNavigationBarHidden(false, animated: true)
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = .clear
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        
+        navigationController?.navigationBar.tintColor = tintColor
     }
-    func setCustomNavagationBar(_ barColor: UIColor = UIColor(named: "mainColor")!, _ title:String = "",_ isTranslucent:Bool = false){
-        self.navigationController?.navigationBar.isTranslucent = isTranslucent
+    
+    func setCustomNavagationBar(_ barColor: UIColor = UIColor(named: "mainColor")!, _ title:String = "") {
         self.navigationController?.navigationBar.barTintColor = barColor
-        self.navigationController?.navigationBar.tintColor = UIColor(named: "whiteColor")!
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "whiteColor")!]
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationItem.title = title
+        
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = barColor
+        appearance.titleTextAttributes = [.font: UIFont.boldSystemFont(ofSize: 20.0),
+                                          .foregroundColor: UIColor.white]
+
+        // Customizing our navigation bar
+        navigationController?.navigationBar.tintColor = .white
+        navigationController?.navigationBar.standardAppearance = appearance
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
     }
     func hideNavigationBar(){
         self.navigationController?.setNavigationBarHidden(true, animated: false)

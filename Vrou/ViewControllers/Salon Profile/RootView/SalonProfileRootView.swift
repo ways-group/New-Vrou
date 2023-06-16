@@ -58,13 +58,13 @@ class SalonProfileRootView: BaseButtonBarPagerTabStripViewController<SalonProfil
     override func viewDidLoad() {
         create_observer()
         settings.style.selectedBarBackgroundColor = .clear
-        changeCurrentIndexProgressive = { [weak self] (oldCell: SalonProfileTabsCell?, newCell: SalonProfileTabsCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+        changeCurrentIndexProgressive = { (oldCell: SalonProfileTabsCell?, newCell: SalonProfileTabsCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.oldCellConfigue()
             newCell?.newCellConfigure()
         }
         super.viewDidLoad()
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar(with: UIColor(named: "mainColor")!)
         
         tabs_view.layer.cornerRadius = 10
         tabs_view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
@@ -72,7 +72,7 @@ class SalonProfileRootView: BaseButtonBarPagerTabStripViewController<SalonProfil
         information_view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     override func viewWillAppear(_ animated: Bool) {
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar(with: UIColor(named: "mainColor")!)
         super.viewWillAppear(animated)
         if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
             containerView.isScrollEnabled = false
@@ -80,7 +80,7 @@ class SalonProfileRootView: BaseButtonBarPagerTabStripViewController<SalonProfil
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar(with: UIColor(named: "mainColor")!)
         super.viewDidAppear(animated)
        
         if firstTime {self.moveToViewController(at: 0)

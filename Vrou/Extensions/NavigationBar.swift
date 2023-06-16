@@ -10,15 +10,16 @@ import Foundation
 import UIKit
 
 class UISupport {
-    
     func TransparentNavigationController(navController:UINavigationController?) {
-        
         navController?.navigationBar.backgroundColor = .clear
         navController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navController?.navigationBar.shadowImage = UIImage()
         
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
     }
-    
 }
 
 

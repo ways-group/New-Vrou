@@ -50,7 +50,7 @@ class MapVC: BaseVC<BasePresenter, BaseItem>, CLLocationManagerDelegate, GMSMapV
         super.viewDidLoad()
         //   GoogleMapsView.delegate = self
 
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar()
         areasTable.delegate = self
         areasTable.dataSource = self
         
@@ -67,20 +67,22 @@ class MapVC: BaseVC<BasePresenter, BaseItem>, CLLocationManagerDelegate, GMSMapV
     
     
     override func willMove(toParent parent: UIViewController?) {
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", false)
+        setCustomNavagationBar()
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        self.locationManager.requestWhenInUseAuthorization()
-        let authorizationStatus = CLLocationManager.authorizationStatus()
-        if (authorizationStatus == CLAuthorizationStatus.denied ) {
-            showSimpleActionSheet()
-        }
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
+        DispatchQueue.global().async {
+            let manager = CLLocationManager()
+            switch manager.authorizationStatus {
+            case .authorizedWhenInUse, .authorizedAlways:
+                self.locationManager.delegate = self
+                self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                self.locationManager.startUpdatingLocation()
+                
+            default:
+                self.showSimpleActionSheet()
+            }
         }
     }
     

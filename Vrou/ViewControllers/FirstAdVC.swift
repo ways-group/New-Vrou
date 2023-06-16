@@ -112,38 +112,42 @@ class FirstAdVC: BaseVC<BasePresenter, BaseItem> , CLLocationManagerDelegate{
             ]
         }
         
-        ApiManager.shared.ApiRequest(URL: "\(ApiManager.Apis.FreeAdsList.description)lat=\(lat)&lng=\(long)", method: .get, Header:headerData, ExtraParams: nil, view: self.view) { (data, tmp) in
-            if tmp == nil {
-                do {
-                    self.ads = try JSONDecoder().decode(FirstAds.self, from: data!)
-                    self.SetImage(image: self.AdIamge, link: self.ads.first_ads ?? "")
-                    self.mainView.isHidden = true
-                    self.mainView.isShimmering = false
+        DispatchQueue.main.sync { [weak self] in
+            guard let self = self else { return }
+            
+            ApiManager.shared.ApiRequest(URL: "\(ApiManager.Apis.FreeAdsList.description)lat=\(lat)&lng=\(long)", method: .get, Header:headerData, ExtraParams: nil, view: self.view) { (data, tmp) in
+                if tmp == nil {
+                    do {
+                        self.ads = try JSONDecoder().decode(FirstAds.self, from: data!)
+                        self.SetImage(image: self.AdIamge, link: self.ads.first_ads ?? "")
+                        self.mainView.isHidden = true
+                        self.mainView.isShimmering = false
+                        
+                        FirstAdds.first_ads = self.ads.first_ads ?? ""
+                        FirstAdds.register_ads = self.ads.register_ads ?? ""
+                        FirstAdds.login_ads = self.ads.login_ads ?? ""
+                        FirstAdds.discover_ads = self.ads.discover_ads ?? ""
+                        FirstAdds.marketPlace = self.ads.marketplace ?? "0"
+                        FirstAdds.week_offer_day = self.ads.week_offer_day ?? ""
+                        UserDefaults.standard.set(self.ads.city_id ?? 0, forKey: "GuestCityId")
+                        self.CheckTodayName()
+                        
+                       
+                        
+                    }catch {
+                        HUD.flash(.label("Something went wrong Please try again later") , onView: self.view , delay: 1.6 , completion: nil)
+                    }
                     
-                    FirstAdds.first_ads = self.ads.first_ads ?? ""
-                    FirstAdds.register_ads = self.ads.register_ads ?? ""
-                    FirstAdds.login_ads = self.ads.login_ads ?? ""
-                    FirstAdds.discover_ads = self.ads.discover_ads ?? ""
-                    FirstAdds.marketPlace = self.ads.marketplace ?? "0"
-                    FirstAdds.week_offer_day = self.ads.week_offer_day ?? ""
-                    UserDefaults.standard.set(self.ads.city_id ?? 0, forKey: "GuestCityId")
-                    self.CheckTodayName()
-                    
-                   
-                    
-                }catch {
-                    HUD.flash(.label("Something went wrong Please try again later") , onView: self.view , delay: 1.6 , completion: nil)
+                }else if tmp == "401" {
+                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+                    self.navigationController?.pushViewController(vc, animated: false)
+                }else if tmp == "NoConnect" {
+                    guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
+                    vc.callbackClosure = { [weak self] in
+                        self?.GetAdsData()
+                    }
+                    self.present(vc, animated: true, completion: nil)
                 }
-                
-            }else if tmp == "401" {
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                self.navigationController?.pushViewController(vc, animated: false)
-            }else if tmp == "NoConnect" {
-                guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
-                vc.callbackClosure = { [weak self] in
-                    self?.GetAdsData()
-                }
-                self.present(vc, animated: true, completion: nil)
             }
         }
     }

@@ -42,7 +42,7 @@ class YourWorldVC: BaseVC<YourWorldPresenter, BaseItem> {
     override func viewDidLoad() {
         super.viewDidLoad()
         helloUser.vc = self
-         setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", false)
+         setCustomNavagationBar()
         if User.shared.isLogedIn() {
             mainView.contentView = logo
             mainView.isShimmering = true

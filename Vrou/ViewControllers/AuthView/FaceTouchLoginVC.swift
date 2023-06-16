@@ -42,7 +42,7 @@ class FaceTouchLoginVC: UIViewController {
         }
         
         authenticateUser()
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar()
 
     }
     

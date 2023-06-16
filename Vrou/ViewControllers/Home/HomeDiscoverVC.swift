@@ -71,7 +71,6 @@ class HomeDiscoverVC: UIViewController , UIScrollViewDelegate {
         SetUpCollectionView(collection: slider2)
         ImagesVideosCollection2.register(UINib(nibName: "LoadingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LoadingCollectionViewCell")
 
-        
         if let nav = self.navigationController {
             uiSupport.TransparentNavigationController(navController: nav)
         }

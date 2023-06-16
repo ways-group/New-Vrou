@@ -16,8 +16,8 @@ class ChangeLanguageView:  BaseVC<BasePresenter, BaseItem> {
         GetAdsData()
     }
     override func viewWillAppear(_ animated: Bool) {
-          super.viewWillAppear(animated)
-        setTransparentNavagtionBar(#colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0), "", true)
+        super.viewWillAppear(animated)
+        setTransparentNavagtionBar()
         hideNavigationBar()
     }
     override func viewWillDisappear(_ animated: Bool) {

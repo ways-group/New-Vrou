@@ -68,7 +68,7 @@ class ProfileVC: UIViewController {
     // MARK: - IBOutlet
     override func viewDidLoad() {
         super.viewDidLoad()
-       // setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+       // setTransparentNavagtionBar()
         router = RouterManager(self)
       setCustomNavagationBar()
 //        mainView.contentView = logo

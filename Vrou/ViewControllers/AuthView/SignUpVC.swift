@@ -90,13 +90,13 @@ class SignUpVC: UIViewController{
         PasswordTxtField.delegate = self
         
         GetCountries()
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar()
         GovernmentBtn.setTitle("City".ar(), for: .normal)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", true)
+        setTransparentNavagtionBar()
     }
     func SetImage(image:UIImageView , link:String) {
         let url = URL(string:link )

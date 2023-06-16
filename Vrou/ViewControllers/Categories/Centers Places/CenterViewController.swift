@@ -68,7 +68,7 @@ class CenterViewController: BaseVC<BasePresenter, BaseItem>, MXParallaxHeaderDel
         if let nav = self.navigationController {
             uiSUpport.TransparentNavigationController(navController: nav)
         }
-        setTransparentNavagtionBar(UIColor(named: "mainColor")!, "", false)
+        setCustomNavagationBar()
         mainView.contentView = logo
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550

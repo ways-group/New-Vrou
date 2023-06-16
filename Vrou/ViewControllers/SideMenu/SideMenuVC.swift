@@ -37,6 +37,7 @@ class SideMenuVC:  BaseVC<SideMenuPresenter, BaseItem> {
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTransparentNavagtionBar()
         presenter = SideMenuPresenter(router: RouterManager(self))
 //        if FirstAdds.marketPlace == "0" {
 //            MarketPlaceView.isHidden = true
@@ -71,10 +72,16 @@ class SideMenuVC:  BaseVC<SideMenuPresenter, BaseItem> {
         setSideMenuTabs()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        setTransparentNavagtionBar()
+    }
+    
     func SetImage(image:UIImageView , link:String) {
         let url = URL(string:link )
         image.sd_setImage(with: url, placeholderImage:UIImage(), options: .highPriority , completed: nil)
     }
+    
     @IBAction func itemsAction(_ button: UIButton){
         globalValues.sideMenu_selected = button.tag
         presenter.itemsRoute(button.tag)
