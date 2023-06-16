@@ -39,16 +39,18 @@ class FirstAdVC: BaseVC<BasePresenter, BaseItem> , CLLocationManagerDelegate{
         mainView.shimmeringOpacity = 1
         
         // For use in foreground
-        self.locationManager.requestWhenInUseAuthorization()
-        let status = CLLocationManager.authorizationStatus()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            locationManager.startUpdatingLocation()
-        }else {
-            GetAdsData()
+        DispatchQueue.global().async {
+            let manager = CLLocationManager()
+            switch manager.authorizationStatus {
+            case .authorizedWhenInUse, .authorizedAlways:
+                self.locationManager.delegate = self
+                self.locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+                self.locationManager.startUpdatingLocation()
+                
+            default:
+                self.GetAdsData()
+            }
         }
-        
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
