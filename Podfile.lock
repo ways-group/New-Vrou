@@ -907,6 +907,7 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
+  - netfox (1.21.0)
   - Pageboy (2.6.1)
   - PKHUD (5.3.0)
   - PromisesObjC (2.2.0)
@@ -954,6 +955,7 @@ DEPENDENCIES:
   - MOLH
   - MultiSlider
   - MXParallaxHeader
+  - netfox
   - PKHUD
   - RevealingSplashView
   - RSSelectionMenu
@@ -1017,6 +1019,7 @@ SPEC REPOS:
     - MultiSlider
     - MXParallaxHeader
     - nanopb
+    - netfox
     - Pageboy
     - PKHUD
     - PromisesObjC
@@ -1083,6 +1086,7 @@ SPEC CHECKSUMS:
   MultiSlider: 7e1c0ce4891d3c698c835b4309b8b18cd3f212f6
   MXParallaxHeader: de3c867e10ba46e8f6e20c8ee1f2a910372b3b94
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
   Pageboy: c2a25d1c280e9b622014b692626f1ff9298e0ad2
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   PromisesObjC: 09985d6d70fbe7878040aa746d78236e6946d2ef
@@ -1099,6 +1103,6 @@ SPEC CHECKSUMS:
   ViewAnimator: a9ceed80266e00fd435ec4fb99b2df64d580d0e4
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: fe419fc97095901f2c6710bc319e7c0dbbeb4e50
+PODFILE CHECKSUM: 2c4a0fc1bcc1295e13b0ec6a2c823d955f6f9233
 
 COCOAPODS: 1.12.1

@@ -112,7 +112,7 @@ class FirstAdVC: BaseVC<BasePresenter, BaseItem> , CLLocationManagerDelegate{
             ]
         }
         
-        DispatchQueue.main.sync { [weak self] in
+        DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
             ApiManager.shared.ApiRequest(URL: "\(ApiManager.Apis.FreeAdsList.description)lat=\(lat)&lng=\(long)", method: .get, Header:headerData, ExtraParams: nil, view: self.view) { (data, tmp) in

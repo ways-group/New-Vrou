@@ -41,6 +41,7 @@ pod 'MultiSlider'
 pod 'FacebookCore'
 pod 'FacebookLogin'
 pod 'FacebookShare'
+pod 'netfox'
 
     post_install do |installer|
       installer.pods_project.targets.each do |target|

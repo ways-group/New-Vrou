@@ -24,7 +24,7 @@ class SalonProfileSettingsPopUp: UIViewController {
     var friendProfile = false
     var parentView: UIViewController!
 
-    let userProfileItems = [(4, NSLocalizedString("Edit profile", comment: ""), #imageLiteral(resourceName: "Pencil")), (5, NSLocalizedString("QrCode", comment: ""), #imageLiteral(resourceName: "qrCodeWgite"))]
+    let userProfileItems = [(4, NSLocalizedString("Edit profile", comment: ""), #imageLiteral(resourceName: "Pencil")), (5, NSLocalizedString("QrCode", comment: ""), #imageLiteral(resourceName: "qrCodeWgite")), (6, NSLocalizedString("Delete Account", comment: ""), UIImage(named: "Delete")!)]
     var items = [(0, NSLocalizedString("Check in", comment: ""), #imageLiteral(resourceName: "checkin_icon")), (1, NSLocalizedString("Share", comment: ""), #imageLiteral(resourceName: "share_icon")), (2, NSLocalizedString("Direction", comment: ""), #imageLiteral(resourceName: "pin_icon")), (3, NSLocalizedString("Reservation policy", comment: ""), #imageLiteral(resourceName: "policy_icon"))]
    
     override func viewDidLoad() {
@@ -70,6 +70,27 @@ class SalonProfileSettingsPopUp: UIViewController {
             }
         }
         
+    }
+    
+    func deleteAccountPressed() {
+        HUD.show(.progress , onView: view)
+        ApiManager.shared.ApiRequest(URL: ApiManager.Apis.DeleteAccount.description, method: .post, Header:["Authorization": "Bearer \(User.shared.TakeToken())"], ExtraParams: "", view: view) { [weak self] data, error in
+            HUD.hide()
+            if error == nil {
+                User.shared.remove()
+                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+                keyWindow?.rootViewController = vc
+            } else if error == "401" {
+                let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+                keyWindow?.rootViewController = vc
+            } else if error == "NoConnect" {
+                guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
+                vc.callbackClosure = { [weak self] in
+                    self?.deleteAccountPressed()
+                }
+                self?.present(vc, animated: true, completion: nil)
+            }
+        }
     }
     
     func reservationPolicy_pressed() {
@@ -128,6 +149,7 @@ extension SalonProfileSettingsPopUp: UITableViewDataSource, UITableViewDelegate 
         case 3: reservationPolicy_pressed()
         case 4: goToEditProfile()
         case 5: goToQrCode()
+        case 6: deleteAccountPressed()
         default: break
         }
     }

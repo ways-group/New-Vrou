@@ -957,6 +957,7 @@
 				523A1EF923200383002BF911 /* AppDelegate.swift */,
 				044B6D6723AA62DD0072194F /* SceneDelegate.swift */,
 				DD0DCC772A3B16830001A090 /* Constants.swift */,
+				0424B9D123A6617300CD07AF /* Localizable.strings */,
 				523A1F0023200385002BF911 /* Assets.xcassets */,
 				B211EA46243DE09A0061D4E3 /* ColorAssets.xcassets */,
 				DD0DCC752A3B15AC0001A090 /* GoogleService-Info.plist */,
@@ -1166,7 +1167,6 @@
 				52888850232A6DD6005D0F95 /* Tajawal-Bold.ttf */,
 				52888852232A6DD6005D0F95 /* JosefinSans-Thin.ttf */,
 				52888854232A6DD6005D0F95 /* OFL.txt */,
-				0424B9D123A6617300CD07AF /* Localizable.strings */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";

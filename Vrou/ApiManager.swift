@@ -43,7 +43,7 @@ class ApiManager {
     enum Apis {
         
         case  Login, ResetPassword, CountriesList, CitiesList, Register, YourWorld, Discover, BeautyWorld, SalonAbout, SalonOffers, ServicesCategories, SalonServices, ProductCategories, SalonProducts, SalonBranches, RecommendSalons, FollowSalon , unfollowSalon, TermsConditions, Sections, CenterList, OfferCategories, OfferList, OfferDetails, ServiceDetials, InServicesCategories, ServicesList, OfferCategoryDetails, ProductCategoriesII, ProductList, ProductDetails, ServicesListHomeSalon, FreeAdsList, NearBranchesMAP, profile, AboutURLs, AddOfferProductToCart, AddServiceToCart, ServiceCartDetails, RemoveOfferProductFromCart, ContactUs, advertise, ChangePassword, Logout, LanguagesList, UpdateSettings, GetOfferPtoductCart, RemoveServiceFromCart, addSalonReview, SalonReviews, RemoveProductFromCart, CheckPromoCode, checkout, updateProfile , RefreshDeviceToken, MyReservations, Mypurchases, MyFavourites, AddToFavourite, RemoveFromFavourite, BeautyWorldAuth, DiscoverAuth, Search, salonsVideo, SocialLogin, NotificationsList, SetNotificationsSeen, ConfirmReservationReschedule, AlbumData, CommentsList, AddComment, DeleteComment, LikeComment, CreateCollection_addItem, DeleteColleciton, CollectionList, AddDeleteVisitSalon, UserSalonsReviews, uploadUserMedia, ShareItem, Like_Dislike, CreateEvent, AcceptRejectEvent, EventsList, EventDetails, AreasList, VisitedSalon, WeekOffers, WatchingList, FollowUnfollowUser, UserProfile, RequestsList, AcceptRejectRequest, getTutorials, HomeOffers, CheckEmailExist, getUserGallery,
-        ReservationDetails, branchAvailableTime, AddMultiServiceToCart
+        ReservationDetails, branchAvailableTime, AddMultiServiceToCart, DeleteAccount
         
         var description: String {
             // let url =    "https://vrouapp.com/api-v2"
@@ -52,6 +52,7 @@ class ApiManager {
             // let url = "https://devbeauty.vrouapp.com/api-v3"
             
             switch self {
+            case .DeleteAccount: return url + "/auth/delete-account"
             case .Login:   return url + "/auth/login"
             case .ResetPassword:   return url + "/auth/password/reset"
             case .CountriesList:   return url + "/common/countries"

@@ -20,6 +20,7 @@ import IQKeyboardManagerSwift
 import GoogleSignIn
 import FirebaseMessaging
 import FirebaseAuth
+import netfox
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNotificationCenterDelegate {
@@ -157,7 +158,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         
         application.registerForRemoteNotifications()
         
-        
+        #if DEBUG
+            NFX.sharedInstance().start()
+        #endif
         
         print(Messaging.messaging().fcmToken as Any)
         let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
