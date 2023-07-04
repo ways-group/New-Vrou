@@ -250,7 +250,7 @@ extension VrouWorldView{
     
     func checkForReservation()  {
         if schedule_reservation?.id != nil && User.shared.isLogedIn() {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "RescheduleReservationVC") as! RescheduleReservationVC
+            let vc = UIStoryboard(name: Storyboard.home.rawValue, bundle: nil).instantiateViewController(withIdentifier: "RescheduleReservationVC") as! RescheduleReservationVC
             vc.info = ("\(schedule_reservation?.id ?? Int())", schedule_reservation?.msg_two ?? "",
                        schedule_reservation?.msg_three ?? "", schedule_reservation?.msg_one ?? "",
                        schedule_reservation?.from ?? "", schedule_reservation?.to ?? "")
