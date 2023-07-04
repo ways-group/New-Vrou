@@ -386,6 +386,7 @@
 		B2FCE8922440A9830005BC41 /* FaceTouchLoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2FCE8912440A9830005BC41 /* FaceTouchLoginVC.swift */; };
 		DD0DCC762A3B15AC0001A090 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD0DCC752A3B15AC0001A090 /* GoogleService-Info.plist */; };
 		DD0DCC782A3B16830001A090 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0DCC772A3B16830001A090 /* Constants.swift */; };
+		DD32E9562A545A2200709515 /* Changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = DD32E9552A545A2200709515 /* Changelog.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -797,6 +798,7 @@
 		C401A20B40BBCFC4EA8643A6 /* Pods_Vrou.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vrou.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD0DCC752A3B15AC0001A090 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD0DCC772A3B16830001A090 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DD32E9552A545A2200709515 /* Changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
 		DD8BB445D81B0D1E6D1C2F57 /* Pods-Vrou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vrou.debug.xcconfig"; path = "Target Support Files/Pods-Vrou/Pods-Vrou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -942,6 +944,7 @@
 		523A1EF823200383002BF911 /* Vrou */ = {
 			isa = PBXGroup;
 			children = (
+				DD32E9552A545A2200709515 /* Changelog.md */,
 				B2B8BC48243DF8B900E55B9A /* Presenter */,
 				B2B8BC43243DF4D900E55B9A /* Helper */,
 				044FDD4323706C6F00748A52 /* Vrou.entitlements */,
@@ -2137,6 +2140,7 @@
 				52B4CF3E23D491AF009D76AA /* PopularCentersCollectionViewCell.xib in Resources */,
 				52B4CF4223D491CA009D76AA /* SponsorsSliderCollectionViewCell.xib in Resources */,
 				0482AFB223CC592100D07D98 /* JosefinSans-Bold.ttf in Resources */,
+				DD32E9562A545A2200709515 /* Changelog.md in Resources */,
 				6986D48D2450414000A74551 /* SalonTodayOfferCell.xib in Resources */,
 				69B3D99C24449F3A00D71192 /* TodayOfferCell.xib in Resources */,
 				043E5AF3237D6F1C00AFCA45 /* Tajawal-Light.ttf in Resources */,
@@ -2209,7 +2213,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		5CD5C5E00506A4F1E978EE85 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2843,7 +2847,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.waysgroup.vrou;
 				PRODUCT_NAME = Vrou;
 				SWIFT_OBJC_BRIDGING_HEADER = Vrou/Bridges/BeautyBridge.h;
@@ -2873,7 +2877,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0.1;
+				MARKETING_VERSION = 3.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.waysgroup.vrou;
 				PRODUCT_NAME = Vrou;
 				SWIFT_OBJC_BRIDGING_HEADER = Vrou/Bridges/BeautyBridge.h;
