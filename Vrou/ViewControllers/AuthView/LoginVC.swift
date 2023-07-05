@@ -81,13 +81,13 @@ class LoginVC: BaseVC<BasePresenter, BaseItem>, ASAuthorizationControllerDelegat
         }
         
         
-//        if #available(iOS 13.0, *) {
-//            addSignInWithAppleBtn()
-//           // performExistingAccountSetupFlows()
-//
-//            // Continue implement with : https://developerinsider.co/ios-13-how-to-integrate-sign-in-with-apple-in-your-application/
-//            // From #9
-//        }
+        if #available(iOS 13.0, *) {
+            addSignInWithAppleBtn()
+            performExistingAccountSetupFlows()
+
+            // Continue implement with : https://developerinsider.co/ios-13-how-to-integrate-sign-in-with-apple-in-your-application/
+            // From #9
+        }
         
     }
     
@@ -534,8 +534,6 @@ extension LoginVC : UITextFieldDelegate{
 
 }
 
-
-@available(iOS 13.0, *)
 extension LoginVC {
     
     func addSignInWithAppleBtn() {
@@ -575,28 +573,17 @@ extension LoginVC {
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
-        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+        if let appleIDCredential = authorization.credential as?  ASAuthorizationAppleIDCredential {
             // Create an account in your system.
-            //               let userIdentifier = appleIDCredential.user
-            //               let userFirstName = appleIDCredential.fullName?.givenName
-            //               let userLastName = appleIDCredential.fullName?.familyName
-            //               let userEmail = appleIDCredential.email
-          //  let token = appleIDCredential.
-            let token2 = appleIDCredential.authorizationCode
+//            let userIdentifier = appleIDCredential.user
+//            let userFirstName = appleIDCredential.fullName?.givenName
+//            let userLastName = appleIDCredential.fullName?.familyName
+//            let userEmail = appleIDCredential.email
+            let token = appleIDCredential.authorizationCode
             
-          //  print(token?.base64EncodedString())
-//            self.SocialLogin(token: token!, provider: "apple")
-            //Navigate to other view controller
+            if let tokenEncoded = token?.base64EncodedString() {
+                self.SocialLogin(token: tokenEncoded, provider: "apple")
+            }
         }
-//        else if let passwordCredential = authorization.credential as? ASPasswordCredential {
-//            // Sign in using an existing iCloud Keychain credential.
-////            let username = passwordCredential.user
-////            let password = passwordCredential.password
-//
-//            //Navigate to other view controller
-//        }
     }
-    
-    
-    
 }
