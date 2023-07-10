@@ -17,15 +17,16 @@ protocol SubCategoryProductCollCellDelegate {
 
 class SubCategoryProductCollCell: UICollectionViewCell {
     
-    @IBOutlet weak var DiscountView: UIView!
-    @IBOutlet weak var DiscountLbl: UILabel!
-    @IBOutlet weak var ProductImage: UIImageView!
-    @IBOutlet weak var ProductName: UILabel!
-    @IBOutlet weak var ProductPrice: UILabel!
-    @IBOutlet weak var ProductDescription: UILabel!
-    @IBOutlet weak var NoteLbl: UILabel!
-    @IBOutlet weak var heartBtn: UIButton!
-    @IBOutlet weak var brandImage: UIImageView!
+    @IBOutlet private weak var DiscountView: UIView!
+    @IBOutlet private weak var DiscountLbl: UILabel!
+    @IBOutlet private weak var ProductImage: UIImageView!
+    @IBOutlet private weak var ProductName: UILabel!
+    @IBOutlet private weak var ProductPrice: UILabel!
+    @IBOutlet private weak var ProductPriceCurrencyLabel: UILabel!
+//    @IBOutlet weak var ProductDescription: UILabel!
+//    @IBOutlet weak var NoteLbl: UILabel!
+    @IBOutlet private weak var heartBtn: UIButton!
+    @IBOutlet private weak var brandImage: UIImageView!
     
     var delegate : SubCategoryProductCollCellDelegate!
     var id = ""
@@ -34,15 +35,17 @@ class SubCategoryProductCollCell: UICollectionViewCell {
     func UpdateView(product:SalonProduct, Note:String , price:String) {
         SetImage(image: ProductImage, link: product.main_image ?? "")
         ProductName.text = product.product_name ?? ""
-        ProductPrice.text = price
         
-        let currency = " \(product.currency ?? "")"
-        let finalString = "\(price) \(currency)"
-        let amountText = NSMutableAttributedString.init(string: finalString)
-        amountText.setAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10, weight: .semibold),NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.6833723187, green: 0.1359050274, blue: 0.4578525424, alpha: 1)], range: NSMakeRange(finalString.count-currency.count,currency.count))
-        ProductPrice.attributedText = amountText
-        ProductDescription.text = product.product_description ?? ""
-        NoteLbl.text = Note
+        let currency = "\(product.currency ?? "")"
+        ProductPrice.text = "\(price)"
+        ProductPriceCurrencyLabel.text = currency
+        if isArabic {
+            ProductPriceCurrencyLabel.textAlignment = .right
+        } else {
+            ProductPriceCurrencyLabel.textAlignment = .left
+        }
+//        ProductDescription.text = product.product_description ?? ""
+//        NoteLbl.text = Note
         
         if product.product_status != "" && product.product_status != nil {
             DiscountView.isHidden = false
@@ -56,15 +59,17 @@ class SubCategoryProductCollCell: UICollectionViewCell {
     func UpdateView(product:Product, Note:String , price:String, index:Int) {
         SetImage(image: ProductImage, link: product.main_image ?? "")
         ProductName.text = product.product_name ?? ""
-        ProductPrice.text = price
         
-        let currency = " \(product.currency ?? "")"
-        let finalString = "\(price)\(currency)"
-//        let amountText = NSMutableAttributedString.init(string: finalString)
-//        amountText.setAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10, weight: .semibold),NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.6833723187, green: 0.1359050274, blue: 0.4578525424, alpha: 1)], range: NSMakeRange(finalString.count-currency.count,currency.count))
-        
-        ProductPrice.text = finalString
-        ProductDescription.text = product.product_description ?? ""
+        let currency = "\(product.currency ?? "")"
+        ProductPrice.text = "\(price)"
+        ProductPriceCurrencyLabel.text = currency
+        if isArabic {
+            ProductPriceCurrencyLabel.textAlignment = .right
+        } else {
+            ProductPriceCurrencyLabel.textAlignment = .left
+        }
+
+//        ProductDescription.text = product.product_description ?? ""
         //NoteLbl.text = Note
         brandImage.SetImage(link: product.brand_image ?? "")
         
@@ -99,7 +104,7 @@ class SubCategoryProductCollCell: UICollectionViewCell {
         //           let amountText = NSMutableAttributedString.init(string: finalString)
         //           amountText.setAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 10, weight: .semibold),NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0.6833723187, green: 0.1359050274, blue: 0.4578525424, alpha: 1)], range: NSMakeRange(finalString.count-currency.count,currency.count))
         //           ProductPrice.attributedText = amountText
-        ProductDescription.text = product.product_description ?? ""
+//        ProductDescription.text = product.product_description ?? ""
         // NoteLbl.text = Note
         
         if product.product_status != "" && product.product_status != nil {

@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import MOLH
 
+let isArabic: Bool = UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar"
 
 struct globalValues {
    static var sideMenu_selected = 0

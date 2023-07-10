@@ -387,6 +387,7 @@
 		DD0DCC762A3B15AC0001A090 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD0DCC752A3B15AC0001A090 /* GoogleService-Info.plist */; };
 		DD0DCC782A3B16830001A090 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0DCC772A3B16830001A090 /* Constants.swift */; };
 		DD32E9562A545A2200709515 /* Changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = DD32E9552A545A2200709515 /* Changelog.md */; };
+		DD7FA2A72A55710300B4CE87 /* SubCategoryProductCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7FA2A62A55710300B4CE87 /* SubCategoryProductCollCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -799,6 +800,7 @@
 		DD0DCC752A3B15AC0001A090 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD0DCC772A3B16830001A090 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DD32E9552A545A2200709515 /* Changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
+		DD7FA2A62A55710300B4CE87 /* SubCategoryProductCollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubCategoryProductCollCell.xib; sourceTree = "<group>"; };
 		DD8BB445D81B0D1E6D1C2F57 /* Pods-Vrou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vrou.debug.xcconfig"; path = "Target Support Files/Pods-Vrou/Pods-Vrou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -911,7 +913,7 @@
 			children = (
 				52104A0D23292F2B0052D9BF /* OfferCollectionCell.swift */,
 				5288884723295F30005D0F95 /* SubCategoryCollCell.swift */,
-				52888849232A409E005D0F95 /* SubCategoryProductCollCell.swift */,
+				DD7FA2A52A5570ED00B4CE87 /* SubCategoryProductCollCell */,
 				5288885C232AE304005D0F95 /* ServcisesCollCell.swift */,
 				5291D2A5232BB8C20097466F /* CenterCollCell.swift */,
 				5291D2B6232D06A80097466F /* SpecialOfferTableCell.swift */,
@@ -2064,6 +2066,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		DD7FA2A52A5570ED00B4CE87 /* SubCategoryProductCollCell */ = {
+			isa = PBXGroup;
+			children = (
+				52888849232A409E005D0F95 /* SubCategoryProductCollCell.swift */,
+				DD7FA2A62A55710300B4CE87 /* SubCategoryProductCollCell.xib */,
+			);
+			path = SubCategoryProductCollCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2138,6 +2149,7 @@
 				B216209924513C4D00A87776 /* MapBranchesTableViewCell.xib in Resources */,
 				694BC4ED24597DE500356F03 /* SalonProfile.storyboard in Resources */,
 				52B4CF3E23D491AF009D76AA /* PopularCentersCollectionViewCell.xib in Resources */,
+				DD7FA2A72A55710300B4CE87 /* SubCategoryProductCollCell.xib in Resources */,
 				52B4CF4223D491CA009D76AA /* SponsorsSliderCollectionViewCell.xib in Resources */,
 				0482AFB223CC592100D07D98 /* JosefinSans-Bold.ttf in Resources */,
 				DD32E9562A545A2200709515 /* Changelog.md in Resources */,

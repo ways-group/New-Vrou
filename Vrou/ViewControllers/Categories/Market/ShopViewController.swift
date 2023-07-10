@@ -77,6 +77,8 @@ class ShopViewController: BaseVC<BasePresenter, BaseItem>, MXParallaxHeaderDeleg
         SetUpCollectionView(collection: ProductsCollection)
         SetUpCollectionView(collection: SubCategoryCollection)
 
+        ProductsCollection.register(UINib(nibName: String(describing: SubCategoryProductCollCell.self), bundle: nil), forCellWithReuseIdentifier: String(describing: SubCategoryProductCollCell.self))
+        
         ProductsCollection.parallaxHeader.view = headerView
         ProductsCollection.parallaxHeader.height = headerHeight
         ProductsCollection.parallaxHeader.mode = .bottom
