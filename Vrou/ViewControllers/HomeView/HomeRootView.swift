@@ -38,12 +38,12 @@ class HomeRootView: BaseButtonBarPagerTabStripViewController<HomeRootTabsCollect
     
     override func viewDidLoad() {
         settings.style.selectedBarBackgroundColor = .clear
-        changeCurrentIndexProgressive = { [weak self] (oldCell: HomeRootTabsCollectionViewCell?, newCell: HomeRootTabsCollectionViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
+        changeCurrentIndexProgressive = { (oldCell: HomeRootTabsCollectionViewCell?, newCell: HomeRootTabsCollectionViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
             oldCell?.oldCellConfigue()
             newCell?.newCellConfigure()
         }
-         super.viewDidLoad()
+        super.viewDidLoad()
         setCustomNavagationBar()
         presenter = HomeRootPresenter(router: RouterManager(self))
         helloUser.vc = self
@@ -55,19 +55,18 @@ class HomeRootView: BaseButtonBarPagerTabStripViewController<HomeRootTabsCollect
         setCustomNavagationBar()
         super.viewWillAppear(animated)
         if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
-        containerView.isScrollEnabled = false
+            containerView.isScrollEnabled = false
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         setCustomNavagationBar()
         super.viewDidAppear(animated)
-         self.view.layoutIfNeeded()
+        self.view.layoutIfNeeded()
     }
 
     // MARK: - PagerTabStripDataSource
-    override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        
+    override public func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
         let vrouWorldView = View.vrouWorldView.identifyViewController(viewControllerType: VrouWorldView.self)
         let offersVC = View.offersVC.identifyViewController(viewControllerType: OffersVC.self)
         let homeServicesVC = View.HomeServicesVC.identifyViewController(viewControllerType: HomeServicesVC.self)
