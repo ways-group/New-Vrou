@@ -10,7 +10,13 @@ import Foundation
 import UIKit
 import MOLH
 
-let isArabic: Bool = UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar"
+let isArabic: Bool = (UserDefaults.standard.string(forKey: "Language") ?? "en") == "ar"
+
+extension String {
+    var localized: String {
+        return NSLocalizedString(self, comment: "")
+    }
+}
 
 struct globalValues {
    static var sideMenu_selected = 0

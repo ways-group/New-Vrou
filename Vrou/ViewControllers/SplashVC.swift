@@ -58,7 +58,7 @@ class SplashVC: BaseVC<BasePresenter, BaseItem> {
              Shortcuts.ID = ""
             keyWindow?.rootViewController = vc
         default:
-            break
+            openfirstAds()
         }
     }
 }

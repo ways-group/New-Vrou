@@ -66,8 +66,9 @@ class SettingForgetPassword: UIViewController {
                     keyWindow?.rootViewController = vc
                 })
             } else if tmp == "401" {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-                keyWindow?.rootViewController = vc
+                let vc = UIStoryboard(name: "Master", bundle: nil).instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+                let vcc = UINavigationController(rootViewController: vc)
+                keyWindow?.rootViewController = vcc
             }
         }
     }

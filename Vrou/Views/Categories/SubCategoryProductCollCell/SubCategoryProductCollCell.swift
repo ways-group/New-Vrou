@@ -23,6 +23,11 @@ class SubCategoryProductCollCell: UICollectionViewCell {
     @IBOutlet private weak var ProductName: UILabel!
     @IBOutlet private weak var ProductPrice: UILabel!
     @IBOutlet private weak var ProductPriceCurrencyLabel: UILabel!
+    @IBOutlet private weak var buyBtn: UIButton! {
+        didSet {
+            buyBtn.setTitle("Buy".localized, for: .normal)
+        }
+    }
 //    @IBOutlet weak var ProductDescription: UILabel!
 //    @IBOutlet weak var NoteLbl: UILabel!
     @IBOutlet private weak var heartBtn: UIButton!

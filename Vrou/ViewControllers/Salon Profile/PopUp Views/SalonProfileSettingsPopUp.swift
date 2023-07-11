@@ -24,7 +24,7 @@ class SalonProfileSettingsPopUp: UIViewController {
     var friendProfile = false
     var parentView: UIViewController!
 
-    let userProfileItems = [(4, NSLocalizedString("Edit profile", comment: ""), #imageLiteral(resourceName: "Pencil")), (5, NSLocalizedString("QrCode", comment: ""), #imageLiteral(resourceName: "qrCodeWgite")), (6, NSLocalizedString("Delete Account", comment: ""), UIImage(named: "Delete")!)]
+    let userProfileItems = [(4, NSLocalizedString("Edit profile", comment: ""), #imageLiteral(resourceName: "Pencil")), (5, NSLocalizedString("QrCode", comment: ""), #imageLiteral(resourceName: "qrCodeWgite")), (6, "Delete Account".localized, UIImage(named: "Delete")!)]
     var items = [(0, NSLocalizedString("Check in", comment: ""), #imageLiteral(resourceName: "checkin_icon")), (1, NSLocalizedString("Share", comment: ""), #imageLiteral(resourceName: "share_icon")), (2, NSLocalizedString("Direction", comment: ""), #imageLiteral(resourceName: "pin_icon")), (3, NSLocalizedString("Reservation policy", comment: ""), #imageLiteral(resourceName: "policy_icon"))]
    
     override func viewDidLoad() {
@@ -72,25 +72,32 @@ class SalonProfileSettingsPopUp: UIViewController {
         
     }
     
-    func deleteAccountPressed() {
+    func deleteAccountAPI() {
         HUD.show(.progress , onView: view)
         ApiManager.shared.ApiRequest(URL: ApiManager.Apis.DeleteAccount.description, method: .post, Header:["Authorization": "Bearer \(User.shared.TakeToken())"], ExtraParams: "", view: view) { [weak self] data, error in
             HUD.hide()
-            if error == nil {
-                User.shared.remove()
-                let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-                keyWindow?.rootViewController = vc
-            } else if error == "401" {
-                let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-                keyWindow?.rootViewController = vc
-            } else if error == "NoConnect" {
+            if error == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
                 vc.callbackClosure = { [weak self] in
                     self?.deleteAccountPressed()
                 }
                 self?.present(vc, animated: true, completion: nil)
+            } else {
+                User.shared.remove()
+                let vc = UIStoryboard(name: "Master", bundle: nil).instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+                let vcc = UINavigationController(rootViewController: vc)
+                keyWindow?.rootViewController = vcc
             }
         }
+    }
+    
+    func deleteAccountPressed() {
+        let alert = UIAlertController(title: "Delete Account".localized, message: "Are you sure you want to delete your account. Please note that this step can't redo.".localized, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Delete".localized, style: .destructive, handler: { [weak self] action in
+            self?.deleteAccountAPI()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel".localized, style: .cancel))
+        self.present(alert, animated: true, completion: nil)
     }
     
     func reservationPolicy_pressed() {

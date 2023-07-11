@@ -13,7 +13,6 @@
 "AppRegularFont_ar" = "Tajawal-Bold";
 "AppBoldFont_ar" = "Tajawal-Bold";
 
-
 "BSImagePicker.Done" = "تم";
 
 // CommentsVC
@@ -172,3 +171,5 @@
 "mins" = "دقيقة";
 
 "Delete Account" = "امسح الحساب";
+"Buy" = "اشتر الآن";
+"Are you sure you want to delete your account. Please note that this step can't redo." = "هل انت متأكد انك تريد حذف حسابك. يرجى ملاحظة أنه لا يمكن إعادة هذه الخطوة.";

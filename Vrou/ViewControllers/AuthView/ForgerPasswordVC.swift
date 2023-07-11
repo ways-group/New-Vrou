@@ -57,8 +57,9 @@ class ForgerPasswordVC: UIViewController {
                     keyWindow?.rootViewController = vc
                 })
             } else if tmp == "401" {
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
-                keyWindow?.rootViewController = vc                
+                let vc = UIStoryboard(name: "Master", bundle: nil).instantiateViewController(withIdentifier: "SplashVC") as! SplashVC
+                let vcc = UINavigationController(rootViewController: vc)
+                keyWindow?.rootViewController = vcc
             }else if tmp == "NoConnect" {
                 guard let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NoConnectionVC") as? NoConnectionVC else { return }
                 vc.callbackClosure = { [weak self] in
