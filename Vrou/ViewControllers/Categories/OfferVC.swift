@@ -46,19 +46,25 @@ class OfferVC: UIViewController {
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550
         mainView.shimmeringOpacity = 1
-        
         // Do any additional setup after loading the view.
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         GetProductDetailsData()
+        setCustomNavagationBar(.white, tintColor: UIColor(named: "mainColor")!, productDetails.data?.product_name ?? "")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        setCustomNavagationBar()
     }
     
     // MARK: - SetupSlideShow
     func SetUpSlideShow() {
         
-        slideshow.slideshowInterval = 2.0
+//        slideshow.slideshowInterval = 5.0
         slideshow.pageIndicatorPosition = .init(horizontal: .center, vertical: .under)
         slideshow.contentScaleMode = UIView.ContentMode.scaleAspectFill
         
@@ -140,11 +146,11 @@ extension OfferVC {
         var params = [String():String()]
             if User.shared.isLogedIn() {
                 params = ["product_id": productID , "user_hash_id": User.shared.TakeHashID() ]
-                }else {
+            }else {
                 params = ["product_id": productID , "user_hash_id": "0" ]
-                   }
-        ApiManager.shared.ApiRequest(URL: FinalURL, method: .post, parameters: params ,encoding: URLEncoding.default, Header:[ "Accept": "application/json","locale": UserDefaults.standard.string(forKey: "Language") ?? "en" , "timezone": TimeZoneValue.localTimeZoneIdentifier ],ExtraParams: "", view: self.view) { (data, tmp) in
-            
+            }
+        ApiManager.shared.ApiRequest(URL: FinalURL, method: .post, parameters: params ,encoding: URLEncoding.default, Header:[ "Accept": "application/json","locale": UserDefaults.standard.string(forKey: "Language") ?? "en" , "timezone": TimeZoneValue.localTimeZoneIdentifier ],ExtraParams: "", view: self.view) { [weak self] (data, tmp) in
+            guard let self = self else { return }
             if tmp == nil {
                 HUD.hide()
                 do {
@@ -167,7 +173,7 @@ extension OfferVC {
                     if self.productDetails.data?.is_favourite == 1 {
                         self.FavoriteBtn.setImage(#imageLiteral(resourceName: "WhiteHeart"), for: .normal)
                     }
-                    
+                    self.setCustomNavagationBar(.white, tintColor: UIColor(named: "mainColor")!, productDetails.data?.product_name ?? "")
                     
                 }catch {
                     HUD.flash(.label("Something went wrong Please try again later") , onView: self.view , delay: 1.6 , completion: nil)
@@ -182,7 +188,6 @@ extension OfferVC {
                 }
                 self.present(vc, animated: true, completion: nil)
             }
-            
         }
     }
     

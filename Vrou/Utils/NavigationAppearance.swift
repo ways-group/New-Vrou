@@ -24,24 +24,28 @@ extension UIViewController{
         navigationController?.navigationBar.tintColor = tintColor
     }
     
-    func setCustomNavagationBar(_ barColor: UIColor = UIColor(named: "mainColor")!, _ title:String = "") {
+    func setCustomNavagationBar(_ barColor: UIColor = UIColor(named: "mainColor")!, tintColor: UIColor = UIColor.white, _ title:String = "") {
         self.navigationController?.navigationBar.barTintColor = barColor
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor(named: "whiteColor")!]
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: tintColor]
         self.navigationItem.title = title
         
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
+        let image = UIImage(systemName: "chevron.backward")?.withTintColor(tintColor, renderingMode: .alwaysOriginal) // fix indicator color
+        appearance.setBackIndicatorImage(image, transitionMaskImage: image)
+
+        appearance.shadowColor = .clear
+        appearance.shadowImage = UIImage()
         appearance.backgroundColor = barColor
-        appearance.titleTextAttributes = [.font: UIFont.boldSystemFont(ofSize: 20.0),
-                                          .foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = [.font: UIFont.systemFont(ofSize: 15.0),
+                                          .foregroundColor: tintColor]
 
         // Customizing our navigation bar
-        navigationController?.navigationBar.tintColor = .white
         navigationController?.navigationBar.standardAppearance = appearance
         navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.tintColor = tintColor
     }
+    
     func hideNavigationBar(){
         self.navigationController?.setNavigationBarHidden(true, animated: false)
     }

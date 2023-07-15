@@ -303,7 +303,7 @@ extension EditAccountVC {
                             HUD.flash(.label("Profile is Updated Successfully") , onView: self.view , delay: 2 , completion: {
                                 tmp in
                                 if self.SocialLogin {
-                                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
+                                    let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
                                     keyWindow?.rootViewController = vc
                                 }else {
                                     self.navigationController?.popViewController(animated: true)
@@ -313,7 +313,7 @@ extension EditAccountVC {
                             HUD.flash(.label("تم تعديل الملف الشخصي بنجاح") , onView: self.view , delay: 2 , completion: {
                                 tmp in
                                 if self.SocialLogin {
-                                    let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
+                                    let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
                                     keyWindow?.rootViewController = vc
                                 }else {
                                     self.navigationController?.popViewController(animated: true)
@@ -373,7 +373,7 @@ extension EditAccountVC {
                                 HUD.flash(.label("Profile is Updated Successfully") , onView: self.view , delay: 2 , completion: {
                                     tmp in
                                     if self.SocialLogin {
-                                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
+                                        let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
                                         User.shared.SaveToken(data: User.shared.data?.token! ?? "")
                                         User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
                                         keyWindow?.rootViewController = vc
@@ -386,7 +386,7 @@ extension EditAccountVC {
                                 HUD.flash(.label("تم تعديل الملف الشخصي بنجاح") , onView: self.view , delay: 2 , completion: {
                                     tmp in
                                     if self.SocialLogin {
-                                        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
+                                        let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
                                         User.shared.SaveToken(data: User.shared.data?.token! ?? "")
                                         User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
                                         keyWindow?.rootViewController = vc
