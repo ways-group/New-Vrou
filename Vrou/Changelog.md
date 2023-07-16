@@ -11,8 +11,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Replace GoogleService-Into.plist to the new account
 - Replace account keys for Google Maps and Facebook
 - Add delete account button in profile screen
+- Add Login with Apple ID
+- Redesign product cards in home page marketplace
+- Redesign product details page
+- Run Pod Update
 
 ### Fixed
 - Fix UI issues
 - Fix Crash in Home Page regarding to the reschedule request
 - Fix DispatchQueue issue
+- Fix Social login (Facebook, Google, Apple ID)

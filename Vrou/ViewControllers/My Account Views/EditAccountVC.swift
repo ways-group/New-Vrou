@@ -337,7 +337,7 @@ extension EditAccountVC {
     
     
       // MARK: - UpdateProfile&Image_API
-    func UpdateProfileWithImage(url:String){
+    func UpdateProfileWithImage(url:String) {
         
         let tokn = User.shared.TakeToken()
         params = ["first_name":firstName.text! , "last_name": lastName.text! , "user_name": userName.text! , "country_id": countryID , "city_id" : cityID , "address": homeAddress.text ?? "" , "phone":mobile.text! , "image": ""]
@@ -350,7 +350,7 @@ extension EditAccountVC {
             HUD.show(.label("جاري رفع الصورة"), onView: self.view)
         }
         
-        Alamofire.upload(multipartFormData: { (multipartFormData) in
+        AF.upload(multipartFormData: { (multipartFormData) in
             for (key, value) in self.params {
                 multipartFormData.append("\(value)".data(using: String.Encoding.utf8)!, withName: key as String)
             }
@@ -358,72 +358,47 @@ extension EditAccountVC {
             for i in self.dataImage{
                 multipartFormData.append(i, withName: "image", fileName: "image.png", mimeType: "image/png")
             }
-            //  }
             
-        }, usingThreshold: UInt64.init(), to: url, method: .post , headers : ["Authorization" : "Bearer " + tokn] ) { (result) in
-            switch result{
-            case .success(let upload, _, _):
-                upload.responseJSON { response in
-                    if (response.response?.statusCode ?? 404) < 300{ //
-                        User.shared.removeUser()
-                        User.shared.SaveUser(data: response.data!)
-                        if User.shared.fetchUser() {
-                             FirstAdds.marketPlace = User.shared.data?.user?.marketplace ?? "0"
-                            if  UserDefaults.standard.string(forKey: "Language") ?? "en" == "en" {
-                                HUD.flash(.label("Profile is Updated Successfully") , onView: self.view , delay: 2 , completion: {
-                                    tmp in
-                                    if self.SocialLogin {
-                                        let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
-                                        User.shared.SaveToken(data: User.shared.data?.token! ?? "")
-                                        User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
-                                        keyWindow?.rootViewController = vc
-                                    }else {
-                                        self.navigationController?.popViewController(animated: true)
-                                    }
-                                    
-                                })
-                            }else if  UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
-                                HUD.flash(.label("تم تعديل الملف الشخصي بنجاح") , onView: self.view , delay: 2 , completion: {
-                                    tmp in
-                                    if self.SocialLogin {
-                                        let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
-                                        User.shared.SaveToken(data: User.shared.data?.token! ?? "")
-                                        User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
-                                        keyWindow?.rootViewController = vc
-                                    }else {
-                                        self.navigationController?.popViewController(animated: true)
-                                    }
-                                })
+        }, to: url, usingThreshold: UInt64.init(), method: .post , headers : ["Authorization" : "Bearer " + tokn] ).responseData(completionHandler: { response in
+            if let data = response.data {
+                User.shared.removeUser()
+                User.shared.SaveUser(data: data)
+                if User.shared.fetchUser() {
+                     FirstAdds.marketPlace = User.shared.data?.user?.marketplace ?? "0"
+                    if  UserDefaults.standard.string(forKey: "Language") ?? "en" == "en" {
+                        HUD.flash(.label("Profile is Updated Successfully") , onView: self.view , delay: 2 , completion: {
+                            tmp in
+                            if self.SocialLogin {
+                                let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
+                                User.shared.SaveToken(data: User.shared.data?.token! ?? "")
+                                User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
+                                keyWindow?.rootViewController = vc
+                            }else {
+                                self.navigationController?.popViewController(animated: true)
                             }
-                        }
-                        print(response.data!)
-                        self.changeProfilePicture = false
-                        
-                    }else{
-                        do {
-                            let temp = try JSONDecoder().decode(ErrorMsg.self, from: response.data!)
-                            HUD.flash(.labeledError(title: "حدث خطأ", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
-                            HUD.hide()
-                        }catch{
-                            HUD.flash(.labeledError(title: "حدث خطأ", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
-                        }
+                            
+                        })
+                    }else if  UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {
+                        HUD.flash(.label("تم تعديل الملف الشخصي بنجاح") , onView: self.view , delay: 2 , completion: {
+                            tmp in
+                            if self.SocialLogin {
+                                let vc = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "WelcomeBeautyVC") as! WelcomeBeautyVC
+                                User.shared.SaveToken(data: User.shared.data?.token! ?? "")
+                                User.shared.SaveHashID(data: User.shared.data?.user_hash_id! ?? "")
+                                keyWindow?.rootViewController = vc
+                            }else {
+                                self.navigationController?.popViewController(animated: true)
+                            }
+                        })
                     }
-                    
-                    if let err = response.error{
-                        HUD.hide()
-                        HUD.flash(.labeledError(title: "حدث خطأ", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
-                        print(err)
-                        return
-                    }
-                    
                 }
-            case .failure(let error):
-                HUD.flash(.labeledError(title: "حدث خطأ في رفع الصور", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
-                print("Error in upload: \(error.localizedDescription)")
-                
+                print(response.data!)
+                self.changeProfilePicture = false
+            } else {
+                HUD.flash(.labeledError(title: "حدث خطأ", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
+                HUD.hide()
             }
-        }
-        
+        })
     }
     
     

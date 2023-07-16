@@ -63,7 +63,7 @@ class CenterProductsTableCell: UITableViewCell {
         
         if User.shared.isLogedIn() {
             if product.is_favourite == 1 {
-                likeBtn.setImage(UIImage(named: "icons8-heart-1"), for: .normal)
+                likeBtn.setImage(UIImage(named: "icons8-heart-filled"), for: .normal)
             }else {
                 likeBtn.setImage(UIImage(named: "icons8-heart"), for: .normal)
             }

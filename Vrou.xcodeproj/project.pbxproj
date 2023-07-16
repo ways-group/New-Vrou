@@ -309,7 +309,6 @@
 		69BD6A5E244A0690002D761B /* OffersFilterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69BD6A5C244A0690002D761B /* OffersFilterTableCell.swift */; };
 		69BD6A5F244A0690002D761B /* OffersFilterTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69BD6A5D244A0690002D761B /* OffersFilterTableCell.xib */; };
 		69C932D923534015008A20DE /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C932D823534015008A20DE /* ProfileVC.swift */; };
-		69CB7D6A244CA01800A0C7E5 /* HomeServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CB7D69244CA01800A0C7E5 /* HomeServicesVC.swift */; };
 		69CB7D71244CA57A00A0C7E5 /* ServicesCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CB7D6F244CA57A00A0C7E5 /* ServicesCollCell.swift */; };
 		69CB7D72244CA57A00A0C7E5 /* ServicesCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69CB7D70244CA57A00A0C7E5 /* ServicesCollCell.xib */; };
 		69CB7D74244DCF7A00A0C7E5 /* SalonOffersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CB7D73244DCF7A00A0C7E5 /* SalonOffersVC.swift */; };
@@ -318,7 +317,6 @@
 		69DAC88624445C8C00902734 /* TermsNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DAC88524445C8C00902734 /* TermsNavController.swift */; };
 		69DAC88D24447DB100902734 /* VrouOfferCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DAC88B24447DB100902734 /* VrouOfferCollCell.swift */; };
 		69DAC88E24447DB100902734 /* VrouOfferCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 69DAC88C24447DB100902734 /* VrouOfferCollCell.xib */; };
-		69DAC89024447FA100902734 /* OffersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DAC88F24447FA100902734 /* OffersVC.swift */; };
 		69DB7EA9234600510018A32D /* ProductDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB7EA8234600510018A32D /* ProductDetails.swift */; };
 		69DB7EAB2346143E0018A32D /* ReservationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB7EAA2346143E0018A32D /* ReservationVC.swift */; };
 		69DB7EAD23475A0E0018A32D /* TimeCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69DB7EAC23475A0E0018A32D /* TimeCollCell.swift */; };
@@ -387,6 +385,8 @@
 		DD0DCC762A3B15AC0001A090 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DD0DCC752A3B15AC0001A090 /* GoogleService-Info.plist */; };
 		DD0DCC782A3B16830001A090 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD0DCC772A3B16830001A090 /* Constants.swift */; };
 		DD32E9562A545A2200709515 /* Changelog.md in Resources */ = {isa = PBXBuildFile; fileRef = DD32E9552A545A2200709515 /* Changelog.md */; };
+		DD3713732A63D5EC0044E24B /* OffersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3713722A63D5EC0044E24B /* OffersVC.swift */; };
+		DD3713782A63D6350044E24B /* HomeServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3713772A63D6350044E24B /* HomeServicesVC.swift */; };
 		DD7FA2A72A55710300B4CE87 /* SubCategoryProductCollCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD7FA2A62A55710300B4CE87 /* SubCategoryProductCollCell.xib */; };
 /* End PBXBuildFile section */
 
@@ -721,7 +721,6 @@
 		69BD6A5C244A0690002D761B /* OffersFilterTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersFilterTableCell.swift; sourceTree = "<group>"; };
 		69BD6A5D244A0690002D761B /* OffersFilterTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OffersFilterTableCell.xib; sourceTree = "<group>"; };
 		69C932D823534015008A20DE /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
-		69CB7D69244CA01800A0C7E5 /* HomeServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeServicesVC.swift; path = Vrou/Views/Offers/HomeOffersTableCells/OffersFilterTableCell/HomeServicesVC.swift; sourceTree = SOURCE_ROOT; };
 		69CB7D6F244CA57A00A0C7E5 /* ServicesCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServicesCollCell.swift; sourceTree = "<group>"; };
 		69CB7D70244CA57A00A0C7E5 /* ServicesCollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ServicesCollCell.xib; sourceTree = "<group>"; };
 		69CB7D73244DCF7A00A0C7E5 /* SalonOffersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SalonOffersVC.swift; path = "Vrou/ViewControllers/Salon Profile/Salon Profile Tabs/SalonOffersVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -730,7 +729,6 @@
 		69DAC88524445C8C00902734 /* TermsNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsNavController.swift; sourceTree = "<group>"; };
 		69DAC88B24447DB100902734 /* VrouOfferCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VrouOfferCollCell.swift; sourceTree = "<group>"; };
 		69DAC88C24447DB100902734 /* VrouOfferCollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VrouOfferCollCell.xib; sourceTree = "<group>"; };
-		69DAC88F24447FA100902734 /* OffersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OffersVC.swift; path = Vrou/Views/Offers/VrouOfferCollCell/OffersVC.swift; sourceTree = SOURCE_ROOT; };
 		69DB7EA8234600510018A32D /* ProductDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetails.swift; sourceTree = "<group>"; };
 		69DB7EAA2346143E0018A32D /* ReservationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationVC.swift; sourceTree = "<group>"; };
 		69DB7EAC23475A0E0018A32D /* TimeCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCollCell.swift; sourceTree = "<group>"; };
@@ -800,6 +798,8 @@
 		DD0DCC752A3B15AC0001A090 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DD0DCC772A3B16830001A090 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DD32E9552A545A2200709515 /* Changelog.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Changelog.md; sourceTree = "<group>"; };
+		DD3713722A63D5EC0044E24B /* OffersVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OffersVC.swift; sourceTree = "<group>"; };
+		DD3713772A63D6350044E24B /* HomeServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServicesVC.swift; sourceTree = "<group>"; };
 		DD7FA2A62A55710300B4CE87 /* SubCategoryProductCollCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SubCategoryProductCollCell.xib; sourceTree = "<group>"; };
 		DD8BB445D81B0D1E6D1C2F57 /* Pods-Vrou.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vrou.debug.xcconfig"; path = "Target Support Files/Pods-Vrou/Pods-Vrou.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -977,11 +977,11 @@
 		523A1F0B232006F6002BF911 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DD3713742A63D6200044E24B /* HomeServices */,
 				B2733599244E471E0052FD86 /* Salon Profile */,
 				69AD62002445D1A900BFDA9B /* Filters */,
 				B2FCE8812440A8670005BC41 /* AuthView */,
-				B232A919243EA76600B52F75 /* Services */,
-				B232A918243EA75700B52F75 /* Offers */,
+				DD3713712A63D5EC0044E24B /* Offers */,
 				B2B8BC5A243E1B2300E55B9A /* ChangeLanguage */,
 				B2B8BC53243E03A300E55B9A /* HomeView */,
 				B2B8BC52243E01AD00E55B9A /* SideMenu */,
@@ -1778,22 +1778,6 @@
 			path = Branches;
 			sourceTree = "<group>";
 		};
-		B232A918243EA75700B52F75 /* Offers */ = {
-			isa = PBXGroup;
-			children = (
-				69DAC88F24447FA100902734 /* OffersVC.swift */,
-			);
-			path = Offers;
-			sourceTree = "<group>";
-		};
-		B232A919243EA76600B52F75 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				69CB7D69244CA01800A0C7E5 /* HomeServicesVC.swift */,
-			);
-			path = Services;
-			sourceTree = "<group>";
-		};
 		B232A920243ED69600B52F75 /* Market */ = {
 			isa = PBXGroup;
 			children = (
@@ -2064,6 +2048,22 @@
 				17DCE794D0A9B8506BA7A9CA /* Pods-Vrou.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DD3713712A63D5EC0044E24B /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				DD3713722A63D5EC0044E24B /* OffersVC.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		DD3713742A63D6200044E24B /* HomeServices */ = {
+			isa = PBXGroup;
+			children = (
+				DD3713772A63D6350044E24B /* HomeServicesVC.swift */,
+			);
+			path = HomeServices;
 			sourceTree = "<group>";
 		};
 		DD7FA2A52A5570ED00B4CE87 /* SubCategoryProductCollCell */ = {
@@ -2406,7 +2406,6 @@
 				043AE536235DB45400AEEFE6 /* PaymentVC.swift in Sources */,
 				04872A5023C73FF4000EDE4B /* CollectionVC.swift in Sources */,
 				528745312328011200E33EAD /* InStoreCollCell2.swift in Sources */,
-				69CB7D6A244CA01800A0C7E5 /* HomeServicesVC.swift in Sources */,
 				04780E4223E1CF2A000CFB5A /* WatchingList.swift in Sources */,
 				0439184F2382D35700BF6EBB /* ProductsSearchNavController.swift in Sources */,
 				69B2930B23782D9D003D84E5 /* MyFavouritesVC.swift in Sources */,
@@ -2425,6 +2424,7 @@
 				B2002E4E246C043400E597A5 /* ReservationExtension.swift in Sources */,
 				523A1F1223200BE1002BF911 /* UI_extension.swift in Sources */,
 				5291D2BB232D3B100097466F /* CenterGalleryCollCell.swift in Sources */,
+				DD3713732A63D5EC0044E24B /* OffersVC.swift in Sources */,
 				5211A4CC2326933800E01AC4 /* HomeDiscoverNavController.swift in Sources */,
 				B291C318244DCC8200A89FB2 /* CategoryHeaderCollectionViewCell.swift in Sources */,
 				045ED28A23D4A9C700D1A5D8 /* EventsVC.swift in Sources */,
@@ -2585,7 +2585,6 @@
 				526D428C2344D46D00FBB7D1 /* ServicesList.swift in Sources */,
 				04780E3C23E1C3FF000CFB5A /* FriendRequestsVC.swift in Sources */,
 				0464165F23743C9700CD0BFD /* ScheduledReservationsVC.swift in Sources */,
-				69DAC89024447FA100902734 /* OffersVC.swift in Sources */,
 				5270FFE42338E2620017E7A3 /* BeautyWorld.swift in Sources */,
 				5291D2B7232D06A80097466F /* SpecialOfferTableCell.swift in Sources */,
 				B232A91B243EA7D200B52F75 /* HomeRootView.swift in Sources */,
@@ -2603,6 +2602,7 @@
 				5291D2BF232D465E0097466F /* CenterFeaturesCollCell.swift in Sources */,
 				5287452D2327EF1300E33EAD /* BestSpecialistCollCell.swift in Sources */,
 				04872A4A23C5BFE5000EDE4B /* CommentsVC.swift in Sources */,
+				DD3713782A63D6350044E24B /* HomeServicesVC.swift in Sources */,
 				B21FAB2D246AB1F200BEACB5 /* ServiceBranchesCollectionViewCell.swift in Sources */,
 				52B2B67B23215C5700791DE9 /* SubHomeVC.swift in Sources */,
 				043918552382D3A200BF6EBB /* CentersSearchVC.swift in Sources */,
@@ -2845,7 +2845,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Vrou/Vrou.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 9UK35C4566;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -2876,7 +2876,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Vrou/Vrou.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 9UK35C4566;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

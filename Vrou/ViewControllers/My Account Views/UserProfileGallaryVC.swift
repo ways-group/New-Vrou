@@ -298,15 +298,15 @@ extension UserProfileGallaryVC {
     }
     
     
-    func UploadMedia(isImages : Bool){
+    func UploadMedia(isImages : Bool) {
         
         let url = ApiManager.Apis.uploadUserMedia.description
         
         if isImages {
             // HUD.show(.label("Uploading Media ..."), onView: self.view)
         }
-        
-        Alamofire.upload(multipartFormData: { (multipartFormData) in
+
+        AF.upload(multipartFormData: { (multipartFormData) in
             HUD.hide()
             
             var fileName = "image.jpeg"
@@ -328,61 +328,23 @@ extension UserProfileGallaryVC {
             print(multipartFormData)
             print(url)
             
-        }, usingThreshold: UInt64.init(), to: url, method: .post , headers :
-            [ "Authorization": "Bearer \(User.shared.TakeToken())","Accept": "application/json", "locale":UserDefaults.standard.string(forKey: "Language") ?? "en" , "timezone": TimeZoneValue.localTimeZoneIdentifier ] )
-        {
-            
-            
-            (result) in
-            switch result{
-            case .success(let upload, _, _):
-                
-                upload.uploadProgress(closure: { (progress) in
-                    
-                    print(progress.fractionCompleted)
-                    
-                    let n = Float(progress.fractionCompleted)
-                    //self.addPostController?.navigationController?.setProgress(n, animated: true)
-                })
-                
-                upload.responseJSON { response in
-                    if (response.response?.statusCode ?? 404) < 300{ //
-                        
-                        do {
-                            self.success = try JSONDecoder().decode(ErrorMsg.self, from: response.data!)
-                            HUD.flash(.label(self.success.msg?[0] ?? ""), onView: self.view, delay: 1.0, completion: nil)
-                            if isImages {
-                                self.GetProfileData()
-                            }
-                            
-                        }catch {
-                            HUD.flash(.label("Something went wrong Please try again later") , onView: self.view , delay: 1.6 , completion: nil)
-                        }
-                        
-                    }else{
-                        do {
-                            let temp = try JSONDecoder().decode(ErrorMsg.self, from: response.data!)
-                            HUD.flash(.labeledError(title: "حدث خطأ", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
-                            HUD.hide()
-                        }catch{
-                            HUD.flash(.labeledError(title: "حدث خطأ", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
-                        }
+        }, to: url, usingThreshold: UInt64.init(), method: .post , headers :
+                    [ "Authorization": "Bearer \(User.shared.TakeToken())","Accept": "application/json", "locale":UserDefaults.standard.string(forKey: "Language") ?? "en" , "timezone": TimeZoneValue.localTimeZoneIdentifier ]).responseData(completionHandler: { result in
+            do {
+                if let data = result.data {
+                    self.success = try JSONDecoder().decode(ErrorMsg.self, from: data)
+                    HUD.flash(.label(self.success.msg?[0] ?? ""), onView: self.view, delay: 1.0, completion: nil)
+                    if isImages {
+                        self.GetProfileData()
                     }
-                    
-                    if let err = response.error{
-                        HUD.hide()
-                        HUD.flash(.labeledError(title: "حدث خطأ", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
-                        print(err)
-                        return
-                    }
-                    
+                } else {
+                    HUD.flash(.labeledError(title: "حدث خطأ", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
                 }
-            case .failure(let error):
-                HUD.flash(.labeledError(title: "حدث خطأ في رفع الصور", subtitle: nil), onView: self.view, delay: 1.0, completion: nil)
-                print("Error in upload: \(error.localizedDescription)")
+                
+            } catch {
+                HUD.flash(.label("Something went wrong Please try again later".localized) , onView: self.view , delay: 1.6 , completion: nil)
             }
-        }
-        
+        })
     }
 }
 

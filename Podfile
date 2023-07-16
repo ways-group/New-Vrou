@@ -6,7 +6,7 @@ target 'Vrou' do
 
 pod 'BSImagePicker', '~> 3.0'
 pod 'SwiftyJSON'
-pod 'Alamofire', '~> 4.7.3'
+pod 'Alamofire'
 pod 'PKHUD'
 pod 'RSSelectionMenu'
 pod 'IQKeyboardManagerSwift'
@@ -15,14 +15,14 @@ pod 'RevealingSplashView'
 pod 'HCSStarRatingView'
 pod 'Tabman', '~> 1.10.2'
 pod 'ViewAnimator'
-pod 'ImageSlideshow', "~> 1.7.0"
+pod 'ImageSlideshow', "~> 1.9.0"
 pod 'MXParallaxHeader'
 pod 'FSCalendar'
 pod 'SideMenu', '~> 6.0'
 pod 'collection-view-layouts/InstagramLayout'
 pod 'Shimmer'
 pod 'SDWebImage'
-pod 'AlamofireImage', "~> 3.4.1"
+pod 'AlamofireImage'
 pod 'GoogleMaps', '8.0.0'
 pod 'GooglePlaces', '8.0.0'
 pod 'ImageSlideshow/Alamofire'

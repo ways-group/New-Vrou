@@ -159,44 +159,38 @@ class ApiManager {
     
     
     
-    func ApiRequest(URL: URLConvertible ,  method: HTTPMethod ,  parameters:[String:Any] = ["":""] , encoding: ParameterEncoding = URLEncoding.default , Header: HTTPHeaders? = nil , ExtraParams:Any?... , view:UIView ,completion: @escaping (_ :Data?,_ error: String?) -> Void)
+    func ApiRequest(URL: URLConvertible ,  method: HTTPMethod ,  parameters:[String:Any] = ["":""] , encoding: ParameterEncoding = URLEncoding.default , Header: [String : String]? = nil , ExtraParams:Any?... , view:UIView ,completion: @escaping (_ :Data?,_ error: String?) -> Void)
         
     {
         // HUD.show(.progress , onView: view)
         view.isUserInteractionEnabled = false
-        Alamofire.request(URL,method: method, parameters: parameters, encoding: encoding, headers: Header).responseJSON { (response:DataResponse) in
+        let afHeaders = HTTPHeaders(Header ?? [:])
+        AF.request(URL,method: method, parameters: parameters, encoding: encoding, headers: afHeaders).response { response in
             
-            switch(response.result) {
-            case .success(let value):
-                print(response.value ?? "ERRor")
-                print(response.result.error ?? "ERRor")
+            switch response.result {
+            case .success(let data):
                 print(response.response?.statusCode ?? "ERRor")
                 print(response.response?.allHeaderFields["x-access-token"] ?? "ERRor")
-                print(value)
                 let temp = response.response?.statusCode ?? 400
                 if temp >= 300 {
                     view.isUserInteractionEnabled = true
                     completion(response.data,"ERROR")
-                    //  HUD.flash(.labeledError(title: "\(response.error?[0])", subtitle: <#T##String?#>))
                     do {
                         
                         if temp == 404 {
                             HUD.flash(.label("Page "), onView: view, delay: 3.0, completion: { (tmp) in
-                                completion(response.data,"404")
+                                completion(data, "404")
                             })
                         }else if temp == 401 {
-                            completion(response.data,"401")
+                            completion(data, "401")
                         }else if temp == 402 {
-                            completion(response.data,"402")
+                            completion(data, "402")
                         } else {
-                            let er = try JSONDecoder().decode(ErrorMsg.self, from: response.data!)
+                            let er = try JSONDecoder().decode(ErrorMsg.self, from: data!)
                             HUD.flash(.label("\(er.msg?[0] ?? "")") , onView: view , delay: 2 , completion: nil)
-                            print(response.value ?? "ERRor")
-                            print(response.result.error ?? "ERRor")
-                            print(response.response?.statusCode ?? "ERRor")
                         }
                         
-                    }catch {
+                    } catch {
                         HUD.flash(.label("Something went wrong Please try again later") , onView: view , delay: 2 , completion: nil)
                     }
                 }else{

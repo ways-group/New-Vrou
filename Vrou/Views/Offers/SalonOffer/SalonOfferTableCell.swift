@@ -74,7 +74,7 @@ class SalonOfferTableCell: UITableViewCell {
         
         if User.shared.isLogedIn() {
             if offer.is_favourite == 1 {
-               heartIcon.setImage(UIImage(named: "icons8-heart-1"), for: .normal)
+               heartIcon.setImage(UIImage(named: "icons8-heart-filled"), for: .normal)
             }else {
                heartIcon.setImage(UIImage(named: "icons8-heart"), for: .normal)
             }

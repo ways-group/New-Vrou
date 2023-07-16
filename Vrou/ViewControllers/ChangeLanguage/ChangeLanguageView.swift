@@ -8,6 +8,7 @@
 
 import UIKit
 import MOLH
+import Alamofire
 
 class ChangeLanguageView:  BaseVC<BasePresenter, BaseItem> {
     
@@ -40,6 +41,7 @@ class ChangeLanguageView:  BaseVC<BasePresenter, BaseItem> {
             goToSplash()
         }
     }
+
     // MARK: - GetAdsData
     func GetAdsData() {
         var headerData = [String:String]()

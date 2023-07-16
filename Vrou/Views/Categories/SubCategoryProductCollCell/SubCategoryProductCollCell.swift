@@ -23,6 +23,9 @@ class SubCategoryProductCollCell: UICollectionViewCell {
     @IBOutlet private weak var ProductName: UILabel!
     @IBOutlet private weak var ProductPrice: UILabel!
     @IBOutlet private weak var ProductPriceCurrencyLabel: UILabel!
+    @IBOutlet private weak var OldPriceView: UIView!
+    @IBOutlet private weak var OldPrice: UILabel!
+    @IBOutlet private weak var OldPriceCurrency: UILabel!
     @IBOutlet private weak var buyBtn: UIButton! {
         didSet {
             buyBtn.setTitle("Buy".localized, for: .normal)
@@ -90,7 +93,7 @@ class SubCategoryProductCollCell: UICollectionViewCell {
         
         if User.shared.isLogedIn() {
             if product.is_favourite == 1 {
-                heartBtn.setImage(UIImage(named: "icons8-heart-1"), for: .normal)
+                heartBtn.setImage(UIImage(named: "icons8-heart-filled"), for: .normal)
             }else {
                 heartBtn.setImage(UIImage(named: "icons8-heart"), for: .normal)
             }
