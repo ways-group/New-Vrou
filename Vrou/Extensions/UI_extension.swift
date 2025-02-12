@@ -211,6 +211,7 @@ struct Constants {
         static let regularFont = NSLocalizedString("AppRegularFont", comment: "")
         static let boldFont = NSLocalizedString("AppBoldFont", comment: "")
         
+        
         // Font
         static let regularFont_ar = NSLocalizedString("AppRegularFont_ar", comment: "")
         static let boldFont_ar = NSLocalizedString("AppBoldFont_ar", comment: "")

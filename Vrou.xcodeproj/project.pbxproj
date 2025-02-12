@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -128,6 +128,8 @@
 		04C4A08223D44C3D006F6DE4 /* ScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C4A08123D44C3D006F6DE4 /* ScrollViewExtension.swift */; };
 		04D092F623E8150B00932B42 /* PopularCentersColl2Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D092F523E8150B00932B42 /* PopularCentersColl2Cell.swift */; };
 		04DCA2E32354AC5E00AF745B /* ContactUsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DCA2E22354AC5E00AF745B /* ContactUsVC.swift */; };
+		11CD03632D2D6B0B002E55AA /* FormaDJRArabicMicro-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11CD03612D2D6B0B002E55AA /* FormaDJRArabicMicro-Medium.ttf */; };
+		11CD03642D2D6B0B002E55AA /* FormaDJRArabicMicro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11CD03622D2D6B0B002E55AA /* FormaDJRArabicMicro-Regular.ttf */; };
 		2E0428A28831B648A47F0611 /* Pods_Vrou.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C401A20B40BBCFC4EA8643A6 /* Pods_Vrou.framework */; };
 		52104A09232927B60052D9BF /* ShopNavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52104A08232927B60052D9BF /* ShopNavController.swift */; };
 		52104A0E23292F2B0052D9BF /* OfferCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52104A0D23292F2B0052D9BF /* OfferCollectionCell.swift */; };
@@ -533,6 +535,8 @@
 		04C4A08123D44C3D006F6DE4 /* ScrollViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewExtension.swift; sourceTree = "<group>"; };
 		04D092F523E8150B00932B42 /* PopularCentersColl2Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCentersColl2Cell.swift; sourceTree = "<group>"; };
 		04DCA2E22354AC5E00AF745B /* ContactUsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsVC.swift; sourceTree = "<group>"; };
+		11CD03612D2D6B0B002E55AA /* FormaDJRArabicMicro-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FormaDJRArabicMicro-Medium.ttf"; sourceTree = "<group>"; };
+		11CD03622D2D6B0B002E55AA /* FormaDJRArabicMicro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "FormaDJRArabicMicro-Regular.ttf"; sourceTree = "<group>"; };
 		17DCE794D0A9B8506BA7A9CA /* Pods-Vrou.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vrou.release.xcconfig"; path = "Target Support Files/Pods-Vrou/Pods-Vrou.release.xcconfig"; sourceTree = "<group>"; };
 		52104A08232927B60052D9BF /* ShopNavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopNavController.swift; sourceTree = "<group>"; };
 		52104A0D23292F2B0052D9BF /* OfferCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferCollectionCell.swift; sourceTree = "<group>"; };
@@ -664,6 +668,7 @@
 		52EFAFD1232FE4D200E5CEDB /* SalonOfferVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalonOfferVC.swift; sourceTree = "<group>"; };
 		52EFAFD3232FE62700E5CEDB /* RelatedOffersCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedOffersCollCell.swift; sourceTree = "<group>"; };
 		52F6549323421C570048B4B5 /* RecommendSalons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendSalons.swift; sourceTree = "<group>"; };
+		6278B65F2D53465F00746A20 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Auth.strings; sourceTree = "<group>"; };
 		690B194D2345469A0047B5AD /* CategoryServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServicesVC.swift; sourceTree = "<group>"; };
 		690B194F2345484E0047B5AD /* CategoryServiceTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceTableCell.swift; sourceTree = "<group>"; };
 		690B1952234551B60047B5AD /* ProductCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategories.swift; sourceTree = "<group>"; };
@@ -679,7 +684,6 @@
 		694BC4EC24597DD000356F03 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Master.strings; sourceTree = "<group>"; };
 		694BC4F124597DF500356F03 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/SalonProfile.strings; sourceTree = "<group>"; };
 		694BC4F624597E1400356F03 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/UserProfile.strings; sourceTree = "<group>"; };
-		694BC4F82459839200356F03 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Auth.strings; sourceTree = "<group>"; };
 		694BC4F92459840000356F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		694BC4FA2459854D00356F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Master.storyboard; sourceTree = "<group>"; };
 		694BC4FB2459856200356F03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/SalonProfile.storyboard; sourceTree = "<group>"; };
@@ -1161,6 +1165,8 @@
 			children = (
 				B20EFB2024584FA300E3CD6F /* QuentellCFMedium-Medium.ttf */,
 				0482AFB023CC592100D07D98 /* JosefinSans-Bold.ttf */,
+				11CD03612D2D6B0B002E55AA /* FormaDJRArabicMicro-Medium.ttf */,
+				11CD03622D2D6B0B002E55AA /* FormaDJRArabicMicro-Regular.ttf */,
 				0482AFB123CC592100D07D98 /* JosefinSans-SemiBold.ttf */,
 				043E5AF1237D6F1B00AFCA45 /* Tajawal-Bold.ttf */,
 				043E5AEF237D6F1B00AFCA45 /* Tajawal-Light.ttf */,
@@ -2191,6 +2197,8 @@
 				043815EE2355CF3C008D664F /* Center.storyboard in Resources */,
 				0482AFB323CC592100D07D98 /* JosefinSans-SemiBold.ttf in Resources */,
 				52888857232A6DD6005D0F95 /* JosefinSans-Light.ttf in Resources */,
+				11CD03632D2D6B0B002E55AA /* FormaDJRArabicMicro-Medium.ttf in Resources */,
+				11CD03642D2D6B0B002E55AA /* FormaDJRArabicMicro-Regular.ttf in Resources */,
 				69BD6A5A2449FE6D002D761B /* TodayOfferTableCell.xib in Resources */,
 				0424B9CF23A6617300CD07AF /* Localizable.strings in Resources */,
 				B291C319244DCC8200A89FB2 /* CategoryHeaderCollectionViewCell.xib in Resources */,
@@ -2683,8 +2691,8 @@
 		694BC4E524597C6800356F03 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				694BC4F82459839200356F03 /* ar */,
 				694BC4F92459840000356F03 /* Base */,
+				6278B65F2D53465F00746A20 /* ar */,
 			);
 			name = Auth.storyboard;
 			sourceTree = "<group>";
@@ -2854,17 +2862,20 @@
 					"$(PROJECT_DIR)/Bitcode_Yes",
 				);
 				INFOPLIST_FILE = Vrou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.waysgroup.vrou;
 				PRODUCT_NAME = Vrou;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = Vrou/Bridges/BeautyBridge.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -2884,17 +2895,20 @@
 					"$(PROJECT_DIR)/Bitcode_Yes",
 				);
 				INFOPLIST_FILE = Vrou/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 4.0.0;
+				MARKETING_VERSION = 5.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.waysgroup.vrou;
 				PRODUCT_NAME = Vrou;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_OBJC_BRIDGING_HEADER = Vrou/Bridges/BeautyBridge.h;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

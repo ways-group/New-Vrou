@@ -122,11 +122,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, MOLHResetable,  UNUserNot
         FirebaseApp.configure()
         
         //Keyborad
-        IQKeyboardManager.shared.enable = true
-        IQKeyboardManager.shared.enableAutoToolbar = true
-        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysShow
-        IQKeyboardManager.shared.toolbarPreviousNextAllowedClasses.append(UIStackView.self)
-        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+            IQKeyboardManager.shared.isEnabled = true
+            IQKeyboardManager.shared.enableAutoToolbar = true
+            IQKeyboardManager.shared.toolbarConfiguration.previousNextDisplayMode = .alwaysShow
+            IQKeyboardManager.shared.deepResponderAllowedContainerClasses.append(UIStackView.self)
+            IQKeyboardManager.shared.resignOnTouchOutside = true
         
         GMSServices.provideAPIKey(GoogleClientID)
         GMSPlacesClient.provideAPIKey(GoogleClientID)

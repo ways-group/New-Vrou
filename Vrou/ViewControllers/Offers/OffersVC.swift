@@ -58,6 +58,7 @@ class OffersVC: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         SetupTableView()
         OffersTable.isHidden = true
+        NoOffersView.isHidden = true
         create_observer()
     }
     
@@ -159,6 +160,7 @@ class OffersVC: UIViewController, IndicatorInfoProvider {
         }
         
         mainView.isHidden = false
+        NoOffersView.isHidden = true
         mainView.contentView = logo
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550
@@ -241,7 +243,6 @@ extension OffersVC {
     func GetOffersData() {
         VrouOffers = false
         TodayOffers = false
-        
         current_page += 1
         is_loading = true
         params["page"] = "\(current_page)"
@@ -317,9 +318,9 @@ extension OffersVC: UITableViewDelegate , UITableViewDataSource {
        // OffersTable.isHidden = false
         
         var data_count = 0
-        if !NoOffersView.isHidden {
-            NoOffersView.isHidden = true
-        }
+//        if !NoOffersView.isHidden {
+//            NoOffersView.isHidden = true
+//        }
         
         
         if ApplyFilter {
@@ -329,6 +330,13 @@ extension OffersVC: UITableViewDelegate , UITableViewDataSource {
             }
         }else {
             data_count = (homeOffers.data?.offersList?.count ?? 0) +  ((homeOffers.data?.offers_end_today?.count ?? 0 > 0) ? 1 : 0) + ((homeOffers.data?.offers_categories?.count ?? 0 > 0) ? 1 : 0)
+            if data_count == 0 &&         mainView.isShimmering == false {
+                NoOffersView.isHidden = false
+                OffersTable.isHidden = true
+            }else{
+                NoOffersView.isHidden = true
+                OffersTable.isHidden = false
+            }
         }
         
         

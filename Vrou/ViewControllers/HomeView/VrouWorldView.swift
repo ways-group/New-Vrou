@@ -15,6 +15,7 @@ import XLPagerTabStrip
 class VrouWorldView:  UIViewController, IndicatorInfoProvider {
     
     var itemInfo = IndicatorInfo(title: NSLocalizedString("Vrou World", comment: ""), image: #imageLiteral(resourceName: "vrouIcon"))
+    @IBOutlet weak var noVrouWorldView: UIView!
     @IBOutlet weak var mainView: FBShimmeringView!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var tableView: UITableView!{
@@ -46,6 +47,7 @@ class VrouWorldView:  UIViewController, IndicatorInfoProvider {
             tableView.addSubview(refresher)
         }
         mainView.isHidden = false
+        noVrouWorldView.isHidden = true
         mainView.contentView = logo
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550
@@ -89,12 +91,26 @@ class VrouWorldView:  UIViewController, IndicatorInfoProvider {
 extension VrouWorldView: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if(titles.count == 0){
+            noVrouWorldView.isHidden = false
+            tableView.isHidden = true
+        }else{
+            noVrouWorldView.isHidden = true
+            tableView.isHidden = false
+        }
         return titles.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let  cell = tableView.dequeueReusableCell(withIdentifier: String(describing: VrouWorldRootTableViewCell.self),
                                                   for: indexPath) as! VrouWorldRootTableViewCell
+        
+        if(titles.count == 0){
+            noVrouWorldView.isHidden = false
+        }else{
+            noVrouWorldView.isHidden = true
+        }
+        
         switch titles[indexPath.row].id {
         case 0:
             cell.top_and_bottom_adsList = allVrouData?.top_ads
@@ -150,6 +166,7 @@ extension VrouWorldView{
     func getData(){
         Requested = false
         mainView.isHidden = false
+        noVrouWorldView.isHidden = true
         mainView.contentView = logo
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550

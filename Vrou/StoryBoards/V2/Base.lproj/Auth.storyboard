@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w3T-nX-qgw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="w3T-nX-qgw">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -860,6 +860,33 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1E5-uk-TTj">
+                                <rect key="frame" x="107" y="380" width="200" height="150"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoServices" translatesAutoresizingMaskIntoConstraints="NO" id="SJ0-eN-nLu">
+                                        <rect key="frame" x="14" y="0.0" width="172" height="150"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Salones!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WHF-or-ilZ">
+                                        <rect key="frame" x="57.5" y="150" width="85" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Ysw-Fr-zhj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="17"/>
+                                        <color key="textColor" red="0.68337231870000004" green="0.13590502739999999" blue="0.45785254240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="WHF-or-ilZ" firstAttribute="centerX" secondItem="1E5-uk-TTj" secondAttribute="centerX" id="3BR-Vt-lKZ"/>
+                                    <constraint firstItem="SJ0-eN-nLu" firstAttribute="centerY" secondItem="1E5-uk-TTj" secondAttribute="centerY" id="7VL-rZ-AMf"/>
+                                    <constraint firstItem="SJ0-eN-nLu" firstAttribute="top" secondItem="1E5-uk-TTj" secondAttribute="top" id="BAe-4m-SCq"/>
+                                    <constraint firstItem="WHF-or-ilZ" firstAttribute="top" secondItem="SJ0-eN-nLu" secondAttribute="bottom" id="Kua-dS-Tmg"/>
+                                    <constraint firstAttribute="width" constant="200" id="Tq7-cd-1JA"/>
+                                    <constraint firstItem="SJ0-eN-nLu" firstAttribute="centerX" secondItem="1E5-uk-TTj" secondAttribute="centerX" id="YNu-5c-H1v"/>
+                                    <constraint firstAttribute="height" constant="150" id="phz-51-wHw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KY7-F6-eCn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -869,13 +896,16 @@
                             <constraint firstItem="eds-qm-mzP" firstAttribute="top" secondItem="KY7-F6-eCn" secondAttribute="top" id="HGm-Td-guv"/>
                             <constraint firstItem="eds-qm-mzP" firstAttribute="leading" secondItem="Nuv-AT-tOH" secondAttribute="leading" id="Vs1-45-uUs"/>
                             <constraint firstItem="Nq0-5p-42v" firstAttribute="centerX" secondItem="Nuv-AT-tOH" secondAttribute="centerX" id="fj6-o5-5f2"/>
+                            <constraint firstItem="1E5-uk-TTj" firstAttribute="centerY" secondItem="KY7-F6-eCn" secondAttribute="centerY" id="mWN-FT-mxh"/>
                             <constraint firstAttribute="bottom" secondItem="eds-qm-mzP" secondAttribute="bottom" id="pgv-UR-uVA"/>
+                            <constraint firstItem="1E5-uk-TTj" firstAttribute="centerX" secondItem="KY7-F6-eCn" secondAttribute="centerX" id="tqW-c8-3XD"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="OffersTable" destination="eds-qm-mzP" id="AyM-6K-cYH"/>
                         <outlet property="logo" destination="iT7-3R-953" id="HMM-nA-Kbq"/>
                         <outlet property="mainView" destination="Nq0-5p-42v" id="pZZ-Cs-ohH"/>
+                        <outlet property="noSalonView" destination="1E5-uk-TTj" id="Gn1-Ow-dZo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwy-NC-EaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2920,7 +2950,7 @@ and Send to 2010-1066-6908 via SMS</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N95-eO-uTc">
-                                <rect key="frame" x="107" y="662" width="200" height="150"/>
+                                <rect key="frame" x="107" y="380" width="200" height="150"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoServices" translatesAutoresizingMaskIntoConstraints="NO" id="iSp-ip-rK6">
                                         <rect key="frame" x="14" y="0.0" width="172" height="150"/>
@@ -2952,13 +2982,13 @@ and Send to 2010-1066-6908 via SMS</string>
                         <constraints>
                             <constraint firstItem="JoT-rt-lOt" firstAttribute="top" secondItem="kcX-id-gfI" secondAttribute="top" id="2t7-aW-ZBD"/>
                             <constraint firstItem="JoT-rt-lOt" firstAttribute="leading" secondItem="kcX-id-gfI" secondAttribute="leading" id="9Ou-r0-Tc8"/>
+                            <constraint firstItem="N95-eO-uTc" firstAttribute="centerY" secondItem="kcX-id-gfI" secondAttribute="centerY" id="ADc-EP-DbK"/>
                             <constraint firstItem="SsS-OL-3tz" firstAttribute="centerX" secondItem="HV8-T2-Rrb" secondAttribute="centerX" id="Fi0-mm-sHR"/>
                             <constraint firstItem="kcX-id-gfI" firstAttribute="trailing" secondItem="N95-eO-uTc" secondAttribute="trailing" constant="107" id="GFT-ig-lhf"/>
                             <constraint firstItem="N95-eO-uTc" firstAttribute="leading" secondItem="kcX-id-gfI" secondAttribute="leading" constant="107" id="X6m-Gp-m8n"/>
                             <constraint firstAttribute="trailing" secondItem="JoT-rt-lOt" secondAttribute="trailing" id="XDg-ov-GVe"/>
                             <constraint firstItem="SsS-OL-3tz" firstAttribute="centerY" secondItem="HV8-T2-Rrb" secondAttribute="centerY" id="YrG-w5-imI"/>
                             <constraint firstAttribute="bottom" secondItem="JoT-rt-lOt" secondAttribute="bottom" id="rON-1n-tRO"/>
-                            <constraint firstItem="kcX-id-gfI" firstAttribute="bottom" secondItem="N95-eO-uTc" secondAttribute="bottom" constant="50" id="x4C-Yi-AHh"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Marketplace" id="b3q-R7-iya">
@@ -3196,11 +3226,6 @@ and Send to 2010-1066-6908 via SMS</string>
             <point key="canvasLocation" x="-159.42028985507247" y="2954.4642857142858"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="a5T-Q1-m6F">
-            <size key="intrinsicContentSize" width="220" height="44"/>
-        </designable>
-    </designables>
     <resources>
         <image name="FB-1" width="199" height="14.5"/>
         <image name="FilterIcon" width="16" height="16"/>
@@ -3211,7 +3236,7 @@ and Send to 2010-1066-6908 via SMS</string>
         <image name="Tmp" width="16" height="16"/>
         <image name="User" width="16.5" height="16"/>
         <image name="VrouLogo" width="190" height="70.5"/>
-        <image name="X" width="18.5" height="18.5"/>
+        <image name="X" width="25" height="25"/>
         <image name="arrow" width="7" height="6"/>
         <image name="authBack" width="381" height="812"/>
         <image name="buy" width="97.5" height="21.5"/>
@@ -3243,7 +3268,7 @@ and Send to 2010-1066-6908 via SMS</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

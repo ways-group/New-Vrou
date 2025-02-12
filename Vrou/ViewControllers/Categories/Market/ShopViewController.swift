@@ -502,8 +502,10 @@ extension ShopViewController : UICollectionViewDelegate, UICollectionViewDataSou
             
             if productCategories.data?.product_categories?.count ?? 0 == 0 && requested {
                 NoProductsView.isHidden = false
+                headerView.isHidden = true
             }else {
                  NoProductsView.isHidden = true
+                headerView.isHidden = false
             }
             
             return productCategories.data?.product_categories?.count ?? 0
