@@ -16,6 +16,7 @@ class ServicesVC: UIViewController , UIScrollViewDelegate {
   
     
     // MARK: - IBOutlet
+    @IBOutlet weak var noserviceImage: UIImageView!
     @IBOutlet weak var SectionCollection: UICollectionView!
     @IBOutlet weak var OfferCollection: UICollectionView!
     @IBOutlet weak var ServicesCollection: UICollectionView!
@@ -62,6 +63,9 @@ class ServicesVC: UIViewController , UIScrollViewDelegate {
         
         GetSectionsData()
         setupSideMenu()
+        let offerImage = UIImage.gifImageWithName("No Search Result Found")
+        noserviceImage.image = offerImage
+        
         
     }
     

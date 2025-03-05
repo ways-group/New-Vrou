@@ -25,6 +25,7 @@ class SalonOffersVC: UIViewController, IndicatorInfoProvider {
     var last:CGFloat = 0.0
 
     @IBOutlet weak var noSalonView: UIView!
+    @IBOutlet weak var noSaloneImage: UIImageView!
     
     @IBOutlet weak var OffersTable: UITableView!
     @IBOutlet weak var mainView: FBShimmeringView!
@@ -49,11 +50,13 @@ class SalonOffersVC: UIViewController, IndicatorInfoProvider {
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550
         mainView.shimmeringOpacity = 1
-        
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noSaloneImage.image = offerImage
         SetupTableView()
         GetSalonOffersData()
         OffersTable.isHidden = true
         height = 400//(self.view.bounds.height / half) - 150
+    
     }
     
     func SetupTableView() {

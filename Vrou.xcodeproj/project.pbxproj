@@ -258,6 +258,20 @@
 		52EFAFD2232FE4D200E5CEDB /* SalonOfferVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFAFD1232FE4D200E5CEDB /* SalonOfferVC.swift */; };
 		52EFAFD4232FE62700E5CEDB /* RelatedOffersCollCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EFAFD3232FE62700E5CEDB /* RelatedOffersCollCell.swift */; };
 		52F6549423421C570048B4B5 /* RecommendSalons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52F6549323421C570048B4B5 /* RecommendSalons.swift */; };
+		628968C22D7838CA00CB0E29 /* Animation - 1740900456237.gif in Resources */ = {isa = PBXBuildFile; fileRef = 628968C12D7838CA00CB0E29 /* Animation - 1740900456237.gif */; };
+		62EB11982D748718002DC18A /* LoadGif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EB11972D748707002DC18A /* LoadGif.swift */; };
+		62EB119B2D74A9CC002DC18A /* Location search.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB119A2D74A9CC002DC18A /* Location search.gif */; };
+		62EB119F2D74A9F6002DC18A /* women in hair salon.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB119E2D74A9F6002DC18A /* women in hair salon.gif */; };
+		62EB11A12D74AA0B002DC18A /* barbershop waiting clients.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11A02D74AA0B002DC18A /* barbershop waiting clients.gif */; };
+		62EB11A32D74AA16002DC18A /* Heartbroken.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11A22D74AA16002DC18A /* Heartbroken.gif */; };
+		62EB11A52D74AA22002DC18A /* Makeup artist.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11A42D74AA22002DC18A /* Makeup artist.gif */; };
+		62EB11A72D74AA2B002DC18A /* Discount.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11A62D74AA2B002DC18A /* Discount.gif */; };
+		62EB11A92D74AA36002DC18A /* Animation - 1733825557396.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11A82D74AA36002DC18A /* Animation - 1733825557396.gif */; };
+		62EB11AB2D74AA42002DC18A /* No Search Result Found.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11AA2D74AA42002DC18A /* No Search Result Found.gif */; };
+		62EB11AD2D74AA4C002DC18A /* spa.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11AC2D74AA4C002DC18A /* spa.gif */; };
+		62EB11AF2D74AA56002DC18A /* Animation - 1733891015564.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11AE2D74AA56002DC18A /* Animation - 1733891015564.gif */; };
+		62EB11B12D74AA66002DC18A /* Animation - 1740900456236.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11B02D74AA66002DC18A /* Animation - 1740900456236.gif */; };
+		62EB11B32D74AA71002DC18A /* Skincare.gif in Resources */ = {isa = PBXBuildFile; fileRef = 62EB11B22D74AA71002DC18A /* Skincare.gif */; };
 		690B194E2345469A0047B5AD /* CategoryServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B194D2345469A0047B5AD /* CategoryServicesVC.swift */; };
 		690B19502345484E0047B5AD /* CategoryServiceTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B194F2345484E0047B5AD /* CategoryServiceTableCell.swift */; };
 		690B1953234551B60047B5AD /* ProductCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 690B1952234551B60047B5AD /* ProductCategories.swift */; };
@@ -669,6 +683,20 @@
 		52EFAFD3232FE62700E5CEDB /* RelatedOffersCollCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedOffersCollCell.swift; sourceTree = "<group>"; };
 		52F6549323421C570048B4B5 /* RecommendSalons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendSalons.swift; sourceTree = "<group>"; };
 		6278B65F2D53465F00746A20 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Auth.strings; sourceTree = "<group>"; };
+		628968C12D7838CA00CB0E29 /* Animation - 1740900456237.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Animation - 1740900456237.gif"; sourceTree = "<group>"; };
+		62EB11972D748707002DC18A /* LoadGif.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadGif.swift; sourceTree = "<group>"; };
+		62EB119A2D74A9CC002DC18A /* Location search.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Location search.gif"; sourceTree = "<group>"; };
+		62EB119E2D74A9F6002DC18A /* women in hair salon.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "women in hair salon.gif"; sourceTree = "<group>"; };
+		62EB11A02D74AA0B002DC18A /* barbershop waiting clients.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "barbershop waiting clients.gif"; sourceTree = "<group>"; };
+		62EB11A22D74AA16002DC18A /* Heartbroken.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Heartbroken.gif; sourceTree = "<group>"; };
+		62EB11A42D74AA22002DC18A /* Makeup artist.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Makeup artist.gif"; sourceTree = "<group>"; };
+		62EB11A62D74AA2B002DC18A /* Discount.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Discount.gif; sourceTree = "<group>"; };
+		62EB11A82D74AA36002DC18A /* Animation - 1733825557396.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Animation - 1733825557396.gif"; sourceTree = "<group>"; };
+		62EB11AA2D74AA42002DC18A /* No Search Result Found.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "No Search Result Found.gif"; sourceTree = "<group>"; };
+		62EB11AC2D74AA4C002DC18A /* spa.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spa.gif; sourceTree = "<group>"; };
+		62EB11AE2D74AA56002DC18A /* Animation - 1733891015564.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Animation - 1733891015564.gif"; sourceTree = "<group>"; };
+		62EB11B02D74AA66002DC18A /* Animation - 1740900456236.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "Animation - 1740900456236.gif"; sourceTree = "<group>"; };
+		62EB11B22D74AA71002DC18A /* Skincare.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Skincare.gif; sourceTree = "<group>"; };
 		690B194D2345469A0047B5AD /* CategoryServicesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServicesVC.swift; sourceTree = "<group>"; };
 		690B194F2345484E0047B5AD /* CategoryServiceTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceTableCell.swift; sourceTree = "<group>"; };
 		690B1952234551B60047B5AD /* ProductCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategories.swift; sourceTree = "<group>"; };
@@ -950,6 +978,7 @@
 		523A1EF823200383002BF911 /* Vrou */ = {
 			isa = PBXGroup;
 			children = (
+				62EB11992D74A9BB002DC18A /* gifs */,
 				DD32E9552A545A2200709515 /* Changelog.md */,
 				B2B8BC48243DF8B900E55B9A /* Presenter */,
 				B2B8BC43243DF4D900E55B9A /* Helper */,
@@ -1428,6 +1457,26 @@
 				04780E4123E1CF2A000CFB5A /* WatchingList.swift */,
 			);
 			path = Categories;
+			sourceTree = "<group>";
+		};
+		62EB11992D74A9BB002DC18A /* gifs */ = {
+			isa = PBXGroup;
+			children = (
+				62EB11B22D74AA71002DC18A /* Skincare.gif */,
+				62EB11AE2D74AA56002DC18A /* Animation - 1733891015564.gif */,
+				62EB11B02D74AA66002DC18A /* Animation - 1740900456236.gif */,
+				62EB11A62D74AA2B002DC18A /* Discount.gif */,
+				62EB11AC2D74AA4C002DC18A /* spa.gif */,
+				628968C12D7838CA00CB0E29 /* Animation - 1740900456237.gif */,
+				62EB11AA2D74AA42002DC18A /* No Search Result Found.gif */,
+				62EB11A42D74AA22002DC18A /* Makeup artist.gif */,
+				62EB11A22D74AA16002DC18A /* Heartbroken.gif */,
+				62EB119E2D74A9F6002DC18A /* women in hair salon.gif */,
+				62EB11A02D74AA0B002DC18A /* barbershop waiting clients.gif */,
+				62EB119A2D74A9CC002DC18A /* Location search.gif */,
+				62EB11A82D74AA36002DC18A /* Animation - 1733825557396.gif */,
+			);
+			path = gifs;
 			sourceTree = "<group>";
 		};
 		690B1951234551A10047B5AD /* Shop */ = {
@@ -1938,6 +1987,7 @@
 		B2B8BC43243DF4D900E55B9A /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				62EB11972D748707002DC18A /* LoadGif.swift */,
 				B2B8BC44243DF4EB00E55B9A /* RouterManager.swift */,
 			);
 			path = Helper;
@@ -2154,6 +2204,7 @@
 				043E5AF5237D6F1C00AFCA45 /* Tajawal-Bold.ttf in Resources */,
 				B216209924513C4D00A87776 /* MapBranchesTableViewCell.xib in Resources */,
 				694BC4ED24597DE500356F03 /* SalonProfile.storyboard in Resources */,
+				62EB119B2D74A9CC002DC18A /* Location search.gif in Resources */,
 				52B4CF3E23D491AF009D76AA /* PopularCentersCollectionViewCell.xib in Resources */,
 				DD7FA2A72A55710300B4CE87 /* SubCategoryProductCollCell.xib in Resources */,
 				52B4CF4223D491CA009D76AA /* SponsorsSliderCollectionViewCell.xib in Resources */,
@@ -2164,29 +2215,39 @@
 				043E5AF3237D6F1C00AFCA45 /* Tajawal-Light.ttf in Resources */,
 				69AD61FF2445D02000BFDA9B /* FilterCollCell.xib in Resources */,
 				0464D1E323869CDA00193AAB /* Search.storyboard in Resources */,
+				62EB11B32D74AA71002DC18A /* Skincare.gif in Resources */,
 				5288885A232A6DD6005D0F95 /* OFL.txt in Resources */,
 				043815EB2355CF27008D664F /* Categories.storyboard in Resources */,
 				52888856232A6DD6005D0F95 /* Tajawal-Bold.ttf in Resources */,
 				523A1F0423200385002BF911 /* LaunchScreen.storyboard in Resources */,
 				69DAC88E24447DB100902734 /* VrouOfferCollCell.xib in Resources */,
 				524BC7F423CB69A8006FD166 /* LoadingCollectionViewCell.xib in Resources */,
+				628968C22D7838CA00CB0E29 /* Animation - 1740900456237.gif in Resources */,
 				B21FAB2E246AB1F200BEACB5 /* ServiceBranchesCollectionViewCell.xib in Resources */,
 				B2BDA1092453212200447503 /* SalonFeaturesCell.xib in Resources */,
 				694BC4F224597E0B00356F03 /* UserProfile.storyboard in Resources */,
 				52888858232A6DD6005D0F95 /* JosefinSans-Thin.ttf in Resources */,
+				62EB119F2D74A9F6002DC18A /* women in hair salon.gif in Resources */,
+				62EB11A52D74AA22002DC18A /* Makeup artist.gif in Resources */,
 				69BD6A5F244A0690002D761B /* OffersFilterTableCell.xib in Resources */,
 				69CB7D72244CA57A00A0C7E5 /* ServicesCollCell.xib in Resources */,
 				523A1F0123200385002BF911 /* Assets.xcassets in Resources */,
+				62EB11A72D74AA2B002DC18A /* Discount.gif in Resources */,
 				B25752A2244BA41F003E51FA /* ServiceReservationCollectionViewCell.xib in Resources */,
 				B2156621244A93A100659AF5 /* TitleAndDescriptionCollectionViewCell.xib in Resources */,
 				B216209D24513DDB00A87776 /* MapMainBranchTableViewCell.xib in Resources */,
 				523A1EFF23200383002BF911 /* Main.storyboard in Resources */,
+				62EB11AB2D74AA42002DC18A /* No Search Result Found.gif in Resources */,
 				5288885B232A6DD6005D0F95 /* JosefinSans-Regular.ttf in Resources */,
 				6986B2EF245F7D21009DD6AB /* SelectServiceTableCell.xib in Resources */,
 				B219BEEA244909DC00F905B6 /* HomeRootTabsCollectionViewCell.xib in Resources */,
 				043815E82355CEFD008D664F /* Home.storyboard in Resources */,
+				62EB11AF2D74AA56002DC18A /* Animation - 1733891015564.gif in Resources */,
 				B211EA47243DE09A0061D4E3 /* ColorAssets.xcassets in Resources */,
+				62EB11AD2D74AA4C002DC18A /* spa.gif in Resources */,
 				B210B06A2443DEEE002136CA /* TutorialCollectionViewCell.xib in Resources */,
+				62EB11A32D74AA16002DC18A /* Heartbroken.gif in Resources */,
+				62EB11A12D74AA0B002DC18A /* barbershop waiting clients.gif in Resources */,
 				B2172F95246952B300B96053 /* ReservationTableViewCell.xib in Resources */,
 				694BC4E824597DC000356F03 /* Master.storyboard in Resources */,
 				69BD6A552449F637002D761B /* VrouOffersTableCell.xib in Resources */,
@@ -2202,10 +2263,12 @@
 				69BD6A5A2449FE6D002D761B /* TodayOfferTableCell.xib in Resources */,
 				0424B9CF23A6617300CD07AF /* Localizable.strings in Resources */,
 				B291C319244DCC8200A89FB2 /* CategoryHeaderCollectionViewCell.xib in Resources */,
+				62EB11B12D74AA66002DC18A /* Animation - 1740900456236.gif in Resources */,
 				69B3D9A32444B85F00D71192 /* OfferTableCell.xib in Resources */,
 				043E5AF2237D6F1C00AFCA45 /* Tajawal-Regular.ttf in Resources */,
 				694BC4E324597C6800356F03 /* Auth.storyboard in Resources */,
 				52888859232A6DD6005D0F95 /* Tajawal-Bold.ttf in Resources */,
+				62EB11A92D74AA36002DC18A /* Animation - 1733825557396.gif in Resources */,
 				69CB7D7B244DED6C00A0C7E5 /* SalonOfferTableCell.xib in Resources */,
 				B20EEACC2450C0AF004F47AA /* SalonProfileTabsCell.xib in Resources */,
 				B21FAB2A246AB0C900BEACB5 /* ServiceTimeCollectionViewCell.xib in Resources */,
@@ -2390,6 +2453,7 @@
 				52B4CF4123D491CA009D76AA /* SponsorsSliderCollectionViewCell.swift in Sources */,
 				0486001A23A10698004D1856 /* SalonAlbumVC.swift in Sources */,
 				B285F4F82453B8C400D1B7C4 /* UserProfileGallaryVC.swift in Sources */,
+				62EB11982D748718002DC18A /* LoadGif.swift in Sources */,
 				0480F4B7235F01C300763D79 /* PromoCode.swift in Sources */,
 				0482AFB523CCAD9900D07D98 /* collectionModel.swift in Sources */,
 				52104A0E23292F2B0052D9BF /* OfferCollectionCell.swift in Sources */,

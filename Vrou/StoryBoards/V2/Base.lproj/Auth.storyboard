@@ -906,6 +906,7 @@
                         <outlet property="logo" destination="iT7-3R-953" id="HMM-nA-Kbq"/>
                         <outlet property="mainView" destination="Nq0-5p-42v" id="pZZ-Cs-ohH"/>
                         <outlet property="noSalonView" destination="1E5-uk-TTj" id="Gn1-Ow-dZo"/>
+                        <outlet property="noSaloneImage" destination="SJ0-eN-nLu" id="rB0-d2-7tD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hwy-NC-EaR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2519,6 +2520,7 @@ and Send to 2010-1066-6908 via SMS</string>
                         <outlet property="SubCategoryCollection" destination="zah-s9-oQu" id="6Vl-Be-UZ9"/>
                         <outlet property="logo" destination="2fW-wy-ZC5" id="fwI-xw-c88"/>
                         <outlet property="mainView" destination="jgL-M5-i2E" id="ko5-Ur-2wk"/>
+                        <outlet property="noServiceImage" destination="5JW-tn-OTs" id="65U-mM-plC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3V3-js-XRj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3012,6 +3014,7 @@ and Send to 2010-1066-6908 via SMS</string>
                         <outlet property="headerView" destination="Lxt-eu-pDt" id="lC2-bE-mBl"/>
                         <outlet property="logo" destination="X4O-PI-Lcq" id="Xhb-zA-T5I"/>
                         <outlet property="mainView" destination="SsS-OL-3tz" id="kgu-Qx-O7I"/>
+                        <outlet property="noServiceImage" destination="iSp-ip-rK6" id="Xbk-VX-fvL"/>
                         <outlet property="offerCollectionHeight" destination="DS1-WN-t3i" id="3gO-1P-hte"/>
                     </connections>
                 </viewController>
@@ -3048,13 +3051,13 @@ and Send to 2010-1066-6908 via SMS</string>
                             <rect key="frame" x="0.0" y="58" width="414" height="200"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Vrou Offers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pDp-t1-A19">
-                                    <rect key="frame" x="15" y="10" width="86" height="17"/>
+                                    <rect key="frame" x="15" y="10" width="86" height="20"/>
                                     <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="17"/>
                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Hl5-L7-ffh">
-                                    <rect key="frame" x="0.0" y="37" width="414" height="163"/>
+                                    <rect key="frame" x="0.0" y="40" width="414" height="160"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FZK-hN-cdb">
                                         <size key="itemSize" width="127" height="158"/>
@@ -3064,7 +3067,7 @@ and Send to 2010-1066-6908 via SMS</string>
                                     </collectionViewFlowLayout>
                                     <cells>
                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="OfferCollectionCell" id="B62-CK-gXY" customClass="OfferCollectionCell" customModule="Vrou" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="2.5" width="127" height="158"/>
+                                            <rect key="frame" x="0.0" y="1" width="127" height="158"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                 <rect key="frame" x="0.0" y="0.0" width="127" height="158"/>
@@ -3082,7 +3085,7 @@ and Send to 2010-1066-6908 via SMS</string>
                                                                 </userDefinedRuntimeAttributes>
                                                             </imageView>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make-up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LT6-9u-NPV">
-                                                                <rect key="frame" x="10" y="120" width="107" height="15"/>
+                                                                <rect key="frame" x="10" y="120" width="107" height="17.5"/>
                                                                 <fontDescription key="fontDescription" name="Tajawal-Medium" family="Tajawal" pointSize="15"/>
                                                                 <color key="textColor" red="0.68337231870000004" green="0.13590502739999999" blue="0.45785254240000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -3154,7 +3157,7 @@ and Send to 2010-1066-6908 via SMS</string>
                                                         </constraints>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Makeup" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="aFU-rt-YKc">
-                                                        <rect key="frame" x="8" y="26" width="148" height="12"/>
+                                                        <rect key="frame" x="8" y="24" width="148" height="14"/>
                                                         <fontDescription key="fontDescription" name="Tajawal-Bold" family="Tajawal" pointSize="12"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -3268,7 +3271,7 @@ and Send to 2010-1066-6908 via SMS</string>
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

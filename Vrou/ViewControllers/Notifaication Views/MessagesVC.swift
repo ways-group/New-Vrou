@@ -17,6 +17,8 @@ import MOLH
 
 class MessagesVC: UIViewController {
     // MARK: - IBOutlet
+    @IBOutlet weak var noNotificationImage: UIImageView!
+
     @IBOutlet weak var helloUser : Hi!
     @IBOutlet weak var MessagesTable: UITableView!
     @IBOutlet weak var NoNotifications: UIView!

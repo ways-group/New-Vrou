@@ -11,7 +11,7 @@ import SDWebImage
 
 protocol WatchDelegate {
     func Like(videoID:String,isLike:String, indexPath:Int)
-    func Comment(videoID:String ,videoName:String, indexPath:Int)
+    func Comment(videoID:String ,videoName:String, indexPath:Int , video : SalonVideo)
     func Share(videoID:String,imageLink:String, indexPath:Int)
     func AddCollection(videoID:String, indexPath:Int)
     func OpenUsersList(videoID:String, guestNumbers:Int)
@@ -44,6 +44,7 @@ class WatchTableCell: UITableViewCell {
     var is_like = ""
     var indexPath =  0
     var guestNum = 0
+    var video : SalonVideo?
     var users = [String]()
     
     override func awakeFromNib() {
@@ -53,6 +54,7 @@ class WatchTableCell: UITableViewCell {
     
     
     func UpdateView(video:SalonVideo, indexpath:Int) {
+        self.video = video
         SetImage(image: VideoImage, link: video.image ?? "")
         SetImage(image: SalonImage, link: video.salon?.salon_logo ?? "")
         SalonName.text = video.salon?.salon_name ?? ""
@@ -103,7 +105,7 @@ class WatchTableCell: UITableViewCell {
     
     @IBAction func CommentsBtn_pressed(_ sender: Any) {
         if let delegate = self.delegate {
-            delegate.Comment(videoID: videoID, videoName: VideoTitle.text!, indexPath: indexPath)
+            delegate.Comment(videoID: videoID, videoName: VideoTitle.text!, indexPath: indexPath , video:video!)
         }
     }
     

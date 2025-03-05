@@ -10,6 +10,7 @@ import UIKit
 
 class loginRequiredVC: UIViewController {
     
+    @IBOutlet weak var loginImage: UIImageView!
     var uiSupport = UISupport()
     
     override func viewDidLoad() {
@@ -18,6 +19,8 @@ class loginRequiredVC: UIViewController {
         if let nav = self.navigationController {
             uiSupport.TransparentNavigationController(navController: nav)
         }
+        let offerImage = UIImage.gifImageWithName("Animation - 1740900456236")
+        loginImage.image = offerImage
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

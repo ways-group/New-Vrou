@@ -9,6 +9,10 @@
 import UIKit
 
 class NoConnectionVC: UIViewController {
+    override func viewDidLoad() {
+        let offerImage = UIImage.gifImageWithName("Animation - 1733891015564")
+        noConnectionImage.image = offerImage
+    }
     
     var callbackClosure: (() -> Void)?
     
@@ -17,6 +21,7 @@ class NoConnectionVC: UIViewController {
     }
     
     
+    @IBOutlet weak var noConnectionImage: UIImageView!
     @IBAction func TryAgainBtn_pressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
     }

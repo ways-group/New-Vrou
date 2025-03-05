@@ -14,7 +14,8 @@ import PKHUD
 import SideMenu
 
 class CategoryServicesVC: UIViewController {
-
+    @IBOutlet weak var noProductImage: UIImageView!
+    
     @IBOutlet weak var ServicesTable: UITableView!
     @IBOutlet weak var mainView: FBShimmeringView!
     @IBOutlet weak var logo: UIImageView!
@@ -46,6 +47,9 @@ class CategoryServicesVC: UIViewController {
        mainView.shimmeringOpacity = 1
       // setupSideMenu()
        GetServicesData()
+        let offerImage = UIImage.gifImageWithName("No Search Result Found")
+        noProductImage.image = offerImage
+        
     }
     
 

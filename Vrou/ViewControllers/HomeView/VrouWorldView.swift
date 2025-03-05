@@ -11,11 +11,13 @@ import Foundation
 import Alamofire
 import PKHUD
 import XLPagerTabStrip
+import SDWebImage
 
 class VrouWorldView:  UIViewController, IndicatorInfoProvider {
     
     var itemInfo = IndicatorInfo(title: NSLocalizedString("Vrou World", comment: ""), image: #imageLiteral(resourceName: "vrouIcon"))
     @IBOutlet weak var noVrouWorldView: UIView!
+    @IBOutlet weak var noOfferImage: UIImageView!
     @IBOutlet weak var mainView: FBShimmeringView!
     @IBOutlet weak var logo: UIImageView!
     @IBOutlet weak var tableView: UITableView!{
@@ -52,6 +54,9 @@ class VrouWorldView:  UIViewController, IndicatorInfoProvider {
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550
         mainView.shimmeringOpacity = 1
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noOfferImage.image = offerImage
+
         
     }
     //IndicatorInfoProvider

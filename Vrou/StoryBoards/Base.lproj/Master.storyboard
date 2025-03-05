@@ -1210,6 +1210,7 @@
                     <connections>
                         <outlet property="logo" destination="MiX-86-gEb" id="xDa-yF-vgu"/>
                         <outlet property="mainView" destination="3xc-xp-TvY" id="aCv-lx-lGY"/>
+                        <outlet property="noOfferImage" destination="a5g-tb-KhY" id="0E1-Be-fqb"/>
                         <outlet property="noVrouWorldView" destination="d27-q6-LLr" id="OsN-9k-a1m"/>
                         <outlet property="tableView" destination="TIN-3U-dTX" id="lR1-7e-KuS"/>
                     </connections>
@@ -1457,13 +1458,16 @@
                                 </view>
                             </tableView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qfc-vO-8Kz">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <rect key="frame" x="57" y="288" width="300" height="320"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoOffers" translatesAutoresizingMaskIntoConstraints="NO" id="2nD-ZI-MbM">
-                                        <rect key="frame" x="-2.5" y="11.5" width="205" height="177"/>
+                                        <rect key="frame" x="47.5" y="10" width="205" height="300"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="300" id="dVA-0o-ZPi"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No offers!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgz-GA-Mys">
-                                        <rect key="frame" x="64" y="180" width="72.5" height="20"/>
+                                        <rect key="frame" x="114" y="300" width="72.5" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="8a0-L2-HhX"/>
                                         </constraints>
@@ -1475,10 +1479,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="2nD-ZI-MbM" firstAttribute="centerX" secondItem="Qfc-vO-8Kz" secondAttribute="centerX" id="DJs-pI-dLh"/>
-                                    <constraint firstAttribute="width" constant="200" id="FAz-zU-gJP"/>
+                                    <constraint firstAttribute="width" constant="300" id="FAz-zU-gJP"/>
                                     <constraint firstAttribute="bottom" secondItem="Bgz-GA-Mys" secondAttribute="bottom" id="HVE-Ef-QLE"/>
                                     <constraint firstItem="2nD-ZI-MbM" firstAttribute="centerY" secondItem="Qfc-vO-8Kz" secondAttribute="centerY" id="IbU-aN-qEi"/>
-                                    <constraint firstAttribute="height" constant="200" id="QOH-Zh-0Gq"/>
+                                    <constraint firstAttribute="height" constant="320" id="QOH-Zh-0Gq"/>
                                     <constraint firstItem="Bgz-GA-Mys" firstAttribute="centerX" secondItem="Qfc-vO-8Kz" secondAttribute="centerX" id="dEV-lg-Kiq"/>
                                 </constraints>
                             </view>
@@ -1534,6 +1538,7 @@
                         <outlet property="headerView_height" destination="miU-MX-x2Q" id="1HU-H2-iGA"/>
                         <outlet property="logo" destination="jQP-Q5-ecK" id="xeu-U3-Wet"/>
                         <outlet property="mainView" destination="yPd-0C-GFz" id="wpU-VY-pgp"/>
+                        <outlet property="noOfferImage" destination="2nD-ZI-MbM" id="UXm-qZ-nKg"/>
                         <outlet property="offerEndTodayView_height" destination="1Og-jN-6kC" id="46G-Fg-DxU"/>
                         <outlet property="offersEndTodayView" destination="MG9-yv-6b0" id="017-cc-cB7"/>
                         <outlet property="offersTitleView" destination="Cw6-K0-xcz" id="eFo-hu-LVg"/>
@@ -2079,6 +2084,7 @@
                         <outlet property="NoServicesView" destination="7gE-0B-de1" id="KuA-tT-MzB"/>
                         <outlet property="ServicesCollection" destination="rh8-uv-bOA" id="mN0-0Z-0yi"/>
                         <outlet property="mainView" destination="Fmj-3w-fxB" id="Cvw-3q-uYq"/>
+                        <outlet property="noServiceImage" destination="hwK-wu-iev" id="mWh-WA-vBV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4A8-Zs-DJL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2134,7 +2140,7 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

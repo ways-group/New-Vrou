@@ -15,6 +15,8 @@ import SideMenu
 class OffersSearchVC: UIViewController {
     
     // MARK: - IBOutlet
+    @IBOutlet weak var NoSearchResultImage: UIImageView!
+    @IBOutlet weak var noSearchResultView: UIView!
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var LatestOffersCollection: UICollectionView!
     
@@ -40,6 +42,8 @@ class OffersSearchVC: UIViewController {
              HUD.show(.progress , onView: view)
             GetSearchResult()
         }
+        let offerImage = UIImage.gifImageWithName("No Search Result Found")
+        NoSearchResultImage.image = offerImage
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -115,10 +119,13 @@ extension OffersSearchVC {
                     self.has_more_pages = paginationModel?.has_more_pages ?? false
                     
                     print("has_more_pages ==>\(self.has_more_pages)")
-
+                    self.noSearchResultView.isHidden = true
+                    self.LatestOffersCollection.isHidden = false
                     self.LatestOffersCollection.reloadData()
                     
                     if self.offerSearch?.count ?? 0 == 0 {
+                        self.noSearchResultView.isHidden = false
+                        self.LatestOffersCollection.isHidden = true
                         if UserDefaults.standard.string(forKey: "Language") ?? "en" == "en" {
                             HUD.flash(.label("No results found") , onView: self.view , delay: 1.5 , completion: nil)
                         }else if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {

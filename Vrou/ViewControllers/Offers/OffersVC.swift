@@ -18,6 +18,7 @@ class OffersVC: UIViewController, IndicatorInfoProvider {
 
     //MARK: - IBOutlet
     @IBOutlet weak var VrouOffersCollection: UICollectionView!
+    @IBOutlet weak var noOfferImage: UIImageView!
     @IBOutlet weak var TodayOfferCollection: UICollectionView!
     @IBOutlet weak var OffersTable: UITableView!
     @IBOutlet weak var offersTitleView: UIView!
@@ -60,6 +61,8 @@ class OffersVC: UIViewController, IndicatorInfoProvider {
         OffersTable.isHidden = true
         NoOffersView.isHidden = true
         create_observer()
+        let offerImage = UIImage.gifImageWithName("Discount")
+        noOfferImage.image = offerImage
     }
     
     

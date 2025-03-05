@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,7 +27,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="260"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-wg-El1">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bdl-wg-El1">
                         <rect key="frame" x="0.0" y="229" width="300" height="30"/>
                         <color key="backgroundColor" red="0.8176838756" green="0.424176842" blue="0.63768136500000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -84,12 +85,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BXF-ae-SJL">
-                                <rect key="frame" x="220" y="180.5" width="70" height="15.5"/>
+                                <rect key="frame" x="220" y="180" width="70" height="16"/>
                                 <attributedString key="attributedText">
                                     <fragment content="150,00EGP ">
                                         <attributes>
                                             <color key="NSColor" name="mainColor"/>
-                                            <font key="NSFont" size="13" name="JosefinSans-Regular"/>
+                                            <font key="NSFont" metaFont="system"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -103,7 +104,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Dg1-ee-hqj" firstAttribute="leading" secondItem="aye-n1-A4Q" secondAttribute="leading" constant="10" id="BYO-5S-dp6"/>
                             <constraint firstItem="xhF-gR-tjS" firstAttribute="leading" secondItem="aye-n1-A4Q" secondAttribute="leading" constant="7" id="CFG-Ex-Gha"/>
@@ -137,6 +138,7 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="bdl-wg-El1" secondAttribute="trailing" id="16i-TZ-akd"/>
                 <constraint firstItem="aye-n1-A4Q" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="MIC-FH-2Lk"/>
@@ -146,7 +148,6 @@
                 <constraint firstItem="bdl-wg-El1" firstAttribute="top" secondItem="aye-n1-A4Q" secondAttribute="bottom" constant="-5" id="o2M-f7-ZKe"/>
                 <constraint firstItem="bdl-wg-El1" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="tdM-qG-OWg"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="192" height="210"/>
             <connections>
                 <outlet property="offerDescription" destination="NxQ-Df-Ioa" id="nan-PS-8pm"/>
@@ -167,5 +168,8 @@
         <namedColor name="whiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

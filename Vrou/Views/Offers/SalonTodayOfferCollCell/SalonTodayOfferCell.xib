@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,7 +27,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="300" height="260"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR5-Wp-S6W">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR5-Wp-S6W">
                         <rect key="frame" x="0.0" y="230" width="300" height="30"/>
                         <color key="backgroundColor" red="0.8176838756" green="0.424176842" blue="0.63768136500000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -72,44 +73,44 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KC9-Mp-axc">
-                                <rect key="frame" x="45" y="16" width="37" height="12"/>
+                                <rect key="frame" x="45" y="15" width="38" height="14"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Regular" family="Josefin Sans" pointSize="12"/>
                                 <color key="textColor" red="0.039215686270000001" green="0.027450980390000001" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Sultana SPA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ZEp-Ro-WV5">
-                                <rect key="frame" x="10" y="158" width="95.5" height="17"/>
+                                <rect key="frame" x="10" y="158" width="94" height="20"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Regular" family="Josefin Sans" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hot-SX-IXo">
-                                <rect key="frame" x="221.5" y="160" width="68.5" height="13"/>
+                                <rect key="frame" x="219.5" y="160" width="70.5" height="16"/>
                                 <attributedString key="attributedText">
                                     <fragment content="150,00EGP ">
                                         <attributes>
                                             <color key="NSColor" name="mainColor"/>
-                                            <font key="NSFont" size="13" name="JosefinSans-Regular"/>
+                                            <font key="NSFont" metaFont="system"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150,00EGP " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeI-Od-psJ">
-                                <rect key="frame" x="221.5" y="176" width="68.5" height="10"/>
+                                <rect key="frame" x="219.5" y="179" width="70.5" height="12"/>
                                 <fontDescription key="fontDescription" name="JosefinSans-Regular" family="Josefin Sans" pointSize="10"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S5u-Rb-P02">
-                                <rect key="frame" x="10" y="190" width="280" height="43"/>
+                                <rect key="frame" x="10" y="195" width="280" height="38"/>
                                 <string key="text">(Moroccan bath and Tunisian bath + sweet + skin + Iranian + 20 minutes massage + aromatic + paraffin hands and man + 3 henna drawings + jacuzzi session + whiting session + gumag)</string>
                                 <fontDescription key="fontDescription" name="JosefinSans-Regular" family="Josefin Sans" pointSize="14"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="KC9-Mp-axc" firstAttribute="centerY" secondItem="FoK-xS-rZn" secondAttribute="centerY" id="57d-fI-o4j"/>
                             <constraint firstItem="HeI-Od-psJ" firstAttribute="trailing" secondItem="Hot-SX-IXo" secondAttribute="trailing" id="BDZ-WP-0Rh"/>
@@ -146,6 +147,7 @@
                     </view>
                 </subviews>
             </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="JMO-cR-k2g" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="09f-4b-UwN"/>
                 <constraint firstAttribute="trailing" secondItem="JMO-cR-k2g" secondAttribute="trailing" id="38d-uV-wwG"/>
@@ -155,7 +157,6 @@
                 <constraint firstItem="GR5-Wp-S6W" firstAttribute="top" secondItem="JMO-cR-k2g" secondAttribute="bottom" constant="-5" id="iZQ-Fi-cOC"/>
                 <constraint firstAttribute="bottom" secondItem="GR5-Wp-S6W" secondAttribute="bottom" id="if4-dH-eUR"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <connections>
                 <outlet property="offerDescription" destination="S5u-Rb-P02" id="3vG-JD-1ef"/>
                 <outlet property="offerImage" destination="8KY-S0-pgP" id="bEN-qJ-hzs"/>
@@ -176,5 +177,8 @@
         <namedColor name="whiteColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
