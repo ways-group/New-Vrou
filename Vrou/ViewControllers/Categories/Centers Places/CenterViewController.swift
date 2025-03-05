@@ -16,6 +16,7 @@ import Alamofire
 
 class CenterViewController: BaseVC<BasePresenter, BaseItem>, MXParallaxHeaderDelegate, UIScrollViewDelegate {
 
+    @IBOutlet weak var noSalonImage: UIImageView!
     @IBOutlet weak var helloUser : Hi!
     @IBOutlet weak var PopularCollection: UICollectionView!
     @IBOutlet weak var CentersCollection: UICollectionView!
@@ -90,6 +91,8 @@ class CenterViewController: BaseVC<BasePresenter, BaseItem>, MXParallaxHeaderDel
         SectionHeaderView.layer.cornerRadius = 10
         SectionHeaderView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
               
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noSalonImage.image = offerImage
         GetSectionsData()
     }
     

@@ -17,6 +17,7 @@ import MOLH
 class CartVC: BaseVC<BasePresenter, BaseItem> {
    
     // MARK: - IBOutlet
+    @IBOutlet weak var noOfferImage: UIImageView!
     @IBOutlet weak var helloUser : Hi!
     @IBOutlet weak var CartTable: UITableView!
     @IBOutlet weak var shippingFee: UILabel!
@@ -42,6 +43,8 @@ class CartVC: BaseVC<BasePresenter, BaseItem> {
         CartTable.delegate = self
         CartTable.dataSource = self
         CartTable.separatorStyle = .none
+        let offerImage = UIImage.gifImageWithName("Animation - 1733825557396")
+        noOfferImage.image = offerImage
      }
     // MARK: - viewWillAppear
     override func viewWillAppear(_ animated: Bool) {

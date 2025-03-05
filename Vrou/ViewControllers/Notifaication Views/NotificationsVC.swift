@@ -17,6 +17,7 @@ import MOLH
 
 class NotificationsVC: BaseVC<BasePresenter, BaseItem> {
     // MARK: - IBOutlet
+    @IBOutlet weak var noNotificationImage: UIImageView!
     @IBOutlet weak var helloUser : Hi!
     @IBOutlet weak var NotificationTable: UITableView!
     @IBOutlet weak var NoNotifications: UIView!
@@ -38,6 +39,8 @@ class NotificationsVC: BaseVC<BasePresenter, BaseItem> {
         NotificationsCounter.count = Int()
         SetNotificationsSeen()
         requestsBtn.setTitle(NSLocalizedString("Requests", comment: ""), for: .normal)
+        
+    
     }
     
     // MARK: - SetUpSideMenu

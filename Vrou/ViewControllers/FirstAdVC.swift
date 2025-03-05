@@ -104,21 +104,26 @@ class FirstAdVC: BaseVC<BasePresenter, BaseItem> , CLLocationManagerDelegate{
                 "locale": UserDefaults.standard.string(forKey: "Language") ?? "en",
                 "timezone": TimeZoneValue.localTimeZoneIdentifier
             ]
+            print(headerData)
         }else {
             headerData = [
                 "Accept": "application/json",
                 "locale": UserDefaults.standard.string(forKey: "Language") ?? "en",
                 "timezone": TimeZoneValue.localTimeZoneIdentifier
             ]
+            print(headerData)
         }
         
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             
             ApiManager.shared.ApiRequest(URL: "\(ApiManager.Apis.FreeAdsList.description)lat=\(lat)&lng=\(long)", method: .get, Header:headerData, ExtraParams: nil, view: self.view) { (data, tmp) in
+                print("\(ApiManager.Apis.FreeAdsList.description)lat=\(self.lat)&lng=\(self.long)")
                 if tmp == nil {
                     do {
+                        print(data)
                         self.ads = try JSONDecoder().decode(FirstAds.self, from: data!)
+                        print(self.ads)
                         self.SetImage(image: self.AdIamge, link: self.ads.first_ads ?? "")
                         self.mainView.isHidden = true
                         self.mainView.isShimmering = false

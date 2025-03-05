@@ -6,12 +6,12 @@
   Copyright © 2019 waysGroup. All rights reserved.
 */
 
-"AppRegularFont" = "JosefinSans-SemiBold";
-"AppBoldFont" = "JosefinSans-Regular";
+"AppRegularFont" = "FormaDJRArabicMicro-Regular";
+"AppBoldFont" = "FormaDJRArabicMicro-Medium";
 
 
-"AppRegularFont_ar" = "Tajawal-Bold";
-"AppBoldFont_ar" = "Tajawal-Bold";
+"AppRegularFont_ar" = "FormaDJRArabicMicro-Regular";
+"AppBoldFont_ar" = "FormaDJRArabicMicro-Medium";
 
 "BSImagePicker.Done" = "Done";
 

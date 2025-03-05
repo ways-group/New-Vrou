@@ -13,6 +13,7 @@ import SDWebImage
 
 class VideoPlayerVC: UIViewController {
 
+    @IBOutlet weak var descriptionTV: UILabel!
     @IBOutlet weak var videoView: UIView!
     var player : AVPlayer!
     var avPlayerLayer : AVPlayerLayer!
@@ -25,6 +26,8 @@ class VideoPlayerVC: UIViewController {
     var link = ""
     var id = ""
     var salon_name = ""
+    var salon_category = ""
+    var salon_description = ""
     var salon_Image = ""
     var playing = true
     override func viewDidLoad() {
@@ -33,6 +36,8 @@ class VideoPlayerVC: UIViewController {
         // SetSalon Data
         SetImage(image: salonImage, link: salon_Image)
         salonName.text = salon_name
+        salonCatgeory.text = salon_category
+        descriptionTV.text = salon_description
         ///////
         
         player = AVPlayer(url: URL(string: link)!)

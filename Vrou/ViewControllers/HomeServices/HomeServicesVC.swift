@@ -14,6 +14,7 @@ import XLPagerTabStrip
 
 class HomeServicesVC: UIViewController,IndicatorInfoProvider {
   
+    @IBOutlet weak var noServiceImage: UIImageView!
     @IBOutlet weak var mainView: FBShimmeringView!
     @IBOutlet weak var Logo: UIImageView!
     @IBOutlet weak var ServicesCollection: UICollectionView!
@@ -38,6 +39,10 @@ class HomeServicesVC: UIViewController,IndicatorInfoProvider {
         mainView.shimmeringSpeed = 550
         mainView.shimmeringOpacity = 1
         create_observer()
+        
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noServiceImage.image = offerImage
+        
     }
     
     

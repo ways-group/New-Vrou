@@ -13,6 +13,7 @@ import SwiftyJSON
 
 class HistoryReservationsVC: UIViewController {
     
+    @IBOutlet weak var noOfferImage: UIImageView!
     @IBOutlet weak var ReservationsTable: UITableView!
     @IBOutlet weak var EmptyCartView: UIView!
     
@@ -24,6 +25,8 @@ class HistoryReservationsVC: UIViewController {
         ReservationsTable.delegate = self
         ReservationsTable.dataSource = self
         ReservationsTable.separatorStyle = .none
+        let offerImage = UIImage.gifImageWithName("Animation - 1733825557396")
+        noOfferImage.image = offerImage
     }
     
     

@@ -302,7 +302,15 @@ class LoginVC: BaseVC<BasePresenter, BaseItem>, ASAuthorizationControllerDelegat
             "timezone": TimeZoneValue.localTimeZoneIdentifier
         ], ExtraParams: "", view: self.view) { (data, tmp) in
             HUD.hide()
-      
+            print(ApiManager.Apis.Login.description)
+            print(["email": self.userName , "password" : self.pass , "device_token": UserDefaults.standard.string(forKey: "FCM_new") ?? "" , "device_id": UIDevice.current.identifierForVendor!.uuidString])
+            print([
+                "Accept": "application/json",
+                "locale":  UserDefaults.standard.string(forKey: "Language") ?? "en",
+                "timezone": TimeZoneValue.localTimeZoneIdentifier])
+            print(tmp)
+            print(data)
+
             if tmp == nil {
                 
                 User.shared.SaveUser(data: data!)

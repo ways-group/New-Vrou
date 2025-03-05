@@ -25,6 +25,7 @@ class ShopViewController: BaseVC<BasePresenter, BaseItem>, MXParallaxHeaderDeleg
   //  @IBOutlet weak var SectionCollection: UICollectionView!
    // @IBOutlet weak var SeactionHeaderView: UIView!
     //@IBOutlet weak var SecondSectionCollection: UICollectionView!
+    @IBOutlet weak var noServiceImage: UIImageView!
     @IBOutlet weak var OfferCollection: UICollectionView!
     @IBOutlet weak var ProductsCollection: UICollectionView!
     @IBOutlet weak var SubCategoryCollection: UICollectionView!
@@ -86,7 +87,8 @@ class ShopViewController: BaseVC<BasePresenter, BaseItem>, MXParallaxHeaderDeleg
         headerView.widthAnchor.constraint(equalTo: ProductsCollection.widthAnchor).isActive = true
         
         ProductsCollection.register(UINib(nibName: "LoadingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LoadingCollectionViewCell")
-       
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noServiceImage.image = offerImage
         
         create_observer()
      }
@@ -502,8 +504,10 @@ extension ShopViewController : UICollectionViewDelegate, UICollectionViewDataSou
             
             if productCategories.data?.product_categories?.count ?? 0 == 0 && requested {
                 NoProductsView.isHidden = false
+                headerView.isHidden = true
             }else {
                  NoProductsView.isHidden = true
+                headerView.isHidden = false
             }
             
             return productCategories.data?.product_categories?.count ?? 0

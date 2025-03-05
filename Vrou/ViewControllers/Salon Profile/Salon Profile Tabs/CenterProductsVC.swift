@@ -30,6 +30,7 @@ class CenterProductsVC: UIViewController, IndicatorInfoProvider {
   // MARK: - IBOutlet
      @IBOutlet weak var SubCategoryCollection: UICollectionView!
  
+    @IBOutlet weak var noServiceImage: UIImageView!
     @IBOutlet weak var productsTable: UITableView!
     @IBOutlet weak var NoProductsView: UIView!
     
@@ -63,6 +64,9 @@ class CenterProductsVC: UIViewController, IndicatorInfoProvider {
         super.viewDidLoad()
         if let nav = self.navigationController {
             uiSupport.TransparentNavigationController(navController: nav)
+            let offerImage = UIImage.gifImageWithName("women in hair salon")
+            noServiceImage.image = offerImage
+            
         }
         // Loading indicator setup
         mainView.contentView = logo

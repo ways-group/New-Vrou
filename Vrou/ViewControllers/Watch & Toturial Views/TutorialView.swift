@@ -10,6 +10,8 @@ import PKHUD
  
 class TutorialView: BaseVC<TutorialPresenter, BaseItem> {
 
+    @IBOutlet weak var noTutorialImage: UIImageView!
+    @IBOutlet weak var noTutorialView: UIView!
     @IBOutlet weak var helloUser : Hi!
     @IBOutlet weak var collectionView: UICollectionView!{
         didSet{
@@ -25,7 +27,15 @@ class TutorialView: BaseVC<TutorialPresenter, BaseItem> {
     var has_more_pages = false
     var is_loading = false
     var current_page = 0
-
+    override func viewDidLoad() {
+        let offerImage = UIImage.gifImageWithName("Makeup artist")
+        noTutorialImage.image = offerImage
+        helloUser.vc = self
+        setCustomNavagationBar()
+        presenter = TutorialPresenter(router: RouterManager(self), parent: self)
+        HUD.show(.progress)
+        getData()
+    }
     
     override func bindind() {
         helloUser.vc = self
@@ -58,7 +68,13 @@ extension TutorialView {
                     let paginationModel = data_.pagination
                     self.has_more_pages = paginationModel?.has_more_pages ?? false
                     print("has_more_pages ==>\(self.has_more_pages)")
+                    self.noTutorialView.isHidden = true
+                    self.collectionView.isHidden = false
                     self.collectionView.reloadData()
+                    if(self.tutorialsList.count == 0){
+                        self.noTutorialView.isHidden = false
+                        self.collectionView.isHidden = true
+                    }
                 }catch {
                     HUD.flash(.label("Something went wrong Please try again later") , onView: self.view , delay: 1.6 , completion: nil)
                 }

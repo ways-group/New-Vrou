@@ -16,6 +16,8 @@ import SideMenu
 class WatchVC: BaseVC<BasePresenter, BaseItem> {
    
     // MARK: - IBOutlet
+    @IBOutlet weak var noSaloneView: UIView!
+    @IBOutlet weak var noSaloneImage: UIImageView!
     @IBOutlet weak var WatchTable: UITableView!
     @IBOutlet weak var AddNewCollectionView: UIView!
     @IBOutlet weak var CollectionNameTxtInput: UITextField!
@@ -57,6 +59,8 @@ class WatchVC: BaseVC<BasePresenter, BaseItem> {
         saveBtn.setTitle(NSLocalizedString("Save", comment: ""), for: .normal)
         cancelBtn.setTitle(NSLocalizedString("Cancel", comment: ""), for: .normal)
         CollectionNameTxtInput.placeholder = NSLocalizedString("Collection Name", comment: "")
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noSaloneImage.image = offerImage
         GetSalonsVideo()
     }
     
@@ -155,8 +159,13 @@ extension WatchVC {
                     
                     print("has_more_pages ==>\(self.has_more_pages)")
 
-                    
+                    self.WatchTable.isHidden = false
+                    self.noSaloneView.isHidden = true
                     self.WatchTable.reloadData()
+                    if(self.salonsVideo_list?.count == 0){
+                        self.WatchTable.isHidden = true
+                        self.noSaloneView.isHidden = false
+                    }
                  //   self.SetupAnimation()
                     
                 }catch {
@@ -341,14 +350,16 @@ extension WatchVC: UITableViewDelegate , UITableViewDataSource, WatchDelegate {
         
     }
     
-    func Comment(videoID: String, videoName: String, indexPath: Int) {
+    func Comment(videoID: String, videoName: String, indexPath: Int , video : SalonVideo) {
         let vc = UIStoryboard(name: "Categories", bundle: nil).instantiateViewController(withIdentifier: "CommentsVC") as! CommentsVC
         
         vc.itemName = videoName
         vc.type = "video"
         vc.id = videoID
+        vc.video = video
+        vc.salonsVideo_list = self.salonsVideo_list
         
-        self.present(vc, animated: true, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func Share(videoID: String, imageLink: String, indexPath: Int) {
@@ -414,6 +425,10 @@ extension WatchVC: UITableViewDelegate , UITableViewDataSource, WatchDelegate {
         vc.link =  salonsVideo_list?[indexPath.row].video ?? ""
         vc.id = "\(salonsVideo_list?[indexPath.row].salon?.id ?? Int())"
         vc.salon_name = salonsVideo_list?[indexPath.row].salon?.salon_name ?? ""
+        vc.salon_category = salonsVideo_list?[indexPath.row].salon?.category?.category_name ?? ""
+        vc.salon_description = salonsVideo_list?[indexPath.row].video_name ?? ""
+        
+        print(salonsVideo_list)
         vc.salon_Image = salonsVideo_list?[indexPath.row].salon?.salon_logo ?? ""
         self.navigationController?.pushViewController(vc, animated: true)
         

@@ -24,6 +24,8 @@ class SalonOffersVC: UIViewController, IndicatorInfoProvider {
     var newPosition: CGFloat = 0.0
     var last:CGFloat = 0.0
 
+    @IBOutlet weak var noSalonView: UIView!
+    @IBOutlet weak var noSaloneImage: UIImageView!
     
     @IBOutlet weak var OffersTable: UITableView!
     @IBOutlet weak var mainView: FBShimmeringView!
@@ -48,11 +50,13 @@ class SalonOffersVC: UIViewController, IndicatorInfoProvider {
         mainView.isShimmering = true
         mainView.shimmeringSpeed = 550
         mainView.shimmeringOpacity = 1
-        
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noSaloneImage.image = offerImage
         SetupTableView()
         GetSalonOffersData()
         OffersTable.isHidden = true
         height = 400//(self.view.bounds.height / half) - 150
+    
     }
     
     func SetupTableView() {
@@ -106,6 +110,8 @@ class SalonOffersVC: UIViewController, IndicatorInfoProvider {
                     self.has_more_pages = paginationModel?.has_more_pages ?? false
                     
                     print("has_more_pages ==>\(self.has_more_pages)")
+                    
+                  
                     
 //                    if self.salonOffers.data?.offers_end_today?.count ?? 0 == 0{
 //                         self.OffersTable.isHidden = false
@@ -329,6 +335,7 @@ extension SalonOffersVC: UITableViewDelegate , UITableViewDataSource {
         if indexPath.row == 0 {
             
             if (salonOffers.data?.offers_end_today?.count ?? 0 > 0) {
+                noSalonView.isHidden = false
                 if let cell = tableView.dequeueReusableCell(withIdentifier: "TodayOfferTableCell", for: indexPath) as? TodayOfferTableCell {
                     cell.selectionStyle = UITableViewCell.SelectionStyle.none
                     cell.delegate = self
@@ -342,6 +349,7 @@ extension SalonOffersVC: UITableViewDelegate , UITableViewDataSource {
                 }
             }else {
                 OffersTable.isHidden = false
+                noSalonView.isHidden = true
             }
             
         }

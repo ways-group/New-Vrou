@@ -14,6 +14,7 @@ import SwiftyJSON
 import MOLH
 
 class MyPurchasesVC: UIViewController {
+    @IBOutlet weak var noOfferImage: UIImageView!
     // MARK: - IBOutlet
     @IBOutlet weak var purchasesTable: UITableView!
     @IBOutlet weak var ProductsBtn: UIButton!
@@ -40,6 +41,9 @@ class MyPurchasesVC: UIViewController {
         purchasesTable.separatorStyle = .none
         purchasesTable.estimatedRowHeight = 400
         purchasesTable.rowHeight = UITableView.automaticDimension
+        
+        let offerImage = UIImage.gifImageWithName("Animation - 1733825557396")
+        noOfferImage.image = offerImage
 
         GetMyPurchses()
     }

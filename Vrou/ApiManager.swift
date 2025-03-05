@@ -48,8 +48,8 @@ class ApiManager {
         var description: String {
             // let url =    "https://vrouapp.com/api-v2"
             //    let url = "https://beauty-apps.com/api-v2"
-            let url = "https://beauty.vrouapp.com/api-v3"
-            // let url = "https://devbeauty.vrouapp.com/api-v3"
+            let url = "https://devbeauty.vrouapp.com/api-v3"
+            // let url = "https://beauty.vrouapp.com/api-v3"
             
             switch self {
             case .DeleteAccount: return url + "/auth/delete-account"

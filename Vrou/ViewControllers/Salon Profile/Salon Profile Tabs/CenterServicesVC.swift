@@ -29,6 +29,7 @@ class CenterServicesVC: UIViewController ,  IndicatorInfoProvider {
    var last:CGFloat = 0.0
     
     // MARK: - IBOutlet
+    @IBOutlet weak var noServiceImage: UIImageView!
     @IBOutlet weak var SubCategoryCollection: UICollectionView!
     @IBOutlet weak var ServicesTable: UITableView!
     @IBOutlet weak var NoServicesView: UIView!
@@ -81,6 +82,9 @@ class CenterServicesVC: UIViewController ,  IndicatorInfoProvider {
         self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
          height = 400
         GetSalonProductsCategoryData()
+        
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noServiceImage.image = offerImage
         
     }
     

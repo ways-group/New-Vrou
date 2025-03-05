@@ -12,6 +12,7 @@ import PKHUD
 class PinInVC: UIViewController {
     
     // MARK: - IBoutlets
+    @IBOutlet weak var noSalonImage: UIImageView!
     @IBOutlet weak var CentersCollection: UICollectionView!
     @IBOutlet weak var NoCentersView: UIView!
     @IBOutlet weak var noCentersLbl: UILabel!
@@ -37,6 +38,8 @@ class PinInVC: UIViewController {
         CentersCollection.register(UINib(nibName: "LoadingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LoadingCollectionViewCell")
         GetCentersData()
         // Do any additional setup after loading the view.
+        let offerImage = UIImage.gifImageWithName("barbershop waiting clients")
+        noSalonImage.image = offerImage
     }
  
 

@@ -18,6 +18,7 @@ class OffersViewController: UIViewController, MXParallaxHeaderDelegate,  UIScrol
 
    
     // MARK: - IBOutlet
+    @IBOutlet weak var noOfferImage: UIImageView!
     @IBOutlet weak var SectionCollection: UICollectionView!
     @IBOutlet weak var SecondSectionCollection: UICollectionView!
     @IBOutlet var headerView: UIView!
@@ -89,6 +90,8 @@ class OffersViewController: UIViewController, MXParallaxHeaderDelegate,  UIScrol
         LatestOffersCollection.parallaxHeader.delegate = self
         LatestOffersCollection.register(UINib(nibName: "LoadingCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LoadingCollectionViewCell") //for pagination
 
+        let offerImage = UIImage.gifImageWithName("Discount")
+        noOfferImage.image = offerImage
         
         setupSideMenu()
         GetSectionsData()

@@ -15,6 +15,8 @@ import SideMenu
 
 class CentersSearchVC: UIViewController,MXParallaxHeaderDelegate {
     // MARK: - IBOutlet
+    @IBOutlet weak var NoSearchResultImage: UIImageView!
+    @IBOutlet weak var noSearchResultView: UIView!
     @IBOutlet weak var SearchBar: UISearchBar!
     @IBOutlet weak var CentersCollection: UICollectionView!
     
@@ -42,6 +44,8 @@ class CentersSearchVC: UIViewController,MXParallaxHeaderDelegate {
              HUD.show(.progress , onView: view)
             GetSearchResult()
         }
+        let offerImage = UIImage.gifImageWithName("No Search Result Found")
+        NoSearchResultImage.image = offerImage
     }
     
     
@@ -124,9 +128,13 @@ extension CentersSearchVC {
                     
                     print("has_more_pages ==>\(self.has_more_pages)")
                     
-                    
+                    self.noSearchResultView.isHidden = true
+                    self.CentersCollection.isHidden = false
                     self.CentersCollection.reloadData()
                     if self.centerSearch?.count ?? 0 == 0 {
+                        self.noSearchResultView.isHidden = false
+                        self.CentersCollection.isHidden = true
+                        
                         if UserDefaults.standard.string(forKey: "Language") ?? "en" == "en" {
                             HUD.flash(.label("No results found") , onView: self.view , delay: 1.5 , completion: nil)
                         }else if UserDefaults.standard.string(forKey: "Language") ?? "en" == "ar" {

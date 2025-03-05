@@ -18,6 +18,7 @@ class ScheduledReservationsVC: UIViewController {
     @IBOutlet weak var EmptyCartView: UIView!
     @IBOutlet weak var scheduledBtn: UIButton!
     @IBOutlet weak var historyBtn: UIButton!
+    @IBOutlet weak var noOfferImage: UIImageView!
     
     // MARK: - Variables
     var myReservations = MyReservations()
@@ -41,6 +42,8 @@ class ScheduledReservationsVC: UIViewController {
         ReservationsTable.estimatedRowHeight = 400
         ReservationsTable.rowHeight = UITableView.automaticDimension
         GetMyReservations()
+        let offerImage = UIImage.gifImageWithName("Animation - 1733825557396")
+        noOfferImage.image = offerImage
     }
     
     // MARK: - HistoryBtn

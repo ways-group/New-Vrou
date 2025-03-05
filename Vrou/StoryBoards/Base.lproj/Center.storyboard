@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dK8-XI-sVS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dK8-XI-sVS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -1792,6 +1792,10 @@
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NoOffers" translatesAutoresizingMaskIntoConstraints="NO" id="PYc-dH-BkV">
                                         <rect key="frame" x="-2.5" y="11.5" width="205" height="177"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="205" id="C6w-fM-LGO"/>
+                                            <constraint firstAttribute="height" constant="177" id="DWR-tR-NGx"/>
+                                        </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No offers!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tT9-Pi-csC">
                                         <rect key="frame" x="64" y="170" width="72.5" height="30"/>
@@ -1962,10 +1966,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQq-xx-bFz">
-                                                    <rect key="frame" x="20" y="21" width="374" height="173"/>
+                                                    <rect key="frame" x="20" y="22" width="374" height="172"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PCM-ur-xjv">
-                                                            <rect key="frame" x="174" y="0.0" width="200" height="173"/>
+                                                            <rect key="frame" x="174" y="0.0" width="200" height="172"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="180" id="PPb-7q-K4J"/>
                                                                 <constraint firstAttribute="width" constant="200" id="cdR-oq-dLG"/>
@@ -2409,8 +2413,6 @@
                                         <connections>
                                             <outlet property="DiscountLbl" destination="mG7-xf-plw" id="nE6-sq-5cl"/>
                                             <outlet property="DiscountView" destination="ccz-QL-Zy5" id="jcD-hZ-vza"/>
-                                            <outlet property="NoteLbl" destination="gv8-9E-itb" id="zQk-7H-1ae"/>
-                                            <outlet property="ProductDescription" destination="45O-IJ-w8B" id="dQH-Fh-Xmm"/>
                                             <outlet property="ProductImage" destination="7Cr-e8-yJK" id="UA9-Nm-Eoq"/>
                                             <outlet property="ProductName" destination="5es-3G-4k2" id="1pl-sN-41i"/>
                                             <outlet property="ProductPrice" destination="g1c-Bd-QKn" id="kyH-lY-Ye1"/>
@@ -2502,6 +2504,7 @@
                         <outlet property="headerView" destination="9qY-5Y-h0r" id="k6X-qp-jDQ"/>
                         <outlet property="logo" destination="GaW-7g-P5s" id="Aww-lL-9fC"/>
                         <outlet property="mainView" destination="N0v-Ad-qwP" id="ShH-Ku-FBy"/>
+                        <outlet property="noServiceImage" destination="9PY-Ey-7Hs" id="oov-aL-1tA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uHu-1c-9FQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2820,6 +2823,7 @@
                         <outlet property="i_btn" destination="8ma-ST-qDw" id="jae-Rk-GEe"/>
                         <outlet property="logo" destination="CtT-w0-5jz" id="aBk-Dm-NFa"/>
                         <outlet property="mainView" destination="O7o-9Z-Xy6" id="GQd-zD-QMq"/>
+                        <outlet property="noServiceImage" destination="VfS-wJ-tS9" id="1P9-rQ-ULt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYF-Q5-5eM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -5230,7 +5234,7 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVH-G2-0rV">
-                            <rect key="frame" x="355" y="48" width="39" height="30"/>
+                            <rect key="frame" x="354" y="48" width="40" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="GzD-Pp-zOu"/>
                             </constraints>
@@ -5240,7 +5244,7 @@
                             </state>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write a review" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GRu-wJ-0EB">
-                            <rect key="frame" x="20" y="84" width="166" height="21"/>
+                            <rect key="frame" x="20" y="84" width="157" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="Xle-ZN-KzS"/>
                             </constraints>
@@ -5469,7 +5473,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvh-X2-C0x">
-                                                    <rect key="frame" x="263" y="166" width="120" height="21"/>
+                                                    <rect key="frame" x="263" y="164" width="120" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="120" id="GUg-uO-n3d"/>
                                                         <constraint firstAttribute="height" constant="21" id="Soa-Sr-F4t"/>
@@ -5772,10 +5776,10 @@
                                                     </constraints>
                                                 </view>
                                                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VjM-oX-gj2">
-                                                    <rect key="frame" x="22" y="54" width="370" height="125"/>
+                                                    <rect key="frame" x="22" y="54" width="370" height="124"/>
                                                     <subviews>
                                                         <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ikl-18-bmX">
-                                                            <rect key="frame" x="0.0" y="0.0" width="370" height="125"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="370" height="124"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -5817,7 +5821,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-------------" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzW-vU-16q">
-                                                            <rect key="frame" x="15" y="38" width="340" height="77"/>
+                                                            <rect key="frame" x="15" y="38" width="340" height="76"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" name="grayColor2"/>
                                                             <nil key="highlightedColor"/>
@@ -6570,41 +6574,6 @@
             <point key="canvasLocation" x="7133" y="1835"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="5bf-eo-wmz">
-            <size key="intrinsicContentSize" width="240" height="44"/>
-        </designable>
-        <designable name="RLT-xL-9Eb">
-            <size key="intrinsicContentSize" width="220" height="44"/>
-        </designable>
-        <designable name="Su5-2R-73D">
-            <size key="intrinsicContentSize" width="220" height="44"/>
-        </designable>
-        <designable name="Waz-u0-PxJ">
-            <size key="intrinsicContentSize" width="220" height="44"/>
-        </designable>
-        <designable name="XsP-Vr-rZ0">
-            <size key="intrinsicContentSize" width="220" height="44"/>
-        </designable>
-        <designable name="aHA-7z-Rai">
-            <size key="intrinsicContentSize" width="240" height="44"/>
-        </designable>
-        <designable name="fOR-yo-UeS">
-            <size key="intrinsicContentSize" width="220" height="44"/>
-        </designable>
-        <designable name="mBP-eQ-dns">
-            <size key="intrinsicContentSize" width="240" height="44"/>
-        </designable>
-        <designable name="p1I-ez-wge">
-            <size key="intrinsicContentSize" width="220" height="44"/>
-        </designable>
-        <designable name="pDs-vG-qA3">
-            <size key="intrinsicContentSize" width="220" height="44"/>
-        </designable>
-        <designable name="pRO-9d-E30">
-            <size key="intrinsicContentSize" width="0.0" height="14"/>
-        </designable>
-    </designables>
     <resources>
         <image name="BackArrow" width="14.5" height="14.5"/>
         <image name="Cart" width="19" height="12"/>
@@ -6617,7 +6586,7 @@
         <image name="Send" width="15" height="15"/>
         <image name="Social+" width="8" height="8"/>
         <image name="Tmp" width="1125" height="2436"/>
-        <image name="X" width="18.5" height="18.5"/>
+        <image name="X" width="25" height="25"/>
         <image name="arrow" width="7" height="6"/>
         <image name="browser" width="20.5" height="20.5"/>
         <image name="facebook" width="20.5" height="20.5"/>
@@ -6637,7 +6606,7 @@
         <image name="snapshaticon" width="24" height="24"/>
         <image name="twitter" width="20.5" height="20.5"/>
         <image name="unComment" width="73.5" height="56"/>
-        <image name="unlike" width="72" height="61"/>
+        <image name="unlike" width="24" height="24"/>
         <image name="whatsapp" width="20.5" height="20.5"/>
         <image name="youtube_icon" width="20.5" height="20.5"/>
         <namedColor name="grayColor2">
